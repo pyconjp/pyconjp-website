@@ -1,6 +1,7 @@
 _build
 *.pyc
 *.swp
+*.sqlite
 dev.db
 .DS_Store
 pycon/static/js/cssrefresh.js

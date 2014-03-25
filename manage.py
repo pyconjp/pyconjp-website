@@ -28,7 +28,7 @@ if __name__ == "__main__":
         # if that doesn't work.
         settings = "default"
 
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pycon.settings.%s" % settings)
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pyconjp.settings.%s" % settings)
 
     from django.core.management import execute_from_command_line
 

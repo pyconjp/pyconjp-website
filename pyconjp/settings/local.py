@@ -54,6 +54,7 @@ DATABASES = {
     }
 }
 
+USE_X_FORWARDED_HOST = True
 INSTALLED_APPS.append('restcms')
 INSTALLED_APPS.append('debug_toolbar')
 INSTALLED_APPS.remove('symposion.cms')

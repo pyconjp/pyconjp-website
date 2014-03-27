@@ -46,7 +46,7 @@ _db_engine = env_var('DB_ENGINE', default='sqlite3' if DEBUG else 'postgresql_ps
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.%s' % _db_engine,
-        'NAME': env_var('DB_NAME', default=os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),  'pycon2014.sqlite') if _db_engine == 'sqlite3' else 'pycon2014'),
+        'NAME': env_var('DB_NAME', default=os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),  'pycon2014.sqlite') if _db_engine == 'sqlite3' else 'pyconjp2014_staging'),
         'USER': env_var('DB_USER', default=''),
         'PASSWORD': env_var('DB_PASSWORD', default=''),
         'HOST': env_var('DB_HOST', default=''),

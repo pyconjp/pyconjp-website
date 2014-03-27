@@ -55,6 +55,7 @@ DATABASES = {
 }
 
 INSTALLED_APPS.append('restcms')
+INSTALLED_APPS.append('debug_toolbar')
 INSTALLED_APPS.remove('symposion.cms')
 
 ROOT_URLCONF = 'pyconjp.urls'

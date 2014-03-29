@@ -53,15 +53,3 @@ DATABASES = {
         'PORT': env_var('DB_PORT', default=''),
     }
 }
-
-USE_X_FORWARDED_HOST = True
-INSTALLED_APPS.append('restcms')
-INSTALLED_APPS.append('debug_toolbar')
-INSTALLED_APPS.remove('symposion.cms')
-
-ROOT_URLCONF = 'pyconjp.urls'
-
-LANGUAGES = (
-    ('en', 'English'),
-    ('ja', 'Japanese'),
-)

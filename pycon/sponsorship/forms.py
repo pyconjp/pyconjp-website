@@ -41,6 +41,9 @@ class SponsorDetailsForm(forms.ModelForm):
 
 
 class SponsorBenefitsInlineFormSet(BaseInlineFormSet):
+    def __init__(self, *args, **kwargs):
+        kwargs['queryset'] = kwargs.get('queryset', self.model._default_manager).exclude(benefit__type="option")
+        super(SponsorBenefitsInlineFormSet, self).__init__(*args, **kwargs)
 
     def _construct_form(self, i, **kwargs):
         form = super(SponsorBenefitsInlineFormSet, self)._construct_form(i, **kwargs)
@@ -52,10 +55,6 @@ class SponsorBenefitsInlineFormSet(BaseInlineFormSet):
         for field in fields:
             # don't need a label, the form template will label it with the benefit name
             form.fields[field].label = ""
-
-            if form.instance.benefit.type == 'option':
-                del form.fields[field]
-                continue
 
             # provide word limit as help_text
             if form.instance.benefit.type in ["text", "richtext"] and form.instance.max_words:

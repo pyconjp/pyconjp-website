@@ -1,5 +1,6 @@
 import datetime
 
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -263,6 +264,20 @@ class Benefit(models.Model):
             ("option", "Option")
         ],
         max_length=10,
+        default="simple"
+    )
+    content_type = models.CharField(
+        _("content type"),
+        choices=[
+            ("simple", "Simple"),
+        ] + [
+            ("listing_text_%s" % lang, "Listing Text (%s)" % label)
+            for lang, label in settings.LANGUAGES
+        ] + [
+            ("joblisting_text_%s" % lang, "Job Listing Text (%s)" % label)
+            for lang, label in settings.LANGUAGES
+        ],
+        max_length=20,
         default="simple"
     )
 

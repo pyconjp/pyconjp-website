@@ -98,7 +98,7 @@ class SponsorAdmin(admin.ModelAdmin):
 class BenefitAdmin(admin.ModelAdmin):
 
     inlines = [BenefitLevelInline]
-    list_display = ('name', 'type', 'levels')
+    list_display = ('name', 'type', 'content_type', 'levels')
 
     def levels(self, benefit):
         return u", ".join(l.level.name for l in benefit.benefit_levels.all())
@@ -109,8 +109,17 @@ class SponsorLevelAdmin(admin.ModelAdmin):
     inlines = [BenefitLevelInline]
 
 
+class SponsorBenefitAdmin(admin.ModelAdmin):
+    list_display = ('benefit', 'sponsor', 'active', '_is_complete', 'show_text')
+
+    def show_text(self, sponsor_benefit):
+        if sponsor_benefit.text:
+            return sponsor_benefit.text[:100]
+        else:
+            return _("None")
+
+
 admin.site.register(SponsorLevel, SponsorLevelAdmin)
 admin.site.register(Sponsor, SponsorAdmin)
 admin.site.register(Benefit, BenefitAdmin)
-admin.site.register(SponsorBenefit,
-                    list_display=('benefit', 'sponsor', 'active', '_is_complete'))
+admin.site.register(SponsorBenefit, SponsorBenefitAdmin)

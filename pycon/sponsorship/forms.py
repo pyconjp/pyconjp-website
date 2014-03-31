@@ -53,6 +53,10 @@ class SponsorBenefitsInlineFormSet(BaseInlineFormSet):
             # don't need a label, the form template will label it with the benefit name
             form.fields[field].label = ""
 
+            if form.instance.benefit.type == 'option':
+                del form.fields[field]
+                continue
+
             # provide word limit as help_text
             if form.instance.benefit.type in ["text", "richtext"] and form.instance.max_words:
                 form.fields[field].help_text = u"maximum %s words" % form.instance.max_words

@@ -1,5 +1,6 @@
 import datetime
 
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -259,9 +260,24 @@ class Benefit(models.Model):
             ("richtext", "Rich Text"),
             ("file", "File"),
             ("weblogo", "Web Logo"),
-            ("simple", "Simple")
+            ("simple", "Simple"),
+            ("option", "Option")
         ],
         max_length=10,
+        default="simple"
+    )
+    content_type = models.CharField(
+        _("content type"),
+        choices=[
+            ("simple", "Simple"),
+        ] + [
+            ("listing_text_%s" % lang, "Listing Text (%s)" % label)
+            for lang, label in settings.LANGUAGES
+        ] + [
+            ("joblisting_text_%s" % lang, "Job Listing Text (%s)" % label)
+            for lang, label in settings.LANGUAGES
+        ],
+        max_length=20,
         default="simple"
     )
 
@@ -352,7 +368,7 @@ class SponsorBenefit(models.Model):
         """
         if self.benefit.type == "file" or self.benefit.type == "weblogo":
             return ["upload"]
-        elif self.benefit.type in ("text", "richtext", "simple"):
+        elif self.benefit.type in ("text", "richtext", "simple", "option"):
             return ["text"]
         return []
 

@@ -14,12 +14,13 @@
 # DB_USER
 # DB_PASSWORD
 
-from .dev import *
+from .dev import *  # NOQA
+
 
 def env_var(var, var_type=None, *args, **kwargs):
     u"""
     環境変数の値を返す
-    
+
     例: env_var("HOGE_SETTING", int, default=123)
     """
     try:
@@ -31,7 +32,7 @@ def env_var(var, var_type=None, *args, **kwargs):
             val = args[0]
         else:
             val = kwargs['default']
-    
+
     if var_type:
         try:
             val = var_type(val)
@@ -40,13 +41,15 @@ def env_var(var, var_type=None, *args, **kwargs):
 
     return val
 
-DEBUG = env_var('DEBUG', bool, default=True) 
+DEBUG = env_var('DEBUG', bool, default=True)
 
 _db_engine = env_var('DB_ENGINE', default='sqlite3' if DEBUG else 'postgresql_psycopg2')
+_db_name = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
+                        'pycon2014.sqlite') if _db_engine == 'sqlite3' else 'pyconjp2014_staging'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.%s' % _db_engine,
-        'NAME': env_var('DB_NAME', default=os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),  'pycon2014.sqlite') if _db_engine == 'sqlite3' else 'pyconjp2014_staging'),
+        'NAME': env_var('DB_NAME', default=_db_name),
         'USER': env_var('DB_USER', default=''),
         'PASSWORD': env_var('DB_PASSWORD', default=''),
         'HOST': env_var('DB_HOST', default=''),

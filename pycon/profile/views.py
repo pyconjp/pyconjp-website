@@ -5,7 +5,24 @@ from django.contrib import messages
 from django.utils.translation import ugettext as _
 
 from .models import Profile
-from .forms import ProfileForm
+from .forms import ProfileForm, SignupForm
+
+from symposion.views import SignupView
+
+
+class SignupView(SignupView):
+
+    form_class = SignupForm
+
+    def after_signup(self, form):
+        super(SignupView, self).after_signup(form)
+        Profile.objects.create(
+            user=self.created_user,
+            first_name=form.cleaned_data.get('first_name'),
+            first_name_ja=form.cleaned_data.get('first_name_ja'),
+            last_name=form.cleaned_data.get('last_name'),
+            last_name_ja=form.cleaned_data.get('last_name_ja'),
+        )
 
 
 @login_required

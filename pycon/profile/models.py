@@ -9,7 +9,9 @@ class Profile(models.Model):
     first_name = models.CharField(max_length=50, blank=True, null=True)
     last_name = models.CharField(max_length=50, blank=True, null=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
-    
+    first_name_ja = models.CharField(max_length=50, blank=True, null=True)
+    last_name_ja = models.CharField(max_length=50, blank=True, null=True)
+
     @property
     def is_complete(self):
         for key in self._meta.get_all_field_names():

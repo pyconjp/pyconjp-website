@@ -4,10 +4,13 @@
 # Will be imported by staging.py, production.py, etc.,
 # and some settings possibly overridden.
 import socket
+import os
 
 from .base import *
 
 # TODO: 後で PyConJP 風に設定する
+
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 DATABASES = {
     "default": {
@@ -48,7 +51,8 @@ SERVE_MEDIA = False
 # yes, use django-compressor on the server
 COMPRESS_ENABLED = True
 
-MEDIA_ROOT = os.environ['MEDIA_ROOT']
+MEDIA_ROOT = os.environ.get('MEDIA_ROOT',
+                            os.path.join(BASE_PATH, 'site_media'))
 
 from django.utils.log import DEFAULT_LOGGING
 LOGGING = DEFAULT_LOGGING.copy()

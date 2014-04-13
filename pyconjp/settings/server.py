@@ -24,11 +24,9 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = [
-    '.pycon.org',
-    '.python.org',
-    'staging-pycon.python.org',
-    socket.getfqdn(),
+    '.pycon.jp',
 ]
+USE_X_FORWARDED_HOST = True
 
 SECRET_KEY = os.environ['SECRET_KEY']
 

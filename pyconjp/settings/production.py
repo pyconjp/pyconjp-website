@@ -6,7 +6,7 @@ from .server import *
 # TODO: 後で PyConJP 風に設定する
 
 # From address for production
-DEFAULT_FROM_EMAIL = "PyCon 2014 <no-reply@us.pycon.org>"
+DEFAULT_FROM_EMAIL = "PyCon JP 2014 <no-reply@pycon.jp>"
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 LOGGING['filters']['static_fields']['fields']['environment'] = 'production'

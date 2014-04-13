@@ -31,8 +31,7 @@ USE_X_FORWARDED_HOST = True
 SECRET_KEY = os.environ['SECRET_KEY']
 
 ADMINS = (
-    ('Ernest W. Durbin III', 'ewdurbin@gmail.com'),
-    ('Caktus Pycon Team', 'pycon@caktusgroup.com'),
+    ('Ian Lewis', 'ianmlewis@pycon.jp'),
 )
 MANAGERS = ADMINS
 

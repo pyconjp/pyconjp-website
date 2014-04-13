@@ -15,10 +15,5 @@ ALLOWED_HOSTS = [
     'pycon.jp',
 ]
 
-LOGGING['handlers']['console']['filters'] = []
-LOGGING[''] = {
-    'handlers': ['console'],
-    'level': 'DEBUG',
-}
 import logging
 logging.basicConfig(level=logging.DEBUG)

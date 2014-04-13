@@ -24,7 +24,8 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = [
-    '.pycon.jp',
+    'pycon.jp',
+    'staging.pycon.jp',
 ]
 USE_X_FORWARDED_HOST = True
 

@@ -40,7 +40,7 @@ MANAGERS = ADMINS
 
 # Yes, send email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = env_or_default("EMAIL_HOST", "")
+EMAIL_HOST = env_or_default("EMAIL_HOST", "localhost")
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -51,7 +51,7 @@ SERVE_MEDIA = False
 # yes, use django-compressor on the server
 COMPRESS_ENABLED = True
 
-MEDIA_ROOT = os.environ.get('MEDIA_ROOT',
+MEDIA_ROOT = env_or_default('MEDIA_ROOT',
                             os.path.join(BASE_PATH, 'site_media'))
 
 import copy
@@ -92,14 +92,14 @@ LOGGING['handlers'].update({
         'level': 'INFO',
         'formatter': 'verbose',
         'class': 'logging.handlers.WatchedFileHandler',
-        'filename': os.environ.get('LOG_PATH',
+        'filename': env_or_default('LOG_PATH',
                                    '/var/log/pyconjp/pyconjp_website.log'),
     },
     'pyconjp_error_log': {
         'level': 'ERROR',
         'formatter': 'verbose',
         'class': 'logging.handlers.WatchedFileHandler',
-        'filename': os.environ.get('ERROR_LOG_PATH',
+        'filename': env_or_default('ERROR_LOG_PATH',
                                    '/var/log/pyconjp/pyconjp_website.error.log'),
     },
 })
@@ -107,7 +107,7 @@ LOGGING['loggers'].update({
     '': {
         # mail_admins will only accept ERROR and higher
         'handlers': ['console', 'pyconjp_log'],
-        'level': os.environ.get('LOG_LEVEL', 'INFO'),
+        'level': env_or_default('LOG_LEVEL', 'INFO'),
     },
     'django.request': {
         'handlers': ['mail_admins', 'pyconjp_error_log'],

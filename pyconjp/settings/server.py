@@ -57,6 +57,16 @@ MEDIA_ROOT = os.environ.get('MEDIA_ROOT',
 from django.utils.log import DEFAULT_LOGGING
 LOGGING = DEFAULT_LOGGING.copy()
 
+LOGGING['formatters'] = {
+    'verbose': {
+        'format': '[%(asctime)s][%(name)s] %(levelname)s %(message)s',
+        'datefmt': "%Y-%m-%d %H:%M:%S",
+    },
+    'simple': {
+        'format': '%(levelname)s %(message)s'
+    },
+}
+
 LOGGING['filters'].update(
     {
         'static_fields': {

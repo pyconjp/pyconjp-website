@@ -75,29 +75,42 @@ LOGGING['handlers'].update(
             'include_html': False,
             'filters': ['require_debug_false'],
         },
-        'sam_gelf': {
-            'class': 'graypy.GELFHandler',
-            'host': os.environ['GRAYLOG_HOST'],
-            'port': 12201,
-            'filters': ['static_fields', 'django_exc'],
-        }
+        'pyconjp_log': {
+            'level': 'INFO',
+            'formatter': 'verbose',
+            'class': 'logging.handlers.WatchedFileHandler',
+            'filename': os.environ.get('LOG_PATH',
+                                       '/var/log/pyconjp/pyconjp_website.log'),
+        },
+        'pyconjp_error_log': {
+            'level': 'ERROR',
+            'formatter': 'verbose',
+            'class': 'logging.handlers.WatchedFileHandler',
+            'filename': os.environ.get('ERROR_LOG_PATH',
+                                       '/var/log/pyconjp/pyconjp_website.error.log'),
+        },
     }
 )
 LOGGING['loggers'].update(
     {
+        '': {
+            # mail_admins will only accept ERROR and higher
+            'handlers': ['pyconjp_log'],
+            'level': os.environ.get('LOG_LEVEL', 'INFO'),
+        },
         'django.request': {
-            'handlers': ['mail_admins', 'sam_gelf'],
+            'handlers': ['mail_admins', 'pyconjp_error_log'],
             'level': 'ERROR',
             'propagate': True,
         },
         'pycon': {
             # mail_admins will only accept ERROR and higher
-            'handlers': ['mail_admins', 'sam_gelf'],
+            'handlers': ['mail_admins', 'pyconjp_error_log'],
             'level': 'WARNING',
         },
         'symposion': {
             # mail_admins will only accept ERROR and higher
-            'handlers': ['mail_admins', 'sam_gelf'],
+            'handlers': ['mail_admins', 'pyconjp_error_log'],
             'level': 'WARNING',
         }
     }

@@ -1,3 +1,5 @@
+#:coding=utf-8:
+
 # Production settings
 from .server import *
 

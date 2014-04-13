@@ -54,9 +54,11 @@ COMPRESS_ENABLED = True
 MEDIA_ROOT = os.environ.get('MEDIA_ROOT',
                             os.path.join(BASE_PATH, 'site_media'))
 
+import copy
 from django.utils.log import DEFAULT_LOGGING
-LOGGING = DEFAULT_LOGGING.copy()
+LOGGING = copy.deepcopy(DEFAULT_LOGGING)
 
+# NOTE: DEFAULT_LOGGING has not formatters defined.
 LOGGING['formatters'] = {
     'verbose': {
         'format': '[%(asctime)s][%(name)s] %(levelname)s %(message)s',
@@ -67,65 +69,59 @@ LOGGING['formatters'] = {
     },
 }
 
-LOGGING['filters'].update(
-    {
-        'static_fields': {
-            '()': 'pycon.logfilters.StaticFieldFilter',
-            'fields': {
-                'deployment': 'pycon',
-                'environment': '?'   # should be overridden
-            },
+LOGGING['filters'].update({
+    'static_fields': {
+        '()': 'pycon.logfilters.StaticFieldFilter',
+        'fields': {
+            'deployment': 'pycon',
+            'environment': '?'   # should be overridden
         },
-        'django_exc': {
-            '()': 'pycon.logfilters.RequestFilter',
-        },
+    },
+    'django_exc': {
+        '()': 'pycon.logfilters.RequestFilter',
+    },
+})
+LOGGING['handlers'].update({
+    'mail_admins': {
+        'level': 'ERROR',
+        'class': 'django.utils.log.AdminEmailHandler',
+        'include_html': False,
+        'filters': ['require_debug_false'],
+    },
+    'pyconjp_log': {
+        'level': 'INFO',
+        'formatter': 'verbose',
+        'class': 'logging.handlers.WatchedFileHandler',
+        'filename': os.environ.get('LOG_PATH',
+                                   '/var/log/pyconjp/pyconjp_website.log'),
+    },
+    'pyconjp_error_log': {
+        'level': 'ERROR',
+        'formatter': 'verbose',
+        'class': 'logging.handlers.WatchedFileHandler',
+        'filename': os.environ.get('ERROR_LOG_PATH',
+                                   '/var/log/pyconjp/pyconjp_website.error.log'),
+    },
+})
+LOGGING['loggers'].update({
+    '': {
+        # mail_admins will only accept ERROR and higher
+        'handlers': ['console', 'pyconjp_log'],
+        'level': os.environ.get('LOG_LEVEL', 'INFO'),
+    },
+    'django.request': {
+        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'level': 'ERROR',
+        'propagate': True,
+    },
+    'pycon': {
+        # mail_admins will only accept ERROR and higher
+        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'level': 'WARNING',
+    },
+    'symposion': {
+        # mail_admins will only accept ERROR and higher
+        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'level': 'WARNING',
     }
-)
-LOGGING['handlers'].update(
-    {
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler',
-            'include_html': False,
-            'filters': ['require_debug_false'],
-        },
-        'pyconjp_log': {
-            'level': 'INFO',
-            'formatter': 'verbose',
-            'class': 'logging.handlers.WatchedFileHandler',
-            'filename': os.environ.get('LOG_PATH',
-                                       '/var/log/pyconjp/pyconjp_website.log'),
-        },
-        'pyconjp_error_log': {
-            'level': 'ERROR',
-            'formatter': 'verbose',
-            'class': 'logging.handlers.WatchedFileHandler',
-            'filename': os.environ.get('ERROR_LOG_PATH',
-                                       '/var/log/pyconjp/pyconjp_website.error.log'),
-        },
-    }
-)
-LOGGING['loggers'].update(
-    {
-        '': {
-            # mail_admins will only accept ERROR and higher
-            'handlers': ['pyconjp_log'],
-            'level': os.environ.get('LOG_LEVEL', 'INFO'),
-        },
-        'django.request': {
-            'handlers': ['mail_admins', 'pyconjp_error_log'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-        'pycon': {
-            # mail_admins will only accept ERROR and higher
-            'handlers': ['mail_admins', 'pyconjp_error_log'],
-            'level': 'WARNING',
-        },
-        'symposion': {
-            # mail_admins will only accept ERROR and higher
-            'handlers': ['mail_admins', 'pyconjp_error_log'],
-            'level': 'WARNING',
-        }
-    }
-)
+})

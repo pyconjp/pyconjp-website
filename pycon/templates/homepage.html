@@ -22,10 +22,11 @@
             <div class="container">
                 <div class="row">
                     <div class="span12">
+                        {% comment %}
                         {% if config.REGISTRATION_STATUS != 'open' %}
                             <div class="promo no-link">
                                 {% if config.REGISTRATION_STATUS == 'soon' %}
-                                    <p>{% trans "Register Fall 2013" %}</p>
+                                    <p>{% trans "Register Fall 2013" %}2013</p>
                                 {% elif config.REGISTRATION_STATUS == 'closed' %}
                                     <p class="small">{% trans "Registration Closed" %}</p>
                                 {% else %}
@@ -33,6 +34,7 @@
                                 {% endif %}
                             </div>
                         {% endif %}
+                        {% endcomment %}
                         <div itemprop="summary" class="logo">PyCon 2014 Montreal April 9th &ndash; April 17th</div>
                         <div class="details">
                             <span itemprop="locality">Montreal</span>,
@@ -61,13 +63,16 @@
         </div>
         <div class="city">
             <div class="container">
+                {% comment %}
                 <div class="clouds">
                     <div id="two-clouds"></div>
                     <div id="one-cloud"></div>
                 </div>
-                <div class="montreal"></div>
+                {% endcomment %}
+
+                <div class="tokyo"></div>
             </div>
-            <div class="water"></div>
+            <div class="lawn"></div>
         </div>
     </div>
 {% endblock %}

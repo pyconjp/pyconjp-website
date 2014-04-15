@@ -14,4 +14,4 @@ site_media
 .ropeproject/
 program_export/
 venv/
-*?
+*~

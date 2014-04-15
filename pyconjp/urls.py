@@ -5,6 +5,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView, RedirectView
 
+from sitetree.sitetreeapp import register_i18n_trees
+
 admin.autodiscover()
 
 import symposion.views
@@ -75,3 +77,5 @@ urlpatterns = patterns("",
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# pycon site uses "main" sitetree. so the name of internationalized one must_be "main_${lang_code}"
+register_i18n_trees(['main'])

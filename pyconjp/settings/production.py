@@ -1,3 +1,5 @@
+#:coding=utf-8:
+
 # Production settings
 from .server import *
 
@@ -10,7 +12,7 @@ SERVER_EMAIL = DEFAULT_FROM_EMAIL
 LOGGING['filters']['static_fields']['fields']['environment'] = 'production'
 
 ALLOWED_HOSTS = [
-    'us.pycon.org',
+    'pycon.jp',
 ]
 
 LOGGING['handlers']['console']['filters'] = []

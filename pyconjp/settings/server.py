@@ -4,10 +4,13 @@
 # Will be imported by staging.py, production.py, etc.,
 # and some settings possibly overridden.
 import socket
+import os
 
 from .base import *
 
 # TODO: 後で PyConJP 風に設定する
+
+BASE_PATH = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 DATABASES = {
     "default": {
@@ -21,23 +24,21 @@ DATABASES = {
 }
 
 ALLOWED_HOSTS = [
-    '.pycon.org',
-    '.python.org',
-    'staging-pycon.python.org',
-    socket.getfqdn(),
+    'pycon.jp',
+    '.pycon.jp',
 ]
+USE_X_FORWARDED_HOST = True
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
 ADMINS = (
-    ('Ernest W. Durbin III', 'ewdurbin@gmail.com'),
-    ('Caktus Pycon Team', 'pycon@caktusgroup.com'),
+    ('Ian Lewis', 'ianmlewis@pycon.jp'),
 )
 MANAGERS = ADMINS
 
 # Yes, send email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = env_or_default("EMAIL_HOST", "")
+EMAIL_HOST = env_or_default("EMAIL_HOST", "localhost")
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -48,57 +49,77 @@ SERVE_MEDIA = False
 # yes, use django-compressor on the server
 COMPRESS_ENABLED = True
 
-MEDIA_ROOT = os.environ['MEDIA_ROOT']
+MEDIA_ROOT = env_or_default('MEDIA_ROOT',
+                            os.path.join(BASE_PATH, 'site_media'))
 
+import copy
 from django.utils.log import DEFAULT_LOGGING
-LOGGING = DEFAULT_LOGGING.copy()
+LOGGING = copy.deepcopy(DEFAULT_LOGGING)
 
-LOGGING['filters'].update(
-    {
-        'static_fields': {
-            '()': 'pycon.logfilters.StaticFieldFilter',
-            'fields': {
-                'deployment': 'pycon',
-                'environment': '?'   # should be overridden
-            },
+# NOTE: DEFAULT_LOGGING has not formatters defined.
+LOGGING['formatters'] = {
+    'verbose': {
+        'format': '[%(asctime)s][%(name)s] %(levelname)s %(message)s',
+        'datefmt': "%Y-%m-%d %H:%M:%S",
+    },
+    'simple': {
+        'format': '%(levelname)s %(message)s'
+    },
+}
+
+LOGGING['filters'].update({
+    'static_fields': {
+        '()': 'pycon.logfilters.StaticFieldFilter',
+        'fields': {
+            'deployment': 'pycon',
+            'environment': '?'   # should be overridden
         },
-        'django_exc': {
-            '()': 'pycon.logfilters.RequestFilter',
-        },
+    },
+    'django_exc': {
+        '()': 'pycon.logfilters.RequestFilter',
+    },
+})
+LOGGING['handlers'].update({
+    'mail_admins': {
+        'level': 'ERROR',
+        'class': 'django.utils.log.AdminEmailHandler',
+        'include_html': False,
+        'filters': ['require_debug_false'],
+    },
+    'pyconjp_log': {
+        'level': 'INFO',
+        'formatter': 'verbose',
+        'class': 'logging.handlers.WatchedFileHandler',
+        'filename': env_or_default('LOG_PATH',
+                                   '/var/log/pyconjp/pyconjp_website.log'),
+    },
+    'pyconjp_error_log': {
+        'level': 'ERROR',
+        'formatter': 'verbose',
+        'class': 'logging.handlers.WatchedFileHandler',
+        'filename': env_or_default('ERROR_LOG_PATH',
+                                   '/var/log/pyconjp/pyconjp_website.error.log'),
+    },
+})
+LOGGING['loggers'].update({
+    '': {
+        # mail_admins will only accept ERROR and higher
+        'handlers': ['console', 'pyconjp_log'],
+        'level': env_or_default('LOG_LEVEL', 'INFO'),
+    },
+    'django.request': {
+        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'level': 'ERROR',
+        'propagate': True,
+    },
+    'pycon': {
+        # mail_admins will only accept ERROR and higher
+        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'level': 'WARNING',
+    },
+    'symposion': {
+        # mail_admins will only accept ERROR and higher
+        'handlers': ['mail_admins', 'pyconjp_error_log'],
+        'level': 'WARNING',
     }
-)
-LOGGING['handlers'].update(
-    {
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler',
-            'include_html': False,
-            'filters': ['require_debug_false'],
-        },
-        'sam_gelf': {
-            'class': 'graypy.GELFHandler',
-            'host': os.environ['GRAYLOG_HOST'],
-            'port': 12201,
-            'filters': ['static_fields', 'django_exc'],
-        }
-    }
-)
-LOGGING['loggers'].update(
-    {
-        'django.request': {
-            'handlers': ['mail_admins', 'sam_gelf'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-        'pycon': {
-            # mail_admins will only accept ERROR and higher
-            'handlers': ['mail_admins', 'sam_gelf'],
-            'level': 'WARNING',
-        },
-        'symposion': {
-            # mail_admins will only accept ERROR and higher
-            'handlers': ['mail_admins', 'sam_gelf'],
-            'level': 'WARNING',
-        }
-    }
-)
+})

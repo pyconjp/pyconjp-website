@@ -52,7 +52,9 @@
                                 <div class="nav-collapse collapse">
                                 {% block topbar %}
                                     {% block nav %}
-                                    {% sitetree_menu from "main-"|add:LANGUAGE_CODE include "trunk" %}
+                                    {% with lang=LANGUAGE_CODE|default:"en" %}
+                                    {% sitetree_menu from "main-"|add:lang include "trunk" %}
+                                    {% endwith %}
                                     {% endblock %}
                                 {% endblock %}
                                 </div>

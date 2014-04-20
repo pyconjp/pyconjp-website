@@ -11,7 +11,7 @@
 {% load thumbnail %}
 {% load sitetree %}
 
-{% block head_title_base %}{% block head_title %}{% endblock %} | PyCon 2014 in Montr&#233;al{% endblock %}
+{% block head_title_base %}{% block head_title %}{% endblock %} | PyCon 2014 in TOKYO{% endblock %}
 
 {% block style_base %}
     {% compress css %}
@@ -128,6 +128,7 @@
     </div>
 
     <footer>
+        {% comment %}
         <div class="hills">
             <div class="trees-1"></div>
             <div class="trees-2"></div>
@@ -135,6 +136,8 @@
             <div class="hill-1"></div>
             <div class="hill-2"></div>
         </div>
+        {% endcomment %}
+
         <div class="container">
         {% block footer %}
             <a href="{%  url 'home' %}" class="logo">

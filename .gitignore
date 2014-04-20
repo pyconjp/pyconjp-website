@@ -13,3 +13,5 @@ pycon/settings/local.py
 site_media
 .ropeproject/
 program_export/
+venv/
+*~

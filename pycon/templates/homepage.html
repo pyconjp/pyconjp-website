@@ -49,7 +49,7 @@
                     <div class="schedule span12">
                         <ul>
                           {# TODO: <li><strong>{% trans "Tutorials" %}</strong> <br>TBD</li> #}
-                          <li><strong>{% trans "Conference" %}</strong> <br>September 13&ndash;15</li>
+                          <li><strong>{% trans "Conference" %}</strong> <br>{% trans "September 13&ndash;15" %}</li>
                           {# TODO: <li><strong>{% trans "Sprints" %}</strong> <br>TBD</li> #}
                         </ul>
                     </div>
@@ -79,6 +79,7 @@
 
 {% block body_outer %}
 <div class="container">
+    {% comment %}
     <div class="row">
         <div class="span12 sponsor-crawl">
             {% cache 600 "homepage-sponsor-slider" %}
@@ -116,8 +117,9 @@
             {% endcache %}
         </div>
     </div>
+    {% endcomment %}
 
-    <div class="row homepage-content">
+    <div class="row homepage-content" style="margin-top: 2em"{# TODO: CSS #}>
         {% latest_blog_posts as posts %}
         <div class="span8">
             <h3>{% trans "Announcements" %}</h3>
@@ -141,7 +143,8 @@
         </div>
 
         <div class="span4">
-            {% box "homepage-about" %}
+          {# homepage-about for each language #} 
+          {% box "homepage-about-"|add:LANGUAGE_CODE %}
         </div>
     </div>
 </div>

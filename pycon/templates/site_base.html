@@ -11,7 +11,7 @@
 {% load thumbnail %}
 {% load sitetree %}
 
-{% block head_title_base %}{% block head_title %}{% endblock %} | PyCon 2014 in TOKYO{% endblock %}
+{% block head_title_base %}{% block head_title %}{% endblock %} | PyCon JP 2014 in TOKYO{% endblock %}
 
 {% block style_base %}
     {% compress css %}
@@ -61,7 +61,7 @@
         {% block main_nav %}
             <nav>
                 <div class="container">
-                    <a class="logo-small" href="{% url 'home' %}">PyCon 2014 in Montr&#233;al</a>
+                    <a class="logo-small" href="{% url 'home' %}">PyCon JP 2014 in Tokyo</a>
                     <div class="navbar navbar-inverse">
                         <div class="navbar-inner">
                             {% block topbar %}
@@ -141,25 +141,22 @@
         <div class="container">
         {% block footer %}
             <a href="{%  url 'home' %}" class="logo">
-                <img src="{{ STATIC_URL }}img/pycon2014-logo-footer@2x.png" alt="PyCon 2014 in Montr&#233;al">
+                <img src="{{ STATIC_URL }}img/pycon2014-logo-footer@2x.png" alt="PyCon JP 2014 in Tokyo">
             </a>
             <div class="footer-content">
                 <p>
                   {% blocktrans %}
-                    PyCon 2014 in Montr&#233;al is a production of the <a href="http://python.org/psf/">Python Software Foundation</a>.
+                    PyCon JP 2014 in Tokyo is a production of the <a href="http://www.pycon.jp/psf/">PyCon JP Management Team</a>.
                   {% endblocktrans %}
                 </p>
                 <p>
                   {% blocktrans %}
-                    Site built by <a href="http://caktusgroup.com">Caktus Consulting Group, LLC.</a> using <a href="http://eldarion.com/symposion/" title="Symposion — An Open Platform for Conference Websites">Symposion</a>.
-                  {% endblocktrans %}
-                  {% blocktrans %}
-                    Hosting provided by <a href="http://osuosl.org">OSU Open Source Lab</a>.
+                    Site forked from the <a href="http://us.pycon.jp/2014">PyCon 2014</a> site built by <a href="http://caktusgroup.com">Caktus Consulting Group, LLC.</a> using <a href="http://eldarion.com/symposion/" title="Symposion — An Open Platform for Conference Websites">Symposion</a>.
                   {% endblocktrans %}
                 </p>
                 <p>
                   {% blocktrans %}
-                    Questions? Comments? Contact <a href="mailto:pycon-organizers@python.org">pycon-organizers@python.org</a>
+                    Questions? Comments? Contact <a href="mailto:pycon-organizers-jp@googlegroups.com">pycon-organizers-jp@@googlegroups.com</a>
                   {% endblocktrans %}
                 </p>
             </div>

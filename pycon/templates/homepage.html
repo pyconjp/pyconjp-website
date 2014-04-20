@@ -9,7 +9,7 @@
 {% load boxes_tags %}
 {% load biblion_tags %}
 
-{% block head_title_base %}PyCon 2014 in Montr&#233;al | April 9th &ndash; April 17th{% endblock %}
+{% block head_title_base %}PyCon JP 2014 in Tokyo | September 13th &ndash; September 15th{% endblock %}
 
 {% block body_class %}
     {{ block.super }}
@@ -35,12 +35,12 @@
                             </div>
                         {% endif %}
                         {% endcomment %}
-                        <div itemprop="summary" class="logo">PyCon 2014 Montreal April 9th &ndash; April 17th</div>
+                        <div itemprop="summary" class="logo">PyCon JP 2014 Tokyo September 13th &ndash; September 15th</div>
                         <div class="details">
-                            <span itemprop="locality">Montreal</span>,
-                            <span itemprop="country-name">Canada</span>,
-                            <time itemprop="startDate" datetime="2014-4-9">April 9</time>&ndash;
-                            <time itemprop="endDate" datetime="2014-4-17">17</time>
+                            <span itemprop="locality">Tokyo</span>,
+                            <span itemprop="country-name">Japan</span>,
+                            <time itemprop="startDate" datetime="2014-9-13">September 13</time>&ndash;
+                            <time itemprop="endDate" datetime="2014-9-15">15</time>
                         </div>
 
                     </div>
@@ -48,15 +48,15 @@
                 <div class="row">
                     <div class="schedule span12">
                         <ul>
-                            <li><strong>{% trans "Tutorials" %}</strong> <br>April 9&ndash;10</li>
-                            <li><strong>{% trans "Conference" %}</strong> <br>April 11&ndash;13</li>
-                            <li><strong>{% trans "Sprints" %}</strong> <br>April 14&ndash;17</li>
+                          {# TODO: <li><strong>{% trans "Tutorials" %}</strong> <br>TBD</li> #}
+                          <li><strong>{% trans "Conference" %}</strong> <br>September 13&ndash;15</li>
+                          {# TODO: <li><strong>{% trans "Sprints" %}</strong> <br>TBD</li> #}
                         </ul>
                     </div>
                 </div>
                 {% if config.REGISTRATION_STATUS == 'open' %}
                     <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
-                       <a href="{% url 'registration_start' %}">REGISTER</a>
+                      <a href="{% url 'registration_start' %}">{% trans "REGISTER" %}</a>
                     </div>
                 {% endif %}
             </div>
@@ -82,7 +82,7 @@
     <div class="row">
         <div class="span12 sponsor-crawl">
             {% cache 600 "homepage-sponsor-slider" %}
-                <h2 class="scroll-title">Sponsors</h2>
+                <h2 class="scroll-title">{% trans "Sponsors" %}</h2>
                 {% sponsors "diamond" as diamond_sponsors %}
                 <div id="sponsorslider" class="carousel slide">
                     <!-- Carousel items -->

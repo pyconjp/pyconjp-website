@@ -128,12 +128,13 @@ TEMPLATE_LOADERS = [
 MIDDLEWARE_CLASSES = [
     "djangosecure.middleware.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    # LocaleMiddleware must follow session middleware and cache middleware,
-    # and precede commonmiddleware
-    "django.middleware.locale.LocaleMiddleware",
-    "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    # LocaleMiddleware must follow session middleware, auth middleware,
+    # and and cache middleware, and precede commonmiddleware
+    #"django.middleware.locale.LocaleMiddleware",
+    "account.middleware.LocaleMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django_openid.consumer.SessionConsumer",
     "django.contrib.messages.middleware.MessageMiddleware",
     "reversion.middleware.RevisionMiddleware",

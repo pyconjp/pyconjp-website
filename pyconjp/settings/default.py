@@ -7,7 +7,7 @@
 import sys
 
 try:
-    from .local import *
+    from .local import *  # NOQA
 except ImportError:
     print("ERROR: A pycon/settings/local.py file is required but was "
           "not found.")

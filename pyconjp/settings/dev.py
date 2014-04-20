@@ -1,7 +1,7 @@
 #:coding=utf-8:
 
 # Top settings file for development
-from .base import *
+from .base import *  # NOQA
 
 COMPRESS_ENABLED = False
 DEBUG = True

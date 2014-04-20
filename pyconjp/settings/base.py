@@ -1,4 +1,4 @@
-from pycon.settings.base import *
+from pycon.settings.base import *  # NOQA
 
 INSTALLED_APPS.append('pyconjp.account')
 INSTALLED_APPS.append('restcms')

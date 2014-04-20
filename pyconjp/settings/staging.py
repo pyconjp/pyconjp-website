@@ -1,7 +1,7 @@
 #:coding=utf-8:
 
 # Staging settings
-from .server import *
+from .server import *  # NOQA
 
 # TODO: 後で PyConJP 風に設定する
 

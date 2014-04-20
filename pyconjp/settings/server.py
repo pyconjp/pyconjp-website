@@ -3,10 +3,9 @@
 # Common settings for deployed servers
 # Will be imported by staging.py, production.py, etc.,
 # and some settings possibly overridden.
-import socket
 import os
 
-from .base import *
+from .base import *  # NOQA
 
 # TODO: 後で PyConJP 風に設定する
 

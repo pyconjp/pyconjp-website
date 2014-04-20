@@ -3,7 +3,7 @@
 # Settings file for running tests locally
 # See also travis.py
 
-from .base import *
+from .base import *  # NOQA
 
 # Use nose and its test runner so we only run our own tests and not those
 # of every app installed.

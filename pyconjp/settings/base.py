@@ -6,6 +6,8 @@ INSTALLED_APPS.remove('symposion.cms')
 
 ROOT_URLCONF = 'pyconjp.urls'
 
+TIME_ZONE = 'Asia/Tokyo'
+
 LANGUAGES = (
     ('en', 'English'),
     ('ja', 'Japanese'),

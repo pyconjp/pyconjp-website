@@ -104,6 +104,7 @@
                         </div>
                         <aside class="span2">
                             {% block sidebar %}
+                            {% comment %}
                             {% cache 600 "sidebar" %}
                                 <div class="sponsor-list">
                                     <h2>{% trans "SPONSORS" %}</h2>
@@ -120,6 +121,7 @@
                                     {% endfor %}
                                 </div>
                             {% endcache %}
+                            {% endcomment %}
                             {% endblock %}
                         </aside>
                     </div>

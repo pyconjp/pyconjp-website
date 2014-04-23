@@ -33,7 +33,7 @@
 
 @blueLight:   #55b6d9;
 @blueDark:    #2871ba;
-@blueSky:     #ade2f5;
+@blueSky:     #d2f6ff;
 
 @greenLight:  #76c34d;
 // #62a83d
@@ -284,7 +284,7 @@ textarea[class*="span"] {
 }
 
 header.main {
-  .box-shadow(0 0 20px rgba(0,0,0,0.15));
+  // .box-shadow(0 0 20px rgba(0,0,0,0.15));
   border-bottom: 1px solid rgba(0,0,0,0.09);
   z-index: 99;
   position: relative;
@@ -624,7 +624,7 @@ header.main {
       .navbar-inner {
         background: transparent;
         .box-shadow(none);
-        margin: 42px 0 0 40px;
+        margin: 42px 0 0 60px;
         border: none;
       }
 
@@ -711,7 +711,7 @@ header.main {
       top: 5px;
       left: 0;
       width: 365px;
-      height: 65px;
+      height: 71px;
       background:url(../img/pycon2014-logo_sub.png) no-repeat 0 0;
       text-indent: -9999px;
     }
@@ -810,7 +810,7 @@ body.home {
       li {
         padding: 10px 0;
         display: inline-block;
-        background-color: lighten(@blueSky, 10%);
+        background-color: @blueSky;
         .border-radius(8px);
         border: 4px solid @white;
         line-height: 24px;
@@ -823,6 +823,15 @@ body.home {
     position: relative;
     // background-color: @blueSky;
     height: 225px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 13%, #edfaff 52%, #cbeced 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(13%,#ffffff), color-stop(52%,#edfaff), color-stop(100%,#cbeced)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 13%,#edfaff 52%,#cbeced 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 13%,#edfaff 52%,#cbeced 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 13%,#edfaff 52%,#cbeced 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffff 13%,#edfaff 52%,#cbeced 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cbeced',GradientType=0 ); /* IE6-9 */
+
 
     .tokyo {
       position: relative;
@@ -1163,7 +1172,7 @@ body.cms-page {
   Overrides styles for devices with a
   device-pixel-ratio of 2+, such as iPhone 4.
 =========================================== */
-
+// TODO ★1>2
 @media
   only screen and (-webkit-min-device-pixel-ratio: 2),
   only screen and (min-device-pixel-ratio: 2) {
@@ -1177,7 +1186,8 @@ body.cms-page {
 
   body.home .sky .logo {
     background-image: url(../img/pycon2014-logo@2x.png);
-    background-size: 522px 105px;
+    background-size: 522px 380px;
+    height: 380px;
   }
   .montreal {
     background: url("../img/montreal@2x.png") no-repeat scroll 0 0 transparent;

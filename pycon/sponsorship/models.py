@@ -374,7 +374,7 @@ class SponsorBenefit(models.Model):
 
     def _is_complete(self):
         return self.active and \
-            ((self.benefit.type in ('text', 'richtext') and bool(self.text))
+            ((self.benefit.type in ('text', 'richtext', 'simple') and bool(self.text))
                 or (self.benefit.type in ('file', 'weblogo') and bool(self.upload)))
 
 

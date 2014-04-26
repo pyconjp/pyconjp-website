@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-26 19:09+0900\n"
+"POT-Creation-Date: 2014-04-26 19:50+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -757,6 +757,30 @@ msgstr ""
 msgid "Slot"
 msgstr ""
 
+#: pycon/templates/dashboard.html:169
+msgid "Financial Aid"
+msgstr ""
+
+#: pycon/templates/dashboard.html:176
+msgid "Apply for financial aid"
+msgstr ""
+
+#: pycon/templates/dashboard.html:182
+msgid "Edit financial aid application"
+msgstr ""
+
+#: pycon/templates/dashboard.html:188
+msgid "Financial aid application status"
+msgstr ""
+
+#: pycon/templates/dashboard.html:194
+msgid "Review applications"
+msgstr ""
+
+#: pycon/templates/dashboard.html:200
+msgid "Download applications"
+msgstr ""
+
 #: pycon/templates/dashboard.html:211
 #: symposion/templates/sponsorship/detail.html:8
 msgid "Sponsorship"
@@ -768,6 +792,10 @@ msgstr ""
 
 #: pycon/templates/dashboard.html:222
 msgid "Apply to be a sponsor"
+msgstr ""
+
+#: pycon/templates/dashboard.html:228
+msgid "Download sponsor logos"
 msgstr ""
 
 #: pycon/templates/dashboard.html:235
@@ -815,6 +843,14 @@ msgstr ""
 
 #: pycon/templates/dashboard.html:373
 msgid "Program Export"
+msgstr ""
+
+#: pycon/templates/dashboard.html:376
+msgid "Export Program Data"
+msgstr ""
+
+#: pycon/templates/dashboard.html:377
+msgid "This action may take up to a minute to complete."
 msgstr ""
 
 #: pycon/templates/homepage.html:53
@@ -1042,6 +1078,7 @@ msgid "Save changes"
 msgstr ""
 
 #: pycon/templates/boxes/box.html:39
+#: symposion/templates/proposals/_proposal_row.html:28
 #: symposion/templates/speakers/speaker_profile.html:35
 msgid "Edit"
 msgstr ""

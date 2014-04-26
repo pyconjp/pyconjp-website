@@ -8,6 +8,7 @@
 # Takanori Suzuki <takanori@takanory.net>, 2014
 # Takuya Okada <okokada.takuya@gmail.com>, 2014
 # shirou - しろう <shirou.faw@gmail.com>, 2014
+# Ryuji TSUTSUI <ryu22e@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
@@ -193,7 +194,7 @@ msgstr ""
 #: symposion/templates/proposals/_pending_proposal_row.html:17
 #: symposion/templates/proposals/_proposal_row.html:17
 msgid "Submitted"
-msgstr ""
+msgstr "提出済み"
 
 #: pycon/finaid/models.py:34
 msgid "Withdrawn"
@@ -723,7 +724,7 @@ msgstr "変更する"
 
 #: pycon/templates/dashboard.html:42 pycon/templates/dashboard.html.py:131
 msgid "Speaking"
-msgstr ""
+msgstr "スピーキング"
 
 #: pycon/templates/dashboard.html:49 pycon/templates/dashboard.html.py:135
 msgid "Edit your speaker profile"
@@ -756,7 +757,7 @@ msgstr "ステータス"
 #: pycon/templates/dashboard.html:68 pycon/templates/dashboard.html.py:88
 #: pycon/templates/dashboard.html:106
 msgid "Actions"
-msgstr ""
+msgstr "アクション"
 
 #: pycon/templates/dashboard.html:75
 msgid "No proposals submitted yet."
@@ -835,15 +836,15 @@ msgstr "スポンサーに応募する"
 
 #: pycon/templates/dashboard.html:228
 msgid "Download sponsor logos"
-msgstr ""
+msgstr "スポンサーロゴをダウンロードする"
 
 #: pycon/templates/dashboard.html:235
 msgid "Your Sponsorship"
-msgstr ""
+msgstr "あなたのスポンサーシップ"
 
 #: pycon/templates/dashboard.html:245
 msgid "awaiting approval"
-msgstr ""
+msgstr "承認待ち"
 
 #: pycon/templates/dashboard.html:259 symposion/templates/dashboard.html:195
 #: symposion/templates/reviews/base.html:85
@@ -852,7 +853,7 @@ msgstr "審査"
 
 #: pycon/templates/dashboard.html:263
 msgid "Review Sections"
-msgstr ""
+msgstr "レビューセクション"
 
 #: pycon/templates/dashboard.html:271
 msgid "Proposals you have reviewed"
@@ -866,7 +867,7 @@ msgstr "スピーカー / タイトル"
 
 #: pycon/templates/dashboard.html:276
 msgid "Your Vote"
-msgstr ""
+msgstr "あなたの投票"
 
 #: pycon/templates/dashboard.html:323 symposion/templates/dashboard.html:259
 msgid "Teams"
@@ -874,23 +875,23 @@ msgstr "チーム"
 
 #: pycon/templates/dashboard.html:328
 msgid "Your Teams"
-msgstr ""
+msgstr "あなたのチーム"
 
 #: pycon/templates/dashboard.html:349
 msgid "Available Teams"
-msgstr ""
+msgstr "有効なチーム"
 
 #: pycon/templates/dashboard.html:373
 msgid "Program Export"
-msgstr ""
+msgstr "プログラムのエクスポート"
 
 #: pycon/templates/dashboard.html:376
 msgid "Export Program Data"
-msgstr ""
+msgstr "プログラムデータをエクスポートする"
 
 #: pycon/templates/dashboard.html:377
 msgid "This action may take up to a minute to complete."
-msgstr ""
+msgstr "このアクションは完了まで数分かかることがあります。"
 
 #: pycon/templates/homepage.html:53
 msgid "Conference"

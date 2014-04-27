@@ -36,7 +36,7 @@
                   </div>
                 {% endif %}
 
-               {% if user.speaker_profile.proposals.exists or proposals_are_open %}
+               {% if user.speaker_profile or proposals_are_open %}
                 <div class="dashboard-panel">
                     <div class="dashboard-panel-header">
                         <i class="icon-bullhorn"></i>
@@ -124,6 +124,7 @@
                         {% endif %}
                     </div>
                 </div>
+                {% endif %}
 
                 {% if user.speaker_profile.all_presentations %}
                     <div class="dashboard-panel">

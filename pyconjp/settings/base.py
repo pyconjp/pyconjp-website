@@ -12,3 +12,5 @@ LANGUAGES = (
     ('en', 'English'),
     ('ja', 'Japanese'),
 )
+
+PROPOSAL_FORMS['talk'] = 'pyconjp.forms.PyConJPTalkProposalForm'

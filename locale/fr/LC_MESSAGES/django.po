@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-26 19:50+0900\n"
+"POT-Creation-Date: 2014-04-29 21:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -527,7 +527,7 @@ msgstr ""
 msgid "sponsor levels"
 msgstr ""
 
-#: pycon/sponsorship/models.py:74 pycon/templates/dashboard.html:341
+#: pycon/sponsorship/models.py:74 pycon/templates/dashboard.html:343
 msgid "applicant"
 msgstr ""
 
@@ -688,168 +688,168 @@ msgstr ""
 msgid "Change"
 msgstr ""
 
-#: pycon/templates/dashboard.html:42 pycon/templates/dashboard.html.py:131
+#: pycon/templates/dashboard.html:43 pycon/templates/dashboard.html.py:133
 msgid "Speaking"
 msgstr ""
 
-#: pycon/templates/dashboard.html:49 pycon/templates/dashboard.html.py:135
+#: pycon/templates/dashboard.html:50 pycon/templates/dashboard.html.py:137
 msgid "Edit your speaker profile"
 msgstr ""
 
-#: pycon/templates/dashboard.html:55
+#: pycon/templates/dashboard.html:56
 msgid "Submit a new proposal"
 msgstr ""
 
-#: pycon/templates/dashboard.html:61
+#: pycon/templates/dashboard.html:62
 msgid "Your Proposals"
 msgstr ""
 
-#: pycon/templates/dashboard.html:65 pycon/templates/dashboard.html.py:85
-#: pycon/templates/dashboard.html:103 pycon/templates/dashboard.html.py:146
-msgid "Title"
-msgstr ""
-
 #: pycon/templates/dashboard.html:66 pycon/templates/dashboard.html.py:86
-#: pycon/templates/dashboard.html:104
-msgid "Session type"
+#: pycon/templates/dashboard.html:104 pycon/templates/dashboard.html.py:148
+msgid "Title"
 msgstr ""
 
 #: pycon/templates/dashboard.html:67 pycon/templates/dashboard.html.py:87
 #: pycon/templates/dashboard.html:105
-#: symposion/templates/reviews/result_notification.html:48
-msgid "Status"
+msgid "Session type"
 msgstr ""
 
 #: pycon/templates/dashboard.html:68 pycon/templates/dashboard.html.py:88
 #: pycon/templates/dashboard.html:106
+#: symposion/templates/reviews/result_notification.html:48
+msgid "Status"
+msgstr ""
+
+#: pycon/templates/dashboard.html:69 pycon/templates/dashboard.html.py:89
+#: pycon/templates/dashboard.html:107
 msgid "Actions"
 msgstr ""
 
-#: pycon/templates/dashboard.html:75
+#: pycon/templates/dashboard.html:76
 msgid "No proposals submitted yet."
 msgstr ""
 
-#: pycon/templates/dashboard.html:82
+#: pycon/templates/dashboard.html:83
 msgid "Proposals you have joined as an additional speaker"
 msgstr ""
 
-#: pycon/templates/dashboard.html:100
+#: pycon/templates/dashboard.html:101
 msgid "Proposals you have been invited to join"
 msgstr ""
 
-#: pycon/templates/dashboard.html:116
+#: pycon/templates/dashboard.html:117
 msgid "To submit a proposal, first create a speaker profile."
 msgstr ""
 
-#: pycon/templates/dashboard.html:120
+#: pycon/templates/dashboard.html:121
 msgid "Create a speaker profile"
 msgstr ""
 
-#: pycon/templates/dashboard.html:141
+#: pycon/templates/dashboard.html:143
 msgid "Your Presentations"
 msgstr ""
 
-#: pycon/templates/dashboard.html:145
+#: pycon/templates/dashboard.html:147
 msgid "Session Type"
 msgstr ""
 
-#: pycon/templates/dashboard.html:147
+#: pycon/templates/dashboard.html:149
 msgid "Slot"
 msgstr ""
 
-#: pycon/templates/dashboard.html:169
+#: pycon/templates/dashboard.html:171
 msgid "Financial Aid"
 msgstr ""
 
-#: pycon/templates/dashboard.html:176
+#: pycon/templates/dashboard.html:178
 msgid "Apply for financial aid"
 msgstr ""
 
-#: pycon/templates/dashboard.html:182
+#: pycon/templates/dashboard.html:184
 msgid "Edit financial aid application"
 msgstr ""
 
-#: pycon/templates/dashboard.html:188
+#: pycon/templates/dashboard.html:190
 msgid "Financial aid application status"
 msgstr ""
 
-#: pycon/templates/dashboard.html:194
+#: pycon/templates/dashboard.html:196
 msgid "Review applications"
 msgstr ""
 
-#: pycon/templates/dashboard.html:200
+#: pycon/templates/dashboard.html:202
 msgid "Download applications"
 msgstr ""
 
-#: pycon/templates/dashboard.html:211
+#: pycon/templates/dashboard.html:213
 #: symposion/templates/sponsorship/detail.html:8
 msgid "Sponsorship"
 msgstr ""
 
-#: pycon/templates/dashboard.html:217
+#: pycon/templates/dashboard.html:219
 msgid "Learn about sponsorship"
 msgstr ""
 
-#: pycon/templates/dashboard.html:222
+#: pycon/templates/dashboard.html:224
 msgid "Apply to be a sponsor"
 msgstr ""
 
-#: pycon/templates/dashboard.html:228
+#: pycon/templates/dashboard.html:230
 msgid "Download sponsor logos"
 msgstr ""
 
-#: pycon/templates/dashboard.html:235
+#: pycon/templates/dashboard.html:237
 msgid "Your Sponsorship"
 msgstr ""
 
-#: pycon/templates/dashboard.html:245
+#: pycon/templates/dashboard.html:247
 msgid "awaiting approval"
 msgstr ""
 
-#: pycon/templates/dashboard.html:259 symposion/templates/dashboard.html:195
+#: pycon/templates/dashboard.html:261 symposion/templates/dashboard.html:195
 #: symposion/templates/reviews/base.html:85
 msgid "Reviews"
 msgstr ""
 
-#: pycon/templates/dashboard.html:263
+#: pycon/templates/dashboard.html:265
 msgid "Review Sections"
 msgstr ""
 
-#: pycon/templates/dashboard.html:271
+#: pycon/templates/dashboard.html:273
 msgid "Proposals you have reviewed"
 msgstr ""
 
-#: pycon/templates/dashboard.html:275
+#: pycon/templates/dashboard.html:277
 #: symposion/templates/reviews/_review_table.html:7
 #: symposion/templates/reviews/result_notification.html:46
 msgid "Speaker / Title"
 msgstr ""
 
-#: pycon/templates/dashboard.html:276
+#: pycon/templates/dashboard.html:278
 msgid "Your Vote"
 msgstr ""
 
-#: pycon/templates/dashboard.html:323 symposion/templates/dashboard.html:259
+#: pycon/templates/dashboard.html:325 symposion/templates/dashboard.html:259
 msgid "Teams"
 msgstr ""
 
-#: pycon/templates/dashboard.html:328
+#: pycon/templates/dashboard.html:330
 msgid "Your Teams"
 msgstr ""
 
-#: pycon/templates/dashboard.html:349
+#: pycon/templates/dashboard.html:351
 msgid "Available Teams"
 msgstr ""
 
-#: pycon/templates/dashboard.html:373
+#: pycon/templates/dashboard.html:375
 msgid "Program Export"
 msgstr ""
 
-#: pycon/templates/dashboard.html:376
+#: pycon/templates/dashboard.html:378
 msgid "Export Program Data"
 msgstr ""
 
-#: pycon/templates/dashboard.html:377
+#: pycon/templates/dashboard.html:379
 msgid "This action may take up to a minute to complete."
 msgstr ""
 

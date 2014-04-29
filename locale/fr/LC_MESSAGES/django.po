@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-29 21:07+0900\n"
+"POT-Creation-Date: 2014-04-29 23:36+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -192,11 +192,11 @@ msgstr ""
 msgid "Rejected"
 msgstr ""
 
-#: pycon/finaid/models.py:38 symposion/proposals/models.py:199
+#: pycon/finaid/models.py:38 symposion/proposals/models.py:201
 msgid "Declined"
 msgstr ""
 
-#: pycon/finaid/models.py:39 symposion/proposals/models.py:198
+#: pycon/finaid/models.py:39 symposion/proposals/models.py:200
 #: symposion/templates/proposals/_pending_proposal_row.html:15
 #: symposion/templates/proposals/_proposal_row.html:15
 msgid "Accepted"
@@ -873,13 +873,13 @@ msgstr ""
 msgid "REGISTER"
 msgstr ""
 
-#: pycon/templates/homepage.html:128
+#: pycon/templates/homepage.html:130
 #: symposion/templates/biblion/blog_list.html:6
 #: symposion/templates/biblion/blog_list.html:12
 msgid "Announcements"
 msgstr ""
 
-#: pycon/templates/homepage.html:137
+#: pycon/templates/homepage.html:139
 #, python-format
 msgid ""
 "\n"
@@ -888,7 +888,7 @@ msgid ""
 "                            "
 msgstr ""
 
-#: pycon/templates/homepage.html:144
+#: pycon/templates/homepage.html:146
 msgid "No announcements have been published."
 msgstr ""
 
@@ -1340,7 +1340,7 @@ msgid "Category:"
 msgstr ""
 
 #: pycon/templates/schedule/presentation_detail.html:53
-#: symposion/proposals/models.py:89
+#: symposion/proposals/models.py:90
 #: symposion/templates/proposals/_proposal_fields.html:53
 #: symposion/templates/schedule/presentation_detail.html:33
 msgid "Description"
@@ -1742,35 +1742,35 @@ msgstr ""
 msgid "Comma-separated list of tags"
 msgstr ""
 
-#: symposion/proposals/models.py:35
+#: symposion/proposals/models.py:36
 msgid "When submissions open"
 msgstr ""
 
-#: symposion/proposals/models.py:37
+#: symposion/proposals/models.py:38
 msgid "When submissions close"
 msgstr ""
 
-#: symposion/proposals/models.py:74
+#: symposion/proposals/models.py:75
 #: symposion/templates/conference/user_list.html:63
 msgid "Name"
 msgstr ""
 
-#: symposion/proposals/models.py:94
+#: symposion/proposals/models.py:95
 msgid "Detailed Abstract"
 msgstr ""
 
-#: symposion/proposals/models.py:95
+#: symposion/proposals/models.py:96
 msgid "Detailed description. Will be made public if your talk is accepted."
 msgstr ""
 
-#: symposion/proposals/models.py:100
+#: symposion/proposals/models.py:101
 msgid ""
 "Anything else you'd like the program committee to know when making their "
 "selection: your past speaking experience, open source community experience, "
 "etc."
 msgstr ""
 
-#: symposion/proposals/models.py:197
+#: symposion/proposals/models.py:199
 msgid "Pending"
 msgstr ""
 

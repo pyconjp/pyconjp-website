@@ -14,3 +14,4 @@ LANGUAGES = (
 )
 
 PROPOSAL_FORMS['talk'] = 'pyconjp.forms.PyConJPTalkProposalForm'
+TEMPLATE_DIRS.insert(0, os.path.join(PROJECT_ROOT, "pyconjp/templates"))

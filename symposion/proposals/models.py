@@ -2,6 +2,7 @@ import datetime
 import os
 import uuid
 
+from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 from django.core.urlresolvers import reverse
 from django.db import models
@@ -109,6 +110,7 @@ class ProposalBase(models.Model):
     additional_speakers = models.ManyToManyField("speakers.Speaker", through="AdditionalSpeaker", blank=True)
     cancelled = models.BooleanField(default=False)
     tags = TaggableManager(blank=True)
+    language = models.CharField(max_length=2, default=settings.LANGUAGES[0][0], choices=settings.LANGUAGES)
 
     def __unicode__(self):
         return self.title

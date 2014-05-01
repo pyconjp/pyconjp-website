@@ -322,7 +322,8 @@ class SponsorBenefit(models.Model):
     active = models.BooleanField(default=True)
 
     # Limits: will initially be set to defaults from corresponding BenefitLevel
-    max_words = models.PositiveIntegerField(_("max words"), blank=True, null=True)
+    # TODO: Rename?
+    max_words = models.PositiveIntegerField(_("max characters"), blank=True, null=True)
     other_limits = models.CharField(_("other limits"), max_length=200, blank=True)
 
     # Data: zero or one of these fields will be used, depending on the
@@ -349,9 +350,11 @@ class SponsorBenefit(models.Model):
         super(SponsorBenefit, self).save(*args, **kwargs)
 
     def clean(self):
-        if self.max_words and len(self.text.split()) > self.max_words:
-            raise ValidationError("Sponsorship level only allows for %s "
-                                  "words." % self.max_words)
+        if self.max_words and len(self.text) > self.max_words:
+            raise ValidationError(_("Sponsorship level only allows for "
+                                    "%(max_words)s characters.") % {
+                'max_words': self.max_words,
+            })
         editable_fields = self.data_fields()
         if bool(self.text) and 'text' not in editable_fields:
             raise ValidationError("Benefit type %s may not have text"

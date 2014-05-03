@@ -79,8 +79,6 @@
 
 {% block body_outer %}
 <div class="container">
-    {# TODO: Sponsor 表示 #}
-    {% comment %}
     {% cache 600 "homepage-sponsor-slider" %}
     {% sponsors as all_sponsors %}
     {% if all_sponsors %}
@@ -119,7 +117,6 @@
     </div>
     {% endif %}
     {% endcache %}
-    {% endcomment %}
 
     <div class="row homepage-content" style="margin-top: 2em"{# TODO: スポンサーを表示する時にマージンがいらない #}>
         {% latest_blog_posts as posts %}

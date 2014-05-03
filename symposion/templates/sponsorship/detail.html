@@ -8,6 +8,11 @@
 {% block page_title %}{% trans "Sponsorship" %}{% endblock %}
 
 {% block body %}
+    <div class="alert alert-info">
+      {% trans "Your sponsorship has been submitted! Thank you!" %}<br />
+      {% trans "Please enter the information below at your leasure. Your submission will become active once it has been reviewed and you have uploaded an image and text for use on the website." %}
+    </div>
+
     <h2>{{ sponsor.name }} ({{ sponsor.level }})</h2>
 
     <form enctype="multipart/form-data" method="POST" action="" class="form-horizontal">

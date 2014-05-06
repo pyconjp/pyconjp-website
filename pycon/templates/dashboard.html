@@ -238,12 +238,9 @@
                                 <ul>
                                     {% for sponsorship in user.sponsorships.all %}
                                         <li>
-                                            {% if sponsorship.active %}
-                                                <a href="{% url 'sponsor_detail' sponsorship.pk %}"><b>{{ sponsorship.name }}</b></a>
-                                                ({{ sponsorship.level }})
-                                            {% else %}
-                                                <b>{{ sponsorship.name }}</b>
-                                                ({{ sponsorship.level }})
+                                            <a href="{% url 'sponsor_detail' sponsorship.pk %}"><b>{{ sponsorship.name }}</b></a>
+                                            ({{ sponsorship.level }})
+                                            {% if not sponsorship.active %}
                                                 <span class="label label-warning">{% trans "awaiting approval" %}</span>
                                             {% endif %}
                                         </li>

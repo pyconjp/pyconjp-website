@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-29 23:36+0900\n"
+"POT-Creation-Date: 2014-05-06 18:35+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -467,7 +467,7 @@ msgstr ""
 msgid "None"
 msgstr ""
 
-#: pycon/sponsorship/forms.py:80 pycon/sponsorship/forms.py:83
+#: pycon/sponsorship/forms.py:79 pycon/sponsorship/forms.py:82
 msgid "(comma-separated addresses)"
 msgstr ""
 
@@ -527,7 +527,7 @@ msgstr ""
 msgid "sponsor levels"
 msgstr ""
 
-#: pycon/sponsorship/models.py:74 pycon/templates/dashboard.html:343
+#: pycon/sponsorship/models.py:74 pycon/templates/dashboard.html:340
 msgid "applicant"
 msgstr ""
 
@@ -609,24 +609,33 @@ msgstr ""
 msgid "benefit"
 msgstr ""
 
-#: pycon/sponsorship/models.py:300 pycon/sponsorship/models.py:325
+#: pycon/sponsorship/models.py:300
 msgid "max words"
 msgstr ""
 
-#: pycon/sponsorship/models.py:301 pycon/sponsorship/models.py:326
+#: pycon/sponsorship/models.py:301 pycon/sponsorship/models.py:327
 msgid "other limits"
 msgstr ""
 
-#: pycon/sponsorship/models.py:330
-msgid "text"
+#: pycon/sponsorship/models.py:326
+msgid "max characters"
 msgstr ""
 
 #: pycon/sponsorship/models.py:331
+msgid "text"
+msgstr ""
+
+#: pycon/sponsorship/models.py:332
 msgid "file"
 msgstr ""
 
-#: pycon/sponsorship/models.py:335
+#: pycon/sponsorship/models.py:336
 msgid "True - benefit complete; False - benefit incomplete; Null - n/a"
+msgstr ""
+
+#: pycon/sponsorship/models.py:354
+#, python-format
+msgid "Sponsorship level only allows for %(max_words)s characters."
 msgstr ""
 
 #: pycon/sponsorship/views.py:179
@@ -802,54 +811,54 @@ msgstr ""
 msgid "Your Sponsorship"
 msgstr ""
 
-#: pycon/templates/dashboard.html:247
+#: pycon/templates/dashboard.html:244
 msgid "awaiting approval"
 msgstr ""
 
-#: pycon/templates/dashboard.html:261 symposion/templates/dashboard.html:195
+#: pycon/templates/dashboard.html:258 symposion/templates/dashboard.html:195
 #: symposion/templates/reviews/base.html:85
 msgid "Reviews"
 msgstr ""
 
-#: pycon/templates/dashboard.html:265
+#: pycon/templates/dashboard.html:262
 msgid "Review Sections"
 msgstr ""
 
-#: pycon/templates/dashboard.html:273
+#: pycon/templates/dashboard.html:270
 msgid "Proposals you have reviewed"
 msgstr ""
 
-#: pycon/templates/dashboard.html:277
+#: pycon/templates/dashboard.html:274
 #: symposion/templates/reviews/_review_table.html:7
 #: symposion/templates/reviews/result_notification.html:46
 msgid "Speaker / Title"
 msgstr ""
 
-#: pycon/templates/dashboard.html:278
+#: pycon/templates/dashboard.html:275
 msgid "Your Vote"
 msgstr ""
 
-#: pycon/templates/dashboard.html:325 symposion/templates/dashboard.html:259
+#: pycon/templates/dashboard.html:322 symposion/templates/dashboard.html:259
 msgid "Teams"
 msgstr ""
 
-#: pycon/templates/dashboard.html:330
+#: pycon/templates/dashboard.html:327
 msgid "Your Teams"
 msgstr ""
 
-#: pycon/templates/dashboard.html:351
+#: pycon/templates/dashboard.html:348
 msgid "Available Teams"
 msgstr ""
 
-#: pycon/templates/dashboard.html:375
+#: pycon/templates/dashboard.html:372
 msgid "Program Export"
 msgstr ""
 
-#: pycon/templates/dashboard.html:378
+#: pycon/templates/dashboard.html:375
 msgid "Export Program Data"
 msgstr ""
 
-#: pycon/templates/dashboard.html:379
+#: pycon/templates/dashboard.html:376
 msgid "This action may take up to a minute to complete."
 msgstr ""
 
@@ -873,13 +882,17 @@ msgstr ""
 msgid "REGISTER"
 msgstr ""
 
-#: pycon/templates/homepage.html:130
+#: pycon/templates/homepage.html:89 symposion/templates/static/sponsors.html:5
+msgid "Sponsors"
+msgstr ""
+
+#: pycon/templates/homepage.html:126
 #: symposion/templates/biblion/blog_list.html:6
 #: symposion/templates/biblion/blog_list.html:12
 msgid "Announcements"
 msgstr ""
 
-#: pycon/templates/homepage.html:139
+#: pycon/templates/homepage.html:135
 #, python-format
 msgid ""
 "\n"
@@ -888,7 +901,7 @@ msgid ""
 "                            "
 msgstr ""
 
-#: pycon/templates/homepage.html:146
+#: pycon/templates/homepage.html:142
 msgid "No announcements have been published."
 msgstr ""
 
@@ -904,7 +917,7 @@ msgstr ""
 msgid ""
 "\n"
 "                    PyCon JP 2014 in Tokyo is a production of the <a href="
-"\"http://www.pycon.jp/psf/\">PyCon JP Management Team</a>.\n"
+"\"http://www.pycon.jp/\">PyCon JP Management Team</a>.\n"
 "                  "
 msgstr ""
 
@@ -1019,7 +1032,7 @@ msgstr ""
 #: symposion/templates/schedule/_slot_edit.html:12
 #: symposion/templates/speakers/speaker_create.html:21
 #: symposion/templates/speakers/speaker_edit.html:21
-#: symposion/templates/sponsorship/detail.html:35
+#: symposion/templates/sponsorship/detail.html:40
 msgid "Save"
 msgstr ""
 
@@ -1040,6 +1053,48 @@ msgstr ""
 #: pycon/templates/account/signup.html:25
 #: symposion/templates/account/signup.html:19
 msgid "Create Account"
+msgstr ""
+
+#: pycon/templates/account/email/email_confirmation_message.txt:1
+#, python-format
+msgid ""
+"A user on %(site_name)s has created an account using this email address.\n"
+"\n"
+"To confirm this email address, go to %(activate_url)s\n"
+"\n"
+"If you did not sign up for this site, you can ignore this message.\n"
+msgstr ""
+
+#: pycon/templates/account/email/email_confirmation_subject.txt:1
+#, python-format
+msgid "Confirm email address for %(site_name)s"
+msgstr ""
+
+#: pycon/templates/account/email/password_change.txt:1
+#, python-format
+msgid ""
+"This is the email notification to confirm your password has been changed on "
+"%(now)s."
+msgstr ""
+
+#: pycon/templates/account/email/password_change_subject.txt:1
+msgid "Change password email notification"
+msgstr ""
+
+#: pycon/templates/account/email/password_reset.txt:1
+#, python-format
+msgid ""
+"You're receiving this email because you or someone else has requested a "
+"password for your user account at %(site_name)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the "
+"link below to reset your password.\n"
+"\n"
+"%(password_reset_url)s\n"
+msgstr ""
+
+#: pycon/templates/account/email/password_reset_subject.txt:1
+#, python-format
+msgid "[%(site_name)s] Password reset"
 msgstr ""
 
 #: pycon/templates/admin/login.html:23 pycon/templates/finaid/edit.html:30
@@ -2320,7 +2375,18 @@ msgid ""
 "\"%(terms)s\" target=\"_blank\">terms and conditions</a>."
 msgstr ""
 
-#: symposion/templates/sponsorship/detail.html:19
+#: symposion/templates/sponsorship/detail.html:12
+msgid "Your sponsorship has been submitted! Thank you!"
+msgstr ""
+
+#: symposion/templates/sponsorship/detail.html:13
+msgid ""
+"Please enter the information below at your leasure. Your submission will "
+"become active once it has been reviewed and you have uploaded an image and "
+"text for use on the website."
+msgstr ""
+
+#: symposion/templates/sponsorship/detail.html:24
 #, python-format
 msgid "%(sponsor.level)s Sponsor Benefits"
 msgstr ""
@@ -2332,10 +2398,6 @@ msgstr ""
 
 #: symposion/templates/static/speaker_detail.html:5
 msgid "Speaker Name"
-msgstr ""
-
-#: symposion/templates/static/sponsors.html:5
-msgid "Sponsors"
 msgstr ""
 
 #: symposion/templates/static/venue.html:5

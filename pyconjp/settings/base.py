@@ -13,4 +13,7 @@ LANGUAGES = (
     ('ja', 'Japanese'),
 )
 
+# Add config for Google Analytics
+CONSTANCE_CONFIG["GOOGLE_ANALYTICS_TRACKING_ID"] = ("", "The site's Google Analytics Tracking ID.")
+
 PROPOSAL_FORMS['talk'] = 'pyconjp.forms.PyConJPTalkProposalForm'

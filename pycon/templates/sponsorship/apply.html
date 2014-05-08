@@ -10,7 +10,7 @@
 
 {% block body %}
 
-    {% box "sponsorship-apply" %}
+    {% box "sponsorship-apply-"|add:LANGUAGE_CODE %}
 
     <form method="POST" action="" class="form-horizontal">
         {% csrf_token %}

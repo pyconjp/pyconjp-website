@@ -10,7 +10,7 @@
 
 {% block body %}
     <div class="span12">
-        {% box "speaker-profile" %}
+        {% box "speaker-profile-"|add:LANGUAGE_CODE %}
 
         {% if form.errors %}
             <div class="alert">

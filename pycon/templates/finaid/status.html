@@ -14,7 +14,7 @@
 {% block page_title %}{% trans "Financial Aid Application Status" %}{% endblock %}
 
 {% block body %}
-    {% box "finaid-status" %}
+    {% box "finaid-status-"|add:LANGUAGE_CODE %}
 
     <div class="tabbable">
         <ul class="nav nav-tabs">

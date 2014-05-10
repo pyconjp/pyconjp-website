@@ -27,6 +27,6 @@
     {% endif %}
 {% endblock %}
 
-{% block breadcrumbs %}{% sitetree_breadcrumbs from "main" %}{% endblock %}
+{% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block body %}{% if use_french %}{{ page.body_fr|safe }}{% else %}{{ page.body|safe }}{% endif %}{% endblock %}

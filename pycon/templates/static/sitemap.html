@@ -9,8 +9,10 @@
 
 {% block page_title %}{% trans "Sitemap" %}{% endblock %}
 
-{% block breadcrumbs %}{% sitetree_breadcrumbs from "main" %}{% endblock %}
+{% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block body %}
-    {% sitetree_tree from "main" %}
+  {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+  {% sitetree_tree from "main-"|add:lang %}
+  {% endwith %}
 {% endblock %}

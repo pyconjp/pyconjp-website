@@ -12,7 +12,7 @@
         {{ schedule.section.name }}{% blocktrans %} Schedule{% endblocktrans %}
 {% endblock %}
 
-{% block breadcrumbs %}{% sitetree_breadcrumbs from "main" %}{% endblock %}
+{% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block page_content %}
     <div class="container">

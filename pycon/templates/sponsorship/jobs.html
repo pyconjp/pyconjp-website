@@ -58,7 +58,9 @@
             {% endfor %}
         </div>
         <aside class="span3">
-            {% box "sponsor-jobs-"|add:LANGUAGE_CODE %}
+            {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+            {% box "sponsor-jobs-"|add:lang %}
+            {% endwith %}
         </aside>
     </div>
 {% endblock %}

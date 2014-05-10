@@ -10,7 +10,9 @@
 
 {% block body %}
 
-    {% box "sponsorship-apply-"|add:LANGUAGE_CODE %}
+    {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+    {% box "sponsorship-apply-"|add:lang %}
+    {% endwith %}
 
     <form method="POST" action="" class="form-horizontal">
         {% csrf_token %}

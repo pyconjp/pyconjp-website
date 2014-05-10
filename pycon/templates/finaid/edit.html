@@ -11,7 +11,9 @@
 {% block body_id %}finaid_apply{% endblock %}
 
 {% block body %}
-    {% box "finaid-apply-"|add:LANGUAGE_CODE %}
+    {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+    {% box "finaid-apply-"|add:lang %}
+    {% endwith %}
 
     {% if form.errors %}
         <div class="alert">

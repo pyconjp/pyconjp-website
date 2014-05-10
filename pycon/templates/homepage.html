@@ -142,7 +142,9 @@
 
         <div class="span4">
           {# homepage-about for each language #} 
-          {% box "homepage-about-"|add:LANGUAGE_CODE %}
+          {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+          {% box "homepage-about-"|add:lang %}
+          {% endwith %}
         </div>
     </div>
 </div>

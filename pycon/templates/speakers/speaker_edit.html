@@ -10,7 +10,9 @@
 
 {% block body %}
     <div class="span12">
-        {% box "speaker-profile-"|add:LANGUAGE_CODE %}
+        {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+        {% box "speaker-profile-"|add:lang %}
+        {% endwith %}
 
         {% if form.errors %}
             <div class="alert">

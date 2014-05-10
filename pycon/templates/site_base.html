@@ -75,7 +75,7 @@
                         <div class="navbar-inner">
                             {% block topbar %}
                                 {% block nav %}
-                                {% with lang=LANGUAGE_CODE|default:"en" %}
+                                {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
                                 {% sitetree_menu from "main-"|add:lang include "trunk" %}
                                 {% endwith %}
                                 {% endblock %}

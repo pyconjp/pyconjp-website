@@ -18,7 +18,9 @@
             <div class="span12">
 
                 <div class="dashboard-top">
-                {% box "dashboard-top-"|add:LANGUAGE_CODE %}
+                {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+                {% box "dashboard-top-"|add:lang %}
+                {% endwith %}
                 </div>
 
                 {% if language_form %}

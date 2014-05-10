@@ -10,7 +10,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         # Adding field 'ProposalBase.language'
         db.add_column(u'proposals_proposalbase', 'language',
-                      self.gf('django.db.models.fields.CharField')(default='English', max_length=2),
+                      self.gf('django.db.models.fields.CharField')(default='en', max_length=2),
                       keep_default=False)
 
 

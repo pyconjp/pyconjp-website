@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-10 12:21+0900\n"
+"POT-Creation-Date: 2014-05-10 16:59+0900\n"
 "PO-Revision-Date: 2014-05-10 03:06+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/"
@@ -103,6 +103,7 @@ msgid "I prefer a 45 minute slot"
 msgstr "45分枠希望"
 
 #: pycon/models.py:129 pycon/models.py:188
+#: pyconjp/templates/proposals/_proposal_fields.html:66
 #: symposion/templates/proposals/_proposal_fields.html:62
 msgid "Outline"
 msgstr "アウトライン"
@@ -116,6 +117,7 @@ msgstr ""
 "プログラマー」は適切な回答ではありません。)"
 
 #: pycon/models.py:138 pycon/models.py:202
+#: pyconjp/templates/proposals/_proposal_fields.html:28
 #: symposion/templates/proposals/_proposal_fields.html:24
 msgid "Objectives"
 msgstr "目的"
@@ -132,7 +134,8 @@ msgstr ""
 msgid "Level of audience expertise assumed in the presentation's domain."
 msgstr "対象者に期待する題目の分野に関する知識レベル"
 
-#: pycon/models.py:191 symposion/templates/proposals/_proposal_fields.html:65
+#: pycon/models.py:191 pyconjp/templates/proposals/_proposal_fields.html:69
+#: symposion/templates/proposals/_proposal_fields.html:65
 msgid "More info"
 msgstr "追加情報"
 
@@ -141,6 +144,7 @@ msgid "More info. Will be made public if your talk is accepted."
 msgstr "追加された情報はあなたの講演が承認された後で公開されます。"
 
 #: pycon/models.py:209 pycon/templates/schedule/presentation_detail.html:65
+#: pyconjp/templates/proposals/_proposal_fields.html:84
 #: symposion/templates/proposals/_proposal_fields.html:80
 msgid "Student Handout"
 msgstr "参加者用ハンドアウト"
@@ -763,6 +767,7 @@ msgid "Sponsorship available! Learn more"
 msgstr "スポンサーシップ募集中！詳しく見る"
 
 #: pycon/templates/dashboard.html:29
+#: pyconjp/templates/proposals/_proposal_fields.html:16
 msgid "Language"
 msgstr "言語"
 
@@ -1486,6 +1491,7 @@ msgid "Category:"
 msgstr "カテゴリ："
 
 #: pycon/templates/schedule/presentation_detail.html:53
+#: pyconjp/templates/proposals/_proposal_fields.html:57
 #: symposion/proposals/models.py:90
 #: symposion/templates/proposals/_proposal_fields.html:53
 #: symposion/templates/schedule/presentation_detail.html:33
@@ -1493,6 +1499,7 @@ msgid "Description"
 msgstr "説明"
 
 #: pycon/templates/schedule/presentation_detail.html:58
+#: pyconjp/templates/proposals/_proposal_fields.html:61
 #: symposion/templates/proposals/_proposal_fields.html:57
 #: symposion/templates/schedule/presentation_detail.html:37
 msgid "Abstract"
@@ -1823,6 +1830,99 @@ msgstr ""
 msgid "Message sent"
 msgstr ""
 
+#: pyconjp/templates/proposals/_proposal_fields.html:4
+#: symposion/templates/proposals/_proposal_fields.html:4
+msgid "Submitted by"
+msgstr "提出者"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:8
+#: symposion/templates/proposals/_proposal_fields.html:8
+#: symposion/templates/reviews/_review_table.html:9
+msgid "Tags"
+msgstr "タグ"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:12
+#: symposion/templates/proposals/_proposal_fields.html:12
+#: symposion/templates/reviews/_review_table.html:8
+#: symposion/templates/reviews/result_notification.html:47
+msgid "Category"
+msgstr "カテゴリ："
+
+#: pyconjp/templates/proposals/_proposal_fields.html:20
+#: symposion/templates/proposals/_proposal_fields.html:16
+msgid "Python Level"
+msgstr "Python レベル"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:25
+#: symposion/templates/proposals/_proposal_fields.html:21
+msgid "Audience"
+msgstr "対象者"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:33
+#: symposion/templates/proposals/_proposal_fields.html:29
+msgid "Duration"
+msgstr ""
+
+#: pyconjp/templates/proposals/_proposal_fields.html:38
+#: symposion/templates/proposals/_proposal_fields.html:34
+msgid "Domain Level"
+msgstr ""
+
+#: pyconjp/templates/proposals/_proposal_fields.html:43
+#: symposion/templates/proposals/_proposal_fields.html:39
+msgid "Additional Speakers"
+msgstr "追加スピーカー"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:50
+#: symposion/templates/proposals/_proposal_fields.html:46
+msgid "Invitation Sent"
+msgstr "送信された招待状"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:73
+#: symposion/templates/proposals/_proposal_fields.html:69
+msgid "Notes"
+msgstr "メモ"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:76
+#: symposion/templates/proposals/_proposal_fields.html:72
+msgid "Speaker Bio"
+msgstr "スピーカー略歴"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:79
+#: symposion/templates/proposals/_proposal_fields.html:75
+msgid "Additional Requirements"
+msgstr "追加の必要事項"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:87
+#: symposion/templates/proposals/_proposal_fields.html:83
+msgid "Download"
+msgstr "ダウンロードする"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:89
+#: symposion/templates/proposals/_proposal_fields.html:85
+msgid "No handout attached to this proposal."
+msgstr "このプロポーザルに付属するハンドアウトはありません。"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:94
+#: symposion/templates/proposals/_proposal_fields.html:90
+#: symposion/templates/proposals/proposal_detail.html:58
+#: symposion/templates/proposals/proposal_detail.html:70
+msgid "Supporting Documents"
+msgstr "補足資料"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:104
+#: symposion/templates/cms/file_index.html:16
+#: symposion/templates/proposals/_proposal_fields.html:100
+#: symposion/templates/proposals/proposal_detail.html:80
+msgid "delete"
+msgstr "削除する"
+
+#: pyconjp/templates/proposals/_proposal_fields.html:111
+#: symposion/templates/proposals/_proposal_fields.html:107
+#: symposion/templates/proposals/proposal_detail.html:87
+msgid "No supporting documents attached to this proposal."
+msgstr "このプロポーザルに付属する補助資料はありません。"
+
 #: symposion/forms.py:47
 msgid "Change language for this session"
 msgstr "このセッションの言語を変更する"
@@ -1901,6 +2001,12 @@ msgstr "提出締め切り日時"
 #: symposion/templates/conference/user_list.html:63
 msgid "Name"
 msgstr "名前"
+
+#: symposion/proposals/models.py:92
+msgid ""
+"If your talk is accepted this will be made public and printed in the "
+"program. Should be one paragraph, maximum 400 characters."
+msgstr ""
 
 #: symposion/proposals/models.py:95
 msgid "Detailed Abstract"
@@ -2061,12 +2167,6 @@ msgstr "アップロードする"
 msgid "Uploaded Files"
 msgstr "アップロードされたファイル"
 
-#: symposion/templates/cms/file_index.html:16
-#: symposion/templates/proposals/_proposal_fields.html:100
-#: symposion/templates/proposals/proposal_detail.html:80
-msgid "delete"
-msgstr "削除する"
-
 #: symposion/templates/cms/file_index.html:19
 msgid "Uploaded"
 msgstr "アップロードされました"
@@ -2184,76 +2284,6 @@ msgstr "招待に応じる"
 #: symposion/templates/proposals/_pending_proposal_row.html:34
 msgid "Decline invitation"
 msgstr "招待を辞退する"
-
-#: symposion/templates/proposals/_proposal_fields.html:4
-msgid "Submitted by"
-msgstr "提出者"
-
-#: symposion/templates/proposals/_proposal_fields.html:8
-#: symposion/templates/reviews/_review_table.html:9
-msgid "Tags"
-msgstr "タグ"
-
-#: symposion/templates/proposals/_proposal_fields.html:12
-#: symposion/templates/reviews/_review_table.html:8
-#: symposion/templates/reviews/result_notification.html:47
-msgid "Category"
-msgstr "カテゴリ："
-
-#: symposion/templates/proposals/_proposal_fields.html:16
-msgid "Python Level"
-msgstr "Python レベル"
-
-#: symposion/templates/proposals/_proposal_fields.html:21
-msgid "Audience"
-msgstr "対象者"
-
-#: symposion/templates/proposals/_proposal_fields.html:29
-msgid "Duration"
-msgstr ""
-
-#: symposion/templates/proposals/_proposal_fields.html:34
-msgid "Domain Level"
-msgstr ""
-
-#: symposion/templates/proposals/_proposal_fields.html:39
-msgid "Additional Speakers"
-msgstr "追加スピーカー"
-
-#: symposion/templates/proposals/_proposal_fields.html:46
-msgid "Invitation Sent"
-msgstr "送信された招待状"
-
-#: symposion/templates/proposals/_proposal_fields.html:69
-msgid "Notes"
-msgstr "メモ"
-
-#: symposion/templates/proposals/_proposal_fields.html:72
-msgid "Speaker Bio"
-msgstr "スピーカー略歴"
-
-#: symposion/templates/proposals/_proposal_fields.html:75
-msgid "Additional Requirements"
-msgstr "追加の必要事項"
-
-#: symposion/templates/proposals/_proposal_fields.html:83
-msgid "Download"
-msgstr "ダウンロードする"
-
-#: symposion/templates/proposals/_proposal_fields.html:85
-msgid "No handout attached to this proposal."
-msgstr "このプロポーザルに付属するハンドアウトはありません。"
-
-#: symposion/templates/proposals/_proposal_fields.html:90
-#: symposion/templates/proposals/proposal_detail.html:58
-#: symposion/templates/proposals/proposal_detail.html:70
-msgid "Supporting Documents"
-msgstr "補足資料"
-
-#: symposion/templates/proposals/_proposal_fields.html:107
-#: symposion/templates/proposals/proposal_detail.html:87
-msgid "No supporting documents attached to this proposal."
-msgstr "このプロポーザルに付属する補助資料はありません。"
 
 #: symposion/templates/proposals/_proposal_row.html:20
 msgid "Associated"

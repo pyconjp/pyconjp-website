@@ -56,5 +56,10 @@ class SignupForm(SignupForm):
             "password_confirm"
         ]
 
+        self.fields['email'].label = _("Email")
+        self.fields['email_confirm'].label = _("Confirm Email")
+
+        self.fields['first_name'].label = _("First Name")
         self.fields['first_name'].help_text = _("Please enter your first name.")
+        self.fields['last_name'].label = _("Last Name")
         self.fields['last_name'].help_text = _("Please enter your last name.")

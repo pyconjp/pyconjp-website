@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
 # Ian Lewis <ianmlewis@gmail.com>, 2014
 # Takuya Okada <okokada.takuya@gmail.com>, 2014
@@ -13,15 +13,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-10 16:59+0900\n"
-"PO-Revision-Date: 2014-05-10 03:06+0000\n"
+"POT-Creation-Date: 2014-05-10 18:47+0900\n"
+"PO-Revision-Date: 2014-05-10 09:48+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/"
-"language/ja/)\n"
-"Language: ja\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: pycon/forms.py:24
@@ -64,17 +63,10 @@ msgstr "プロポーザルが却下された理由"
 
 #: pycon/models.py:105
 msgid ""
-"By submitting your talk proposal, you agree to give permission to the Python "
-"Software Foundation to record, edit, and release audio and/or video of your "
-"presentation. If you do not agree to this, please uncheck this box. See <a "
-"href='https://us.pycon.org/2014/speaking/recording/' target='_blank'>PyCon "
-"2014 Recording Release</a> for details."
-msgstr ""
-"講演のプロポーザルを提出すると、Pythonソフトウェア財団があなたの講演を記録、"
-"編集、またその録音またはビデオあるいはその両方を頒布することに同意したとみな"
-"します。もしこれに同意しない場合はチェックボックスをオフにして下さい。詳しく"
-"は<a href='https://us.pycon.org/2014/speaking/recording/' "
-"target='_blank'>PyCon 2014 Recording Release</a>をご覧ください。"
+"By submitting your talk proposal, you agree to give permission to the Python"
+" Software Foundation to record, edit, and release audio and/or video of your"
+" presentation. If you do not agree to this, please uncheck this box."
+msgstr "講演のプロポーザルを提出すると、Pythonソフトウェア財団があなたの講演を記録、編集、またその録音またはビデオあるいはその両方を頒布することに同意したとみなします。もしこれに同意しない場合はチェックボックスをオフにして下さい。"
 
 #: pycon/models.py:109
 msgid "Additional requirements"
@@ -85,10 +77,7 @@ msgid ""
 "Please let us know if you have any specific needs (A/V requirements, "
 "multiple microphones, a table, etc).  Note for example that 'audio out' is "
 "not provided for your computer unless you tell us in advance."
-msgstr ""
-"特に必要な物(A/V機器、複数のマイク、テーブルetc)があれば教えて下さい。例とし"
-"て、コンピュータからの「音声出力」は事前にお知らせ頂いていない場合は提供でき"
-"ないことに注意して下さい。"
+msgstr "特に必要な物(A/V機器、複数のマイク、テーブルetc)があれば教えて下さい。例として、コンピュータからの「音声出力」は事前にお知らせ頂いていない場合は提供できないことに注意して下さい。"
 
 #: pycon/models.py:121
 msgid "No preference"
@@ -112,9 +101,7 @@ msgstr "アウトライン"
 msgid ""
 "Who is the intended audience for your talk? (Be specific; \"Python "
 "programmers\" is not a good answer to this question.)"
-msgstr ""
-"想定している対象者について教えて下さい。(具体的にお願いします。例えば「Python"
-"プログラマー」は適切な回答ではありません。)"
+msgstr "想定している対象者について教えて下さい。(具体的にお願いします。例えば「Pythonプログラマー」は適切な回答ではありません。)"
 
 #: pycon/models.py:138 pycon/models.py:202
 #: pyconjp/templates/proposals/_proposal_fields.html:28
@@ -126,9 +113,7 @@ msgstr "目的"
 msgid ""
 "What will attendees get out of your talk? When they leave the room, what "
 "will they know that they didn't know before?"
-msgstr ""
-"参加者はあなたの講演から何を学びますか。参加者が会場に来る前は知らなかったけ"
-"れども、帰る際には得ている知識は何でしょうか。"
+msgstr "参加者はあなたの講演から何を学びますか。参加者が会場に来る前は知らなかったけれども、帰る際には得ている知識は何でしょうか。"
 
 #: pycon/models.py:184
 msgid "Level of audience expertise assumed in the presentation's domain."
@@ -153,8 +138,7 @@ msgstr "参加者用ハンドアウト"
 msgid ""
 "Upload a resource to be distributed to students  attending the tutorial "
 "session."
-msgstr ""
-"チュートリアルセッションの参加者へ配布するための資料をアプロードして下さい。"
+msgstr "チュートリアルセッションの参加者へ配布するための資料をアプロードして下さい。"
 
 #: pycon/models.py:221
 msgid "CTE registered participants for this tutorial."
@@ -274,9 +258,7 @@ msgstr "性別"
 msgid ""
 "(Your sex will be used only to help assign roommates for those requesting "
 "hotel assistance)"
-msgstr ""
-"(あなたの性別はホテルでの援助を依頼された方へルームメイトを指定する際にのみ使"
-"用されます。)"
+msgstr "(あなたの性別はホテルでの援助を依頼された方へルームメイトを指定する際にのみ使用されます。)"
 
 #: pycon/finaid/models.py:83
 msgid "Travel grant"
@@ -334,9 +316,7 @@ msgstr "関与"
 
 #: pycon/finaid/models.py:107
 msgid "Describe your involvement in any open source projects or community."
-msgstr ""
-"あなたが関わっている全てのオープンソースプロジェクトあるいはコミュニティを記"
-"入して下さい。"
+msgstr "あなたが関わっている全てのオープンソースプロジェクトあるいはコミュニティを記入して下さい。"
 
 #: pycon/finaid/models.py:112
 #: pycon/templates/finaid/_application_fields.html:93
@@ -354,11 +334,9 @@ msgstr "参加プロジェクト一覧"
 
 #: pycon/finaid/models.py:120
 msgid ""
-"Please provide links to any portfolios you have that contain Python work. (e."
-"g. Github, Bitbucket, etc.)"
-msgstr ""
-"あなたが関わったのプロジェクトでPythonが使用されたものがあればそのリンクを入"
-"力して下さい。(Github、Bitbucket、etc)"
+"Please provide links to any portfolios you have that contain Python work. "
+"(e.g. Github, Bitbucket, etc.)"
+msgstr "あなたが関わったのプロジェクトでPythonが使用されたものがあればそのリンクを入力して下さい。(Github、Bitbucket、etc)"
 
 #: pycon/finaid/models.py:125
 #: pycon/templates/finaid/_application_fields.html:107
@@ -377,9 +355,7 @@ msgstr "初心者用資料"
 #: pycon/finaid/models.py:129
 msgid ""
 "If you're a beginner, describe the resources you're using to learn Python."
-msgstr ""
-"もしあなたが初級者なら、Pythonを学習するのに利用している情報源を教えて下さ"
-"い。"
+msgstr "もしあなたが初級者なら、Pythonを学習するのに利用している情報源を教えて下さい。"
 
 #: pycon/finaid/models.py:133
 msgid "Presenting"
@@ -389,9 +365,7 @@ msgstr ""
 msgid ""
 "Will you be speaking, hosting a poster session, or otherwise presenting at "
 "PyCon?"
-msgstr ""
-"プレゼンテーションのスピーカー、ポスターセッションのプレゼンター、あるいはそ"
-"の他の発表をする予定はありますか。"
+msgstr "プレゼンテーションのスピーカー、ポスターセッションのプレゼンター、あるいはその他の発表をする予定はありますか。"
 
 #: pycon/finaid/models.py:138
 msgid "Python experience level"
@@ -453,7 +427,8 @@ msgid "Messages sent"
 msgstr ""
 
 #: pycon/finaid/views.py:226 pycon/tutorials/views.py:65
-msgid "There was some error sending emails, not all of them might have made it"
+msgid ""
+"There was some error sending emails, not all of them might have made it"
 msgstr ""
 
 #: pycon/finaid/views.py:229
@@ -475,7 +450,8 @@ msgstr "名前"
 
 #: pycon/profile/forms.py:35
 msgid ""
-"Please enter your first  name in Japanese. Non-Japanese can leave this blank."
+"Please enter your first  name in Japanese. Non-Japanese can leave this "
+"blank."
 msgstr "名前を漢字で入力してください。"
 
 #: pycon/profile/forms.py:39
@@ -974,8 +950,7 @@ msgstr "アナウンス"
 #, python-format
 msgid ""
 "\n"
-"                              <p class=\"post_dateline\">by <span class="
-"\"author\">%(author)s</span></p>\n"
+"                              <p class=\"post_dateline\">by <span class=\"author\">%(author)s</span></p>\n"
 "                            "
 msgstr ""
 
@@ -998,27 +973,21 @@ msgstr ""
 #: pycon/templates/site_base.html:163
 msgid ""
 "\n"
-"                    PyCon JP 2014 in Tokyo is a production of the <a href="
-"\"http://www.pycon.jp/\">PyCon JP Management Team</a>.\n"
+"                    PyCon JP 2014 in Tokyo is a production of the <a href=\"http://www.pycon.jp/\">PyCon JP Management Team</a>.\n"
 "                  "
 msgstr ""
 
 #: pycon/templates/site_base.html:168
 msgid ""
 "\n"
-"                    Site forked from the <a href=\"http://us.pycon."
-"jp/2014\">PyCon 2014</a> site built by <a href=\"http://caktusgroup.com"
-"\">Caktus Consulting Group, LLC.</a> using <a href=\"http://eldarion.com/"
-"symposion/\" title=\"Symposion — An Open Platform for Conference Websites"
-"\">Symposion</a>.\n"
+"                    Site forked from the <a href=\"http://us.pycon.jp/2014\">PyCon 2014</a> site built by <a href=\"http://caktusgroup.com\">Caktus Consulting Group, LLC.</a> using <a href=\"http://eldarion.com/symposion/\" title=\"Symposion — An Open Platform for Conference Websites\">Symposion</a>.\n"
 "                  "
 msgstr ""
 
 #: pycon/templates/site_base.html:173
 msgid ""
 "\n"
-"                    Questions? Comments? Contact <a href=\"mailto:pycon-"
-"organizers-jp@googlegroups.com\">pycon-organizers-jp@googlegroups.com</a>\n"
+"                    Questions? Comments? Contact <a href=\"mailto:pycon-organizers-jp@googlegroups.com\">pycon-organizers-jp@googlegroups.com</a>\n"
 "                  "
 msgstr ""
 
@@ -1140,14 +1109,7 @@ msgid ""
 "To confirm this email address, go to %(activate_url)s\n"
 "\n"
 "If you did not sign up for this site, you can ignore this message.\n"
-msgstr ""
-"%(site_name)s でユーザーがこのメールアドレスを使って、アカウントを作成しまし"
-"た。\n"
-"\n"
-"このメールアドレスを確認するには以下のURLをクリックしてください。\n"
-"%(activate_url)s\n"
-"\n"
-"このメールに心当たりの無い方は無視してください。\n"
+msgstr "%(site_name)s でユーザーがこのメールアドレスを使って、アカウントを作成しました。\n\nこのメールアドレスを確認するには以下のURLをクリックしてください。\n%(activate_url)s\n\nこのメールに心当たりの無い方は無視してください。\n"
 
 #: pycon/templates/account/email/email_confirmation_subject.txt:1
 #, python-format
@@ -1168,19 +1130,11 @@ msgstr "パスワード変更"
 #: pycon/templates/account/email/password_reset.txt:1
 #, python-format
 msgid ""
-"You're receiving this email because you or someone else has requested a "
-"password for your user account at %(site_name)s.\n"
-"It can be safely ignored if you did not request a password reset. Click the "
-"link below to reset your password.\n"
+"You're receiving this email because you or someone else has requested a password for your user account at %(site_name)s.\n"
+"It can be safely ignored if you did not request a password reset. Click the link below to reset your password.\n"
 "\n"
 "%(password_reset_url)s\n"
-msgstr ""
-"%(site_name)s でパスワード再設定の手続きを承りました。\n"
-"\n"
-"パスワードを再設定するには以下のURLをクリックしてください。\n"
-"%(password_reset_url)s\n"
-"\n"
-"このメールに心当たりの無い方は無視してください。\n"
+msgstr "%(site_name)s でパスワード再設定の手続きを承りました。\n\nパスワードを再設定するには以下のURLをクリックしてください。\n%(password_reset_url)s\n\nこのメールに心当たりの無い方は無視してください。\n"
 
 #: pycon/templates/account/email/password_reset_subject.txt:1
 #, python-format
@@ -1208,13 +1162,9 @@ msgstr "編集"
 #, python-format
 msgid ""
 "\n"
-"                   Content is processed using <a href=\"%(helplink)s\" "
-"target=\"_blank\">Markdown</a>\n"
+"                   Content is processed using <a href=\"%(helplink)s\" target=\"_blank\">Markdown</a>\n"
 "                 "
-msgstr ""
-"\n"
-"<a href=\"%(helplink)s\"target=\"_blank\"> Markdown</a> を使用してコンテンツ"
-"は処理されます。"
+msgstr "\n<a href=\"%(helplink)s\"target=\"_blank\"> Markdown</a> を使用してコンテンツは処理されます。"
 
 #: pycon/templates/boxes/box.html:20 symposion/templates/boxes/box.html:16
 msgid "Close"
@@ -1452,18 +1402,11 @@ msgstr "%(name)s のプロポーザルを提出する"
 #: pycon/templates/proposals/proposal_submit_kind.html:19
 msgid ""
 "\n"
-"                    You will be able to edit your proposal after it has been "
-"submitted.\n"
-"                    The program committee may ask questions, provide "
-"feedback,\n"
-"                    and even suggest changes to your proposal as part of the "
-"review processes.\n"
+"                    You will be able to edit your proposal after it has been submitted.\n"
+"                    The program committee may ask questions, provide feedback,\n"
+"                    and even suggest changes to your proposal as part of the review processes.\n"
 "                  "
-msgstr ""
-"\n"
-"プロポーザルは提出した後でも編集できます。\n"
-"審査の過程で運営委員会は提出されたプロポーザルへの質問やフィードバック、変更"
-"依頼をすることがあります。"
+msgstr "\nプロポーザルは提出した後でも編集できます。\n審査の過程で運営委員会は提出されたプロポーザルへの質問やフィードバック、変更依頼をすることがあります。"
 
 #: pycon/templates/proposals/proposal_submit_kind.html:27
 #: symposion/templates/proposals/proposal_submit_kind.html:23
@@ -1580,15 +1523,14 @@ msgstr "司会者"
 msgid ""
 "<a href=\"%(profile_edit)s?next=%(request.path)s\">Click here to create a "
 "volunteer profile</a> and enable volunteering for session roles."
-msgstr ""
-"ボランティア用プロファイルを作成してセッションをサポートするには、<a href="
-"\"%(profile_edit)s?next=%(request.path)s\">ここをクリック</a>して下さい。"
+msgstr "ボランティア用プロファイルを作成してセッションをサポートするには、<a href=\"%(profile_edit)s?next=%(request.path)s\">ここをクリック</a>して下さい。"
 
 #: pycon/templates/schedule/session_detail.html:46
 #, python-format
 msgid ""
-"<a href=\"%(account_signup)s\">Sign up</a> and <a href=\"%(account_login)s?"
-"next=%(request.path)s\">log in</a> to volunteer to be session chair."
+"<a href=\"%(account_signup)s\">Sign up</a> and <a "
+"href=\"%(account_login)s?next=%(request.path)s\">log in</a> to volunteer to "
+"be session chair."
 msgstr ""
 
 #: pycon/templates/schedule/session_detail.html:50
@@ -1599,8 +1541,9 @@ msgstr "アシスタント"
 #: pycon/templates/schedule/session_detail.html:78
 #, python-format
 msgid ""
-"<a href=\"%(account_signup)s\">Sign up</a> and <a href=\"%(account_login)s?"
-"next=%(request.path)s\">log in</a> to volunteer to be session runner."
+"<a href=\"%(account_signup)s\">Sign up</a> and <a "
+"href=\"%(account_login)s?next=%(request.path)s\">log in</a> to volunteer to "
+"be session runner."
 msgstr ""
 
 #: pycon/templates/schedule/session_detail.html:93
@@ -1724,9 +1667,7 @@ msgstr "参加"
 msgid ""
 "You have been invited to join this team. Click <b>join</b> to the right to "
 "accept."
-msgstr ""
-"あなたはこのチームに招待されています。承認して参加するには右をクリックして下"
-"さい。"
+msgstr "あなたはこのチームに招待されています。承認して参加するには右をクリックして下さい。"
 
 #: pycon/templates/teams/team_detail.html:49
 #: symposion/templates/teams/team_detail.html:42
@@ -1937,9 +1878,7 @@ msgstr "公開"
 
 #: symposion/cms/models.py:55
 msgid "Path can only contain letters, numbers and hyphens and end with /"
-msgstr ""
-"パスはアルファベット、数字、ハイフンのみ使用でき、スラッシュで終わる必要があ"
-"ります"
+msgstr "パスはアルファベット、数字、ハイフンのみ使用でき、スラッシュで終わる必要があります"
 
 #: symposion/conference/models.py:18
 msgid "title"
@@ -1977,9 +1916,7 @@ msgstr "メールアドレス"
 msgid ""
 "You have submitted the Proposal author's email address. Please select "
 "another email address."
-msgstr ""
-"すでにプロポーザルのメールアドレスに登録しています。他のメールアドレスを選ん"
-"でください。"
+msgstr "すでにプロポーザルのメールアドレスに登録しています。他のメールアドレスを選んでください。"
 
 #: symposion/proposals/forms.py:45
 msgid "This email address has already been invited to your talk proposal"
@@ -2021,9 +1958,7 @@ msgid ""
 "Anything else you'd like the program committee to know when making their "
 "selection: your past speaking experience, open source community experience, "
 "etc."
-msgstr ""
-"選考について運営に伝えたいことは他にありますか。 例: 過去の講演経験、オープン"
-"ソースコミュニティでの経験など"
+msgstr "選考について運営に伝えたいことは他にありますか。 例: 過去の講演経験、オープンソースコミュニティでの経験など"
 
 #: symposion/proposals/models.py:199
 msgid "Pending"
@@ -2033,10 +1968,7 @@ msgstr "保留"
 msgid ""
 "Cannot remove the only Social Account without first setting a Password or "
 "adding another Social Account."
-msgstr ""
-"ソーシャルアカウントが一つしか登録されていません。パスワードを設定するか他の"
-"ソーシャルアカウントを追加されないとこのソーシャルアカウントを削除できませ"
-"ん。"
+msgstr "ソーシャルアカウントが一つしか登録されていません。パスワードを設定するか他のソーシャルアカウントを追加されないとこのソーシャルアカウントを削除できません。"
 
 #: symposion/social_auth/views.py:39
 #, python-format
@@ -2047,9 +1979,7 @@ msgstr "%(provider)s アカウント '%(uid)s'を削除しました。"
 msgid ""
 "If you've submitted multiple proposals, please let us know if you only want "
 "to give one or if you'd like to give two talks."
-msgstr ""
-"複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演"
-"したいのかお知らせ下さい。"
+msgstr "複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演したいのかお知らせ下さい。"
 
 #: symposion/speakers/forms.py:47
 msgid "Please limit speaker biography to 100 words or less"
@@ -2071,9 +2001,7 @@ msgstr ""
 msgid ""
 "A little bit about you. 100 words or less, please. This will be used in "
 "print publications so please keep it simple, no links or formatting."
-msgstr ""
-"100文字以内で自己紹介をお願いします。この文章は印刷物に使用されますのでシンプ"
-"ルにお願いします。リンクや書式の設定はできません。"
+msgstr "100文字以内で自己紹介をお願いします。この文章は印刷物に使用されますのでシンプルにお願いします。リンクや書式の設定はできません。"
 
 #: symposion/speakers/models.py:28
 msgid "Your Twitter account"
@@ -2085,10 +2013,7 @@ msgid ""
 "want to give one or if you'd like to give two talks.  For tutorials and "
 "posters, state similar preferences in the additional notes section of your "
 "proposals."
-msgstr ""
-"複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演"
-"したいのかお知らせ下さい。チュートリアルとポスターの場合は、プロポーザルのメ"
-"モ欄にsimilar preferencesを記入して下さい。"
+msgstr "複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演したいのかお知らせ下さい。チュートリアルとポスターの場合は、プロポーザルのメモ欄にsimilar preferencesを記入して下さい。"
 
 #: symposion/sponsorship/models.py:33
 msgid "contact_name"
@@ -2114,19 +2039,15 @@ msgstr "次は何？"
 #: symposion/templates/about/what_next.html:23
 #, python-format
 msgid ""
-"Start by <a href=\"%(signup_url)s\">signing up</a> and <a href="
-"\"%(login_url)s\">logging in</a>."
-msgstr ""
-"<a href=\"%(signup_url)s\"> 登録</a>して<a href=\"%(login_url)s\"> ログイン</"
-"a>して下さい。"
+"Start by <a href=\"%(signup_url)s\">signing up</a> and <a "
+"href=\"%(login_url)s\">logging in</a>."
+msgstr "<a href=\"%(signup_url)s\"> 登録</a>して<a href=\"%(login_url)s\"> ログイン</a>して下さい。"
 
 #: symposion/templates/account/login.html:10
 msgid ""
-"<b>Note:</b> Account information is not saved year to year, you will need to "
-"make a new account or login using one of the method on the right."
-msgstr ""
-"<b>注意：</b> アカウント情報は一年間しか保存されません。右の方法のいずれかで"
-"のログインか新しいアカウントの作成が必要にあります。"
+"<b>Note:</b> Account information is not saved year to year, you will need to"
+" make a new account or login using one of the method on the right."
+msgstr "<b>注意：</b> アカウント情報は一年間しか保存されません。右の方法のいずれかでのログインか新しいアカウントの作成が必要にあります。"
 
 #: symposion/templates/biblion/blog_list.html:26
 #: symposion/templates/biblion/blog_post.html:20
@@ -2143,11 +2064,10 @@ msgstr "公開された投稿はありません。"
 
 #: symposion/templates/boxes/box.html:15
 msgid ""
-"Content is processed using <a href=\"http://daringfireball.net/projects/"
-"markdown/syntax\" target=\"_blank\">Markdown</a>"
-msgstr ""
-"コンテンツは<a href=\"http://daringfireball.net/projects/markdown/syntax\" "
-"target=\"_blank\">マークダウン</a>で処理されます。"
+"Content is processed using <a "
+"href=\"http://daringfireball.net/projects/markdown/syntax\" "
+"target=\"_blank\">Markdown</a>"
+msgstr "コンテンツは<a href=\"http://daringfireball.net/projects/markdown/syntax\" target=\"_blank\">マークダウン</a>で処理されます。"
 
 #: symposion/templates/boxes/box.html:34
 msgid "Edit this content"
@@ -2205,28 +2125,14 @@ msgstr "作成する"
 msgid ""
 "\n"
 "    <p>\n"
-"        User \"%(username)s\" has applied to join <b>%(team_name)s</b> on "
-"%(site_name)s.\n"
+"        User \"%(username)s\" has applied to join <b>%(team_name)s</b> on %(site_name)s.\n"
 "    </p>\n"
 "\n"
 "    <p>\n"
-"        To accept this application and see any other pending applications, "
-"visit the following url:\n"
-"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s"
-"%(team_url)s</a>\n"
+"        To accept this application and see any other pending applications, visit the following url:\n"
+"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</a>\n"
 "    </p>\n"
-msgstr ""
-"\n"
-"<p>\n"
-"ユーザー \"%(username)s\"が%(site_name)sにある<b>%(team_name)s</b>への参加を"
-"申請しています。\n"
-"</p>\n"
-" \n"
-"<p>\n"
-"この申請を承認して他の保留中の申請を見るには、次のURLを開いて下さい：\n"
-"<a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</"
-"a>\n"
-"</p>\n"
+msgstr "\n<p>\nユーザー \"%(username)s\"が%(site_name)sにある<b>%(team_name)s</b>への参加を申請しています。\n</p>\n \n<p>\nこの申請を承認して他の保留中の申請を見るには、次のURLを開いて下さい：\n<a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</a>\n</p>\n"
 
 #: symposion/templates/emails/teams_user_applied/subject.txt:1
 #, python-format
@@ -2238,26 +2144,14 @@ msgstr "ユーザー \"%(username)s\"が%(team)sへの参加を申請してい�
 msgid ""
 "\n"
 "    <p>\n"
-"        You have been invited to join <b>%(team_name)s</b> on "
-"%(site_name)s.\n"
+"        You have been invited to join <b>%(team_name)s</b> on %(site_name)s.\n"
 "    </p>\n"
 "\n"
 "    <p>\n"
 "        To accept this invitation, visit the following url:\n"
-"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s"
-"%(team_url)s</a>\n"
+"        <a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</a>\n"
 "    </p>\n"
-msgstr ""
-"\n"
-"<p>\n"
-"あなたは<b>%(team_name)s</b> on %(site_name)sに招待されています。\n"
-"</p>\n"
-"\n"
-"<p>\n"
-"この招待を承認するには次のURLを開いて下さい：\n"
-"<a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</"
-"a>\n"
-"</p>\n"
+msgstr "\n<p>\nあなたは<b>%(team_name)s</b> on %(site_name)sに招待されています。\n</p>\n\n<p>\nこの招待を承認するには次のURLを開いて下さい：\n<a href=\"http://%(site_url)s%(team_url)s\">http://%(site_url)s%(team_url)s</a>\n</p>\n"
 
 #: symposion/templates/emails/teams_user_invited/subject.txt:1
 #, python-format
@@ -2337,9 +2231,7 @@ msgid ""
 "This proposal is locked as the review period for this section has ended. "
 "Edits of proposals after acceptance will not be reflected on the official "
 "schedule."
-msgstr ""
-"このプロポーザルはこのセクションの審査が終了するとロックされます。承認された"
-"後にプロポーザルを編集しても公式スケジュールへは反映されません。"
+msgstr "このプロポーザルはこのセクションの審査が終了するとロックされます。承認された後にプロポーザルを編集しても公式スケジュールへは反映されません。"
 
 #: symposion/templates/proposals/proposal_detail.html:89
 msgid "Add Document"
@@ -2393,10 +2285,7 @@ msgid ""
 "Lookup speaker by email, first, or last name. If a Speaker does not exist "
 "for the email provided, an invitation to create an account will be sent to "
 "them."
-msgstr ""
-"スピーカーをメールアドレス、氏名で検索する。検索されたメールアドレスのスピー"
-"カーがいない場合、そのメールアドレスへアカウント作成のための招待状が送信され"
-"ます。"
+msgstr "スピーカーをメールアドレス、氏名で検索する。検索されたメールアドレスのスピーカーがいない場合、そのメールアドレスへアカウント作成のための招待状が送信されます。"
 
 #: symposion/templates/proposals/proposal_speaker_manage.html:50
 msgid "Add speaker"
@@ -2419,9 +2308,7 @@ msgid ""
 "You will be able to edit your proposal after it has been submitted. The "
 "program committee may ask questions, provide feedback, and even suggest "
 "changes to your proposal as part of the review processes."
-msgstr ""
-"プロポーザルは提出した後でも編集できます。審査の過程で運営委員会は提出された"
-"プロポーザルへの質問やフィードバック、変更依頼をすることがあります。"
+msgstr "プロポーザルは提出した後でも編集できます。審査の過程で運営委員会は提出されたプロポーザルへの質問やフィードバック、変更依頼をすることがあります。"
 
 #: symposion/templates/registration/login.html:12
 msgid "Redirecting to CTE..."
@@ -2505,18 +2392,14 @@ msgstr "プレゼンテーションのリスト"
 msgid ""
 "Sign up and <a href=\"%(account_login)s?next=%(request.path)s\">log in</a> "
 "to volunteer to be session chair."
-msgstr ""
-"司会者のボランティアをするには登録して <a href=\"%(account_login)s?next="
-"%(request.path)s\">ログイン</a> して下さい。"
+msgstr "司会者のボランティアをするには登録して <a href=\"%(account_login)s?next=%(request.path)s\">ログイン</a> して下さい。"
 
 #: symposion/templates/schedule/session_detail.html:76
 #, python-format
 msgid ""
 "Sign up and <a href=\"%(account_login)s?next=%(request.path)s\">log in</a> "
 "to volunteer to be session runner."
-msgstr ""
-"アシスタントをするには登録して<a href=\"%(account_login)s?next="
-"%(request.path)s\">ログイン</a>して下さい。"
+msgstr "アシスタントをするには登録して<a href=\"%(account_login)s?next=%(request.path)s\">ログイン</a>して下さい。"
 
 #: symposion/templates/social_auth/usersocialauth_list.html:15
 msgid "Remove"
@@ -2534,18 +2417,14 @@ msgstr "プレゼンテーション"
 msgid ""
 "No presentations. This page is only visible to staff until there is a "
 "presentation."
-msgstr ""
-"プレゼンテーションがありません。このページはプレゼンテーションが登録されるま"
-"でスタッフにしか表示されません。"
+msgstr "プレゼンテーションがありません。このページはプレゼンテーションが登録されるまでスタッフにしか表示されません。"
 
 #: symposion/templates/sponsorship/apply.html:23
 #, python-format
 msgid ""
-"By submitting this sponsor application you are agreeing to the <a href="
-"\"%(terms)s\" target=\"_blank\">terms and conditions</a>."
-msgstr ""
-"スポンサーに応募すると<a href=\"%(terms)s\" target=\"_blank\">条項と条件</a>"
-"に同意したことになります。"
+"By submitting this sponsor application you are agreeing to the <a "
+"href=\"%(terms)s\" target=\"_blank\">terms and conditions</a>."
+msgstr "スポンサーに応募すると<a href=\"%(terms)s\" target=\"_blank\">条項と条件</a>に同意したことになります。"
 
 #: symposion/templates/sponsorship/detail.html:12
 msgid "Your sponsorship has been submitted! Thank you!"
@@ -2556,11 +2435,7 @@ msgid ""
 "Please enter the information below at your leasure. Your submission will "
 "become active once it has been reviewed and you have uploaded an image and "
 "text for use on the website."
-msgstr ""
-"スポンサーシップの申請を完了するには、以下のスポンサー情報の最低限、ウェブ用"
-"のロゴ、会社の説明を入力してください。 最低限の情報が登録できたら、スタッフに"
-"レビューされ、スポンサーシップの申請が有効になります。 有効になったら、スポン"
-"サーのロゴや、リンクがサイト上に表示されます。"
+msgstr "スポンサーシップの申請を完了するには、以下のスポンサー情報の最低限、ウェブ用のロゴ、会社の説明を入力してください。 最低限の情報が登録できたら、スタッフにレビューされ、スポンサーシップの申請が有効になります。 有効になったら、スポンサーのロゴや、リンクがサイト上に表示されます。"
 
 #: symposion/templates/sponsorship/detail.html:24
 #, python-format

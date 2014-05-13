@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-10 18:47+0900\n"
-"PO-Revision-Date: 2014-05-10 09:48+0000\n"
+"POT-Creation-Date: 2014-05-13 10:09+0900\n"
+"PO-Revision-Date: 2014-05-13 01:21+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -27,17 +27,24 @@ msgstr ""
 msgid "The description must be less than 400 characters"
 msgstr "400文字以内で記入して下さい。"
 
-#: pycon/models.py:48 pycon/models.py:177
+#: pycon/models.py:48 pycon/models.py:179
 msgid "Novice"
 msgstr "初級"
 
-#: pycon/models.py:49 pycon/models.py:178
+#: pycon/models.py:49 pycon/models.py:180
 msgid "Intermediate"
 msgstr "中級"
 
-#: pycon/models.py:50 pycon/models.py:179
+#: pycon/models.py:50 pycon/models.py:181
 msgid "Experienced"
 msgstr "上級"
+
+#: pycon/models.py:85 pyconjp/templates/proposals/_proposal_fields.html:12
+#: symposion/templates/proposals/_proposal_fields.html:12
+#: symposion/templates/reviews/_review_table.html:8
+#: symposion/templates/reviews/result_notification.html:47
+msgid "Category"
+msgstr "カテゴリ"
 
 #: pycon/models.py:88
 msgid "Level of audience expertise assumed in Python."
@@ -61,96 +68,110 @@ msgstr ""
 msgid "The reason the proposal was rejected."
 msgstr "プロポーザルが却下された理由"
 
-#: pycon/models.py:105
+#: pycon/models.py:104
+msgid "Recording Release"
+msgstr "録画許可"
+
+#: pycon/models.py:106
 msgid ""
 "By submitting your talk proposal, you agree to give permission to the Python"
 " Software Foundation to record, edit, and release audio and/or video of your"
 " presentation. If you do not agree to this, please uncheck this box."
 msgstr "講演のプロポーザルを提出すると、Pythonソフトウェア財団があなたの講演を記録、編集、またその録音またはビデオあるいはその両方を頒布することに同意したとみなします。もしこれに同意しない場合はチェックボックスをオフにして下さい。"
 
-#: pycon/models.py:109
+#: pycon/models.py:110
 msgid "Additional requirements"
 msgstr "追加必要事項"
 
-#: pycon/models.py:111
+#: pycon/models.py:112
 msgid ""
 "Please let us know if you have any specific needs (A/V requirements, "
 "multiple microphones, a table, etc).  Note for example that 'audio out' is "
 "not provided for your computer unless you tell us in advance."
 msgstr "特に必要な物(A/V機器、複数のマイク、テーブルetc)があれば教えて下さい。例として、コンピュータからの「音声出力」は事前にお知らせ頂いていない場合は提供できないことに注意して下さい。"
 
-#: pycon/models.py:121
+#: pycon/models.py:122
 msgid "No preference"
 msgstr "希望なし"
 
-#: pycon/models.py:122
+#: pycon/models.py:123
 msgid "I prefer a 30 minute slot"
 msgstr "30分枠希望"
 
-#: pycon/models.py:123
+#: pycon/models.py:124
 msgid "I prefer a 45 minute slot"
 msgstr "45分枠希望"
 
-#: pycon/models.py:129 pycon/models.py:188
+#: pycon/models.py:127 pyconjp/templates/proposals/_proposal_fields.html:33
+#: symposion/templates/proposals/_proposal_fields.html:29
+msgid "Duration"
+msgstr "時間枠"
+
+#: pycon/models.py:130 pycon/models.py:190
 #: pyconjp/templates/proposals/_proposal_fields.html:66
 #: symposion/templates/proposals/_proposal_fields.html:62
 msgid "Outline"
 msgstr "アウトライン"
 
-#: pycon/models.py:133 pycon/models.py:197
+#: pycon/models.py:134 pyconjp/templates/proposals/_proposal_fields.html:25
+#: symposion/templates/proposals/_proposal_fields.html:21
+msgid "Audience"
+msgstr "対象者"
+
+#: pycon/models.py:135 pycon/models.py:199
 msgid ""
 "Who is the intended audience for your talk? (Be specific; \"Python "
 "programmers\" is not a good answer to this question.)"
 msgstr "想定している対象者について教えて下さい。(具体的にお願いします。例えば「Pythonプログラマー」は適切な回答ではありません。)"
 
-#: pycon/models.py:138 pycon/models.py:202
+#: pycon/models.py:140 pycon/models.py:204
 #: pyconjp/templates/proposals/_proposal_fields.html:28
 #: symposion/templates/proposals/_proposal_fields.html:24
 msgid "Objectives"
 msgstr "目的"
 
-#: pycon/models.py:140 pycon/models.py:204
+#: pycon/models.py:142 pycon/models.py:206
 msgid ""
 "What will attendees get out of your talk? When they leave the room, what "
 "will they know that they didn't know before?"
 msgstr "参加者はあなたの講演から何を学びますか。参加者が会場に来る前は知らなかったけれども、帰る際には得ている知識は何でしょうか。"
 
-#: pycon/models.py:184
+#: pycon/models.py:186
 msgid "Level of audience expertise assumed in the presentation's domain."
 msgstr "対象者に期待する題目の分野に関する知識レベル"
 
-#: pycon/models.py:191 pyconjp/templates/proposals/_proposal_fields.html:69
+#: pycon/models.py:193 pyconjp/templates/proposals/_proposal_fields.html:69
 #: symposion/templates/proposals/_proposal_fields.html:65
 msgid "More info"
 msgstr "追加情報"
 
-#: pycon/models.py:192
+#: pycon/models.py:194
 msgid "More info. Will be made public if your talk is accepted."
 msgstr "追加された情報はあなたの講演が承認された後で公開されます。"
 
-#: pycon/models.py:209 pycon/templates/schedule/presentation_detail.html:65
+#: pycon/models.py:211 pycon/templates/schedule/presentation_detail.html:65
 #: pyconjp/templates/proposals/_proposal_fields.html:84
 #: symposion/templates/proposals/_proposal_fields.html:80
 msgid "Student Handout"
 msgstr "参加者用ハンドアウト"
 
-#: pycon/models.py:212
+#: pycon/models.py:214
 msgid ""
 "Upload a resource to be distributed to students  attending the tutorial "
 "session."
 msgstr "チュートリアルセッションの参加者へ配布するための資料をアプロードして下さい。"
 
-#: pycon/models.py:221
+#: pycon/models.py:223
 msgid "CTE registered participants for this tutorial."
 msgstr ""
 
-#: pycon/models.py:226
+#: pycon/models.py:228
 msgid ""
 "CTE Tutorial Identifier. This is typically auto-populated from a management "
 "command."
 msgstr ""
 
-#: pycon/models.py:234
+#: pycon/models.py:236
 msgid "Maximum number of attendees, per CTE data"
 msgstr ""
 
@@ -200,11 +221,11 @@ msgstr "オファー済み"
 msgid "Rejected"
 msgstr "却下済み"
 
-#: pycon/finaid/models.py:38 symposion/proposals/models.py:201
+#: pycon/finaid/models.py:38 symposion/proposals/models.py:207
 msgid "Declined"
 msgstr "辞退"
 
-#: pycon/finaid/models.py:39 symposion/proposals/models.py:200
+#: pycon/finaid/models.py:39 symposion/proposals/models.py:206
 #: symposion/templates/proposals/_pending_proposal_row.html:15
 #: symposion/templates/proposals/_proposal_row.html:15
 msgid "Accepted"
@@ -744,6 +765,7 @@ msgstr "スポンサーシップ募集中！詳しく見る"
 
 #: pycon/templates/dashboard.html:29
 #: pyconjp/templates/proposals/_proposal_fields.html:16
+#: symposion/proposals/models.py:116
 msgid "Language"
 msgstr "言語"
 
@@ -769,6 +791,7 @@ msgstr "あなたのプロポーザル"
 
 #: pycon/templates/dashboard.html:68 pycon/templates/dashboard.html.py:88
 #: pycon/templates/dashboard.html:106 pycon/templates/dashboard.html.py:150
+#: symposion/proposals/models.py:88
 msgid "Title"
 msgstr "題目"
 
@@ -838,11 +861,11 @@ msgstr "費用補助申請のステータス"
 
 #: pycon/templates/dashboard.html:198
 msgid "Review applications"
-msgstr ""
+msgstr "申請をレビュー"
 
 #: pycon/templates/dashboard.html:204
 msgid "Download applications"
-msgstr ""
+msgstr "申請をダウンロード"
 
 #: pycon/templates/dashboard.html:215
 #: symposion/templates/sponsorship/detail.html:8
@@ -906,11 +929,11 @@ msgstr "参加可能なチーム"
 
 #: pycon/templates/dashboard.html:374
 msgid "Program Export"
-msgstr ""
+msgstr "プログラムエクスポート"
 
 #: pycon/templates/dashboard.html:377
 msgid "Export Program Data"
-msgstr ""
+msgstr "プログラムデータをエクスポート"
 
 #: pycon/templates/dashboard.html:378
 msgid "This action may take up to a minute to complete."
@@ -934,7 +957,7 @@ msgstr ""
 
 #: pycon/templates/homepage.html:60
 msgid "REGISTER"
-msgstr ""
+msgstr "参加登録"
 
 #: pycon/templates/homepage.html:87 symposion/templates/static/sponsors.html:5
 msgid "Sponsors"
@@ -968,7 +991,7 @@ msgstr "ログインしています"
 
 #: pycon/templates/site_base.html:120
 msgid "SPONSORS"
-msgstr ""
+msgstr "スポンサー"
 
 #: pycon/templates/site_base.html:163
 msgid ""
@@ -1497,7 +1520,7 @@ msgstr "カンファレンススケジュール"
 #: pycon/templates/schedule/schedule_detail.html:9
 #: pycon/templates/schedule/schedule_detail.html:12
 msgid " Schedule"
-msgstr ""
+msgstr "スケジュール"
 
 #: pycon/templates/schedule/schedule_edit.html:7
 #: pycon/templates/schedule/schedule_edit.html:14
@@ -1782,27 +1805,10 @@ msgstr "提出者"
 msgid "Tags"
 msgstr "タグ"
 
-#: pyconjp/templates/proposals/_proposal_fields.html:12
-#: symposion/templates/proposals/_proposal_fields.html:12
-#: symposion/templates/reviews/_review_table.html:8
-#: symposion/templates/reviews/result_notification.html:47
-msgid "Category"
-msgstr "カテゴリ："
-
 #: pyconjp/templates/proposals/_proposal_fields.html:20
 #: symposion/templates/proposals/_proposal_fields.html:16
 msgid "Python Level"
 msgstr "Python レベル"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:25
-#: symposion/templates/proposals/_proposal_fields.html:21
-msgid "Audience"
-msgstr "対象者"
-
-#: pyconjp/templates/proposals/_proposal_fields.html:33
-#: symposion/templates/proposals/_proposal_fields.html:29
-msgid "Duration"
-msgstr ""
 
 #: pyconjp/templates/proposals/_proposal_fields.html:38
 #: symposion/templates/proposals/_proposal_fields.html:34
@@ -1943,24 +1949,28 @@ msgstr "名前"
 msgid ""
 "If your talk is accepted this will be made public and printed in the "
 "program. Should be one paragraph, maximum 400 characters."
-msgstr ""
+msgstr "公園が証人されたら、このテキストはプログラムに印刷され、公開されます。 最大４００文字"
 
 #: symposion/proposals/models.py:95
 msgid "Detailed Abstract"
-msgstr ""
+msgstr "詳細な説明"
 
 #: symposion/proposals/models.py:96
 msgid "Detailed description. Will be made public if your talk is accepted."
 msgstr "詳細な説明はあなたの講演が承認された後で公開されます。"
 
-#: symposion/proposals/models.py:101
+#: symposion/proposals/models.py:100
+msgid "Additional Notes"
+msgstr "その他のメモ"
+
+#: symposion/proposals/models.py:102
 msgid ""
 "Anything else you'd like the program committee to know when making their "
 "selection: your past speaking experience, open source community experience, "
 "etc."
 msgstr "選考について運営に伝えたいことは他にありますか。 例: 過去の講演経験、オープンソースコミュニティでの経験など"
 
-#: symposion/proposals/models.py:199
+#: symposion/proposals/models.py:205
 msgid "Pending"
 msgstr "保留"
 

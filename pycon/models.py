@@ -82,7 +82,7 @@ class PyConProposal(ProposalBase):
         (REJECTION_BAD, "No really: rejected. It's just plain bad."),
     ]
 
-    category = models.ForeignKey(PyConProposalCategory)
+    category = models.ForeignKey(PyConProposalCategory, verbose_name=_("Category"))
     audience_level = models.IntegerField(
         choices=AUDIENCE_LEVELS,
         help_text=_(u'Level of audience expertise assumed in Python.'),
@@ -101,6 +101,7 @@ class PyConProposal(ProposalBase):
         choices=REJECTION_OPTIONS,
         help_text=_(u'The reason the proposal was rejected.'))
     recording_release = models.BooleanField(
+        _("Recording Release"),
         default=True,
         help_text=_(u"By submitting your talk proposal, you agree to give permission to the Python Software Foundation to record, edit, and release audio and/or video of your presentation. If you do not agree to this, please uncheck this box.")
     )
@@ -123,13 +124,14 @@ class PyConTalkProposal(PyConProposal):
         (2, _(u"I prefer a 45 minute slot")),
     ]
 
-    duration = models.IntegerField(choices=DURATION_CHOICES)
+    duration = models.IntegerField(choices=DURATION_CHOICES, verbose_name=_("Duration"))
 
     outline = models.TextField(
         _(u"Outline")
     )
     audience = models.CharField(
         max_length=150,
+        verbose_name=_("Audience"),
         help_text=_(u'Who is the intended audience for your talk? (Be '
                     u'specific; "Python programmers" is not a good answer '
                     u'to this question.)'),

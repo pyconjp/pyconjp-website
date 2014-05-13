@@ -85,7 +85,7 @@ class ProposalBase(models.Model):
 
     kind = models.ForeignKey(ProposalKind)
 
-    title = models.CharField(max_length=100)
+    title = models.CharField(_("Title"), max_length=100)
     description = models.TextField(
         _("Description"),
         max_length=400,  # @@@ need to enforce 400 in UI
@@ -97,6 +97,7 @@ class ProposalBase(models.Model):
                     "if your talk is accepted.")
     )
     additional_notes = models.TextField(
+        _("Additional Notes"),
         blank=True,
         help_text=_("Anything else you'd like the program committee to know "
                     "when making their selection: your past speaking "
@@ -110,7 +111,12 @@ class ProposalBase(models.Model):
     additional_speakers = models.ManyToManyField("speakers.Speaker", through="AdditionalSpeaker", blank=True)
     cancelled = models.BooleanField(default=False)
     tags = TaggableManager(blank=True)
-    language = models.CharField(max_length=2, default=settings.LANGUAGES[0][0], choices=settings.LANGUAGES)
+    language = models.CharField(
+        max_length=2,
+        verbose_name=_("Language"),
+        default=settings.LANGUAGES[0][0],
+        choices=settings.LANGUAGES,
+    )
 
     def __unicode__(self):
         return self.title

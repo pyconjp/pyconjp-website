@@ -7,7 +7,7 @@
 {% load sponsorship_tags %}
 {% load thumbnail %}
 {% load boxes_tags %}
-{% load biblion_tags %}
+{% load pyconjp_tags %}
 
 {% block head_title_base %}PyCon JP 2014 in Tokyo | September 13th &ndash; September 15th{% endblock %}
 
@@ -118,7 +118,8 @@
     {% endcache %}
 
     <div class="row homepage-content" style="margin-top: 2em"{# TODO: スポンサーを表示する時にマージンがいらない #}>
-        {% latest_blog_posts as posts %}
+        {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+        {% latest_section_posts lang as posts %}
         <div class="span8">
             <h3>{% trans "Announcements" %}</h3>
                 {% for post in posts %}
@@ -139,6 +140,7 @@
                     <p>{% trans "No announcements have been published." %}</p>
                 {% endfor %}
         </div>
+        {% endwith %}
 
         <div class="span4">
           {# homepage-about for each language #} 

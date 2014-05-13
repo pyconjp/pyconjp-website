@@ -13,9 +13,7 @@ class PyConProposalForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(PyConProposalForm, self).__init__(*args, **kwargs)
-        self.fields["category"] = forms.ModelChoiceField(
-            queryset=PyConProposalCategory.objects.order_by("name")
-        )
+        self.fields["category"].queryset = PyConProposalCategory.objects.order_by("name")
 
     def clean_description(self):
         value = self.cleaned_data["description"]

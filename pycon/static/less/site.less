@@ -383,17 +383,12 @@ aside {
 
 .page-head {
   padding: 10px 0 20px 0;
-  position: relative;
-  background-color: @blueSky;
   min-height: 55px;
-  .skyline {
-    background: url('../img/pagehead-bkg.png') no-repeat;
-    width: 500px;
-    height: 70px;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-  }
+  background-color: @blueSky;
+  background-image: url('../img/pagehead-bkg.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
   h1 {
     text-transform:uppercase;
     font-size: @baseFontSize + 18;

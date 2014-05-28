@@ -49,7 +49,7 @@ SERVE_MEDIA = False
 COMPRESS_ENABLED = True
 
 MEDIA_ROOT = env_or_default('MEDIA_ROOT',
-                            os.path.join(BASE_PATH, 'site_media'))
+                            os.path.join(BASE_PATH, 'site_media', 'media'))
 
 import copy
 from django.utils.log import DEFAULT_LOGGING

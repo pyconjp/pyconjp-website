@@ -103,7 +103,7 @@ class PyConProposal(ProposalBase):
     recording_release = models.BooleanField(
         _("Recording Release"),
         default=True,
-        help_text=_(u"By submitting your talk proposal, you agree to give permission to the Python Software Foundation to record, edit, and release audio and/or video of your presentation. If you do not agree to this, please uncheck this box.")
+        help_text=_(u"By submitting your talk proposal, you agree to give permission to the PyCon JP Management Team to record, edit, and release audio and/or video of your presentation. If you do not agree to this, please uncheck this box.")
     )
 
     additional_requirements = models.TextField(

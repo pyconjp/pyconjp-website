@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-14 22:25+0900\n"
+"POT-Creation-Date: 2014-06-14 22:42+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -930,6 +930,14 @@ msgstr ""
 
 #: pycon/templates/dashboard.html:378
 msgid "This action may take up to a minute to complete."
+msgstr ""
+
+#: pycon/templates/homepage.html:52
+msgid "Tutorials"
+msgstr ""
+
+#: pycon/templates/homepage.html:52
+msgid "September 12"
 msgstr ""
 
 #: pycon/templates/homepage.html:53

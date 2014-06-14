@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-14 22:25+0900\n"
-"PO-Revision-Date: 2014-06-14 13:37+0000\n"
+"POT-Creation-Date: 2014-06-14 22:42+0900\n"
+"PO-Revision-Date: 2014-06-14 13:43+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -938,6 +938,14 @@ msgstr "プログラムデータをエクスポート"
 
 #: pycon/templates/dashboard.html:378
 msgid "This action may take up to a minute to complete."
+msgstr ""
+
+#: pycon/templates/homepage.html:52
+msgid "Tutorials"
+msgstr "チュートリアル"
+
+#: pycon/templates/homepage.html:52
+msgid "September 12"
 msgstr ""
 
 #: pycon/templates/homepage.html:53

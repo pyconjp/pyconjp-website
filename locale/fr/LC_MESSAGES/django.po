@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-13 10:09+0900\n"
+"POT-Creation-Date: 2014-05-31 15:07+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: pycon/forms.py:24
+#: pycon/forms.py:22
 msgid "The description must be less than 400 characters"
 msgstr ""
 
@@ -68,8 +68,8 @@ msgstr ""
 
 #: pycon/models.py:106
 msgid ""
-"By submitting your talk proposal, you agree to give permission to the Python "
-"Software Foundation to record, edit, and release audio and/or video of your "
+"By submitting your talk proposal, you agree to give permission to the PyCon "
+"JP Management Team to record, edit, and release audio and/or video of your "
 "presentation. If you do not agree to this, please uncheck this box."
 msgstr ""
 
@@ -758,6 +758,7 @@ msgstr ""
 #: pycon/templates/dashboard.html:29
 #: pyconjp/templates/proposals/_proposal_fields.html:16
 #: symposion/proposals/models.py:116
+#: symposion/templates/reviews/_review_table.html:9
 msgid "Language"
 msgstr ""
 
@@ -955,13 +956,13 @@ msgstr ""
 msgid "Sponsors"
 msgstr ""
 
-#: pycon/templates/homepage.html:124
+#: pycon/templates/homepage.html:125
 #: symposion/templates/biblion/blog_list.html:6
 #: symposion/templates/biblion/blog_list.html:12
 msgid "Announcements"
 msgstr ""
 
-#: pycon/templates/homepage.html:133
+#: pycon/templates/homepage.html:134
 #, python-format
 msgid ""
 "\n"
@@ -970,7 +971,7 @@ msgid ""
 "                            "
 msgstr ""
 
-#: pycon/templates/homepage.html:140
+#: pycon/templates/homepage.html:141
 msgid "No announcements have been published."
 msgstr ""
 
@@ -982,11 +983,11 @@ msgstr ""
 msgid "loggedin"
 msgstr ""
 
-#: pycon/templates/site_base.html:120
+#: pycon/templates/site_base.html:119
 msgid "SPONSORS"
 msgstr ""
 
-#: pycon/templates/site_base.html:163
+#: pycon/templates/site_base.html:162
 msgid ""
 "\n"
 "                    PyCon JP 2014 in Tokyo is a production of the <a href="
@@ -994,7 +995,7 @@ msgid ""
 "                  "
 msgstr ""
 
-#: pycon/templates/site_base.html:168
+#: pycon/templates/site_base.html:167
 msgid ""
 "\n"
 "                    Site forked from the <a href=\"http://us.pycon."
@@ -1005,7 +1006,7 @@ msgid ""
 "                  "
 msgstr ""
 
-#: pycon/templates/site_base.html:173
+#: pycon/templates/site_base.html:172
 msgid ""
 "\n"
 "                    Questions? Comments? Contact <a href=\"mailto:pycon-"
@@ -1805,7 +1806,7 @@ msgstr ""
 
 #: pyconjp/templates/proposals/_proposal_fields.html:8
 #: symposion/templates/proposals/_proposal_fields.html:8
-#: symposion/templates/reviews/_review_table.html:9
+#: symposion/templates/reviews/_review_table.html:10
 msgid "Tags"
 msgstr ""
 
@@ -2356,23 +2357,23 @@ msgstr ""
 msgid "Registration and Housing"
 msgstr ""
 
-#: symposion/templates/reviews/_review_table.html:15
+#: symposion/templates/reviews/_review_table.html:16
 msgid "Online Result Status"
 msgstr ""
 
-#: symposion/templates/reviews/_review_table.html:16
+#: symposion/templates/reviews/_review_table.html:17
 msgid "Overall Status"
 msgstr ""
 
-#: symposion/templates/reviews/_review_table.html:18
+#: symposion/templates/reviews/_review_table.html:19
 msgid "Update Overall Status"
 msgstr ""
 
-#: symposion/templates/reviews/_review_table.html:21
+#: symposion/templates/reviews/_review_table.html:22
 msgid "Rejection Status"
 msgstr ""
 
-#: symposion/templates/reviews/_review_table.html:22
+#: symposion/templates/reviews/_review_table.html:23
 msgid "Damage Score"
 msgstr ""
 

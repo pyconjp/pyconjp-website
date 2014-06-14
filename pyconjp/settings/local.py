@@ -56,3 +56,6 @@ DATABASES = {
         'PORT': env_var('DB_PORT', default=''),
     }
 }
+
+INSTALLED_APPS += ['debug_toolbar']
+MIDDLEWARE_CLASSES += ["debug_toolbar.middleware.DebugToolbarMiddleware"]

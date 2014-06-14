@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-31 15:07+0900\n"
+"POT-Creation-Date: 2014-06-14 22:25+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1064,6 +1064,22 @@ msgstr ""
 #: pycon/templates/account/base.html:17
 #: symposion/templates/account/base.html:14
 msgid "Delete account"
+msgstr ""
+
+#: pycon/templates/account/delete.html:7
+#: pycon/templates/account/delete.html:10
+msgid "Delete Account"
+msgstr ""
+
+#: pycon/templates/account/delete.html:12
+#, python-format
+msgid ""
+"If you go ahead and delete your account, your information will be "
+"<b>expunged within %(ACCOUNT_DELETION_EXPUNGE_HOURS)s hours</b>."
+msgstr ""
+
+#: pycon/templates/account/delete.html:16
+msgid "Delete My Account"
 msgstr ""
 
 #: pycon/templates/account/email_confirm.html:14

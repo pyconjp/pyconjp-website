@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-31 15:07+0900\n"
-"PO-Revision-Date: 2014-06-14 09:24+0000\n"
+"POT-Creation-Date: 2014-06-14 22:25+0900\n"
+"PO-Revision-Date: 2014-06-14 13:37+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -1065,6 +1065,22 @@ msgstr "関連付け"
 #: pycon/templates/account/base.html:17
 #: symposion/templates/account/base.html:14
 msgid "Delete account"
+msgstr "アカウント削除"
+
+#: pycon/templates/account/delete.html:7
+#: pycon/templates/account/delete.html:10
+msgid "Delete Account"
+msgstr "アカウント削除"
+
+#: pycon/templates/account/delete.html:12
+#, python-format
+msgid ""
+"If you go ahead and delete your account, your information will be "
+"<b>expunged within %(ACCOUNT_DELETION_EXPUNGE_HOURS)s hours</b>."
+msgstr "ここでアカウントを削除を削除したら、情報は%(ACCOUNT_DELETION_EXPUNGE_HOURS)s時間内に完全に削除されます。"
+
+#: pycon/templates/account/delete.html:16
+msgid "Delete My Account"
 msgstr "アカウントを削除する"
 
 #: pycon/templates/account/email_confirm.html:14

@@ -99,7 +99,7 @@ class LocalizedTextNode(template.Node):
             content_type = '%s_%s' % (self.content_type, context['request'].LANGUAGE_CODE)
             texts = sponsor.sponsor_benefits.filter(benefit__content_type=content_type)
             if texts.count() > 0:
-                s = linebreaks(urlize(texts[0].text, autoescape=True), autoescape=True)
+                s = linebreaks(urlize(texts[0].text, autoescape=True))
             if self.content_var:
                 context[self.content_var] = s
                 s = ''

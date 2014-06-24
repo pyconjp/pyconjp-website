@@ -26,3 +26,5 @@ CONSTANCE_CONFIG["GOOGLE_ANALYTICS_TRACKING_ID"] = ("", "The site's Google Analy
 
 PROPOSAL_FORMS['talk'] = 'pyconjp.forms.PyConJPTalkProposalForm'
 TEMPLATE_DIRS.insert(0, os.path.join(PROJECT_ROOT, "pyconjp/templates"))
+
+ACCOUNT_DELETION_EXPUNGE_CALLBACK = 'pyconjp.account.callbacks.account_delete_expunge'

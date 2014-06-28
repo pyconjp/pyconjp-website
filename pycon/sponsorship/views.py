@@ -136,8 +136,8 @@ def sponsor_zip_logo_files(request):
     """Return a zip file of sponsor web and print logos"""
 
     zip_stringio = StringIO()
-    with ZipFile(zip_stringio, "w") as zipfile:
-
+    zipfile = ZipFile(zip_stringio, "w")
+    try:
         benefits = Benefit.objects.all()
         for benefit in benefits:
             dir_name = benefit.name.lower().replace(" ", "_").replace('/', '_')
@@ -160,6 +160,8 @@ def sponsor_zip_logo_files(request):
                                 zipfile.writestr(zipinfo, f.read())
                         else:
                             log.debug("No such sponsor file: %s" % sponsor_benefit.upload.path)
+    finally:
+        zipfile.close()
 
     response = HttpResponse(zip_stringio.getvalue(),
                             content_type="application/zip")

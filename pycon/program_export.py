@@ -132,8 +132,7 @@ class SpeakerBiosExporter(BaseExporter):
         queryset = Presentation.objects.exclude(cancelled=True)
         sort_key = lambda s: s.name.lower()
         all_speakers = []
-        kinds = [ProposalKind.objects.get(name=name)
-                 for name in ['Talk', 'Poster', 'Tutorial', 'Lightning Talk']]
+        kinds = ProposalKind.objects.all()
         for kind in kinds:
             speakers = []
             for presentation in queryset.filter(proposal_base__kind=kind):
@@ -196,8 +195,7 @@ class PresentationsExporter(BaseExporter):
 
     def export(self):
         queryset = Presentation.objects.exclude(cancelled=True)
-        kinds = [ProposalKind.objects.get(name=name)
-                 for name in ['Talk', 'Poster', 'Tutorial', 'Lightning Talk']]
+        kinds = ProposalKind.objects.all()
         for kind in kinds:
             presentations = queryset.filter(proposal_base__kind=kind)
             presentations = presentations.order_by('slot__day', 'slot__start', 'title')
@@ -244,8 +242,7 @@ class ScheduleExporter(BaseExporter):
         return ''
 
     def export(self):
-        schedules = [Schedule.objects.get(section__name=name)
-                     for name in ['Talks', 'Tutorials']]
+        schedules = Schedule.objects.all()
 
         for schedule in schedules:
             slots = []

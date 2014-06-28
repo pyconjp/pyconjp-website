@@ -139,7 +139,7 @@ class SpeakerBiosExporter(BaseExporter):
                 speakers.extend(presentation.speakers())
                 all_speakers.extend(presentation.speakers())
             speakers = sorted(list(set(speakers)), key=sort_key)
-            filename = kind.name.lower().replace(' ', '_') + '_bios'
+            filename = kind.name.lower().replace(' ', '_').replace('/', '_') + '_bios'
             self.write(filename, speakers)
 
         all_speakers = sorted(list(set(all_speakers)), key=sort_key)
@@ -166,7 +166,7 @@ class SponsorsExporter(BaseExporter):
         levels = SponsorLevel.objects.all()
         for level in levels:
             sponsors = queryset.filter(level=level).order_by('name')
-            filename = level.name.lower().replace(' ', '_') + '_sponsors'
+            filename = level.name.lower().replace(' ', '_').replace('/', '_') + '_sponsors'
             self.write(filename, sponsors)
 
 
@@ -199,7 +199,7 @@ class PresentationsExporter(BaseExporter):
         for kind in kinds:
             presentations = queryset.filter(proposal_base__kind=kind)
             presentations = presentations.order_by('slot__day', 'slot__start', 'title')
-            filename = kind.name.lower().replace(' ', '_') + 's'
+            filename = kind.name.lower().replace(' ', '_').replace('/', '_') + 's'
             if kind.name in ['Talk', 'Tutorial']:
                 self.write(filename, presentations,
                                 self.fields + ['room', 'time'])
@@ -255,7 +255,7 @@ class ScheduleExporter(BaseExporter):
             slots.sort(key=lambda s: s.end)
             slots.sort(key=lambda s: s.start)
             slots.sort(key=lambda s: s.day.date)
-            filename = schedule.section.name.lower().replace(' ', '_') + '_schedule'
+            filename = schedule.section.name.lower().replace(' ', '_').replace('/', '_') + '_schedule'
             self.write(filename, slots)
 
 

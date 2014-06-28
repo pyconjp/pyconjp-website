@@ -140,11 +140,11 @@ def sponsor_zip_logo_files(request):
 
         benefits = Benefit.objects.all()
         for benefit in benefits:
-            dir_name = benefit.name.lower().replace(" ", "_")
+            dir_name = benefit.name.lower().replace(" ", "_").replace('/', '_')
             for level in SponsorLevel.objects.all():
-                level_name = level.name.lower().replace(" ", "_")
+                level_name = level.name.lower().replace(" ", "_").replace('/', '_')
                 for sponsor in Sponsor.objects.filter(level=level, active=True):
-                    sponsor_name = sponsor.name.lower().replace(" ", "_")
+                    sponsor_name = sponsor.name.lower().replace(" ", "_").replace('/', '_')
                     full_dir = "/".join([dir_name, level_name, sponsor_name])
                     for sponsor_benefit in SponsorBenefit.objects.filter(
                         benefit=benefit,

@@ -1683,8 +1683,8 @@ msgstr "スポンサーになる方法を見る"
 #: pycon/templates/sponsorship/list.html:13
 #: symposion/templates/sponsorship/list.html:8
 #: symposion/templates/sponsorship/list.html:17
-msgid "About PyCon Sponsors"
-msgstr "PyConのスポンサーについて"
+msgid "About PyCon JP Sponsors"
+msgstr "PyCon JP のスポンサーについて"
 
 #: pycon/templates/static/sitemap.html:8
 #: pycon/templates/static/sitemap.html:10

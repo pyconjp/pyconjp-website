@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-14 22:42+0900\n"
+"POT-Creation-Date: 2014-07-16 09:00+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -704,11 +704,11 @@ msgstr ""
 msgid "Sponsorship level only allows for %(max_words)s characters."
 msgstr ""
 
-#: pycon/sponsorship/views.py:179
+#: pycon/sponsorship/views.py:181
 msgid "Email selected sponsors"
 msgstr ""
 
-#: pycon/sponsorship/views.py:226
+#: pycon/sponsorship/views.py:228
 msgid "Email sent to sponsors"
 msgstr ""
 
@@ -995,7 +995,7 @@ msgstr ""
 msgid "SPONSORS"
 msgstr ""
 
-#: pycon/templates/site_base.html:162
+#: pycon/templates/site_base.html:166
 msgid ""
 "\n"
 "                    PyCon JP 2014 in Tokyo is a production of the <a href="
@@ -1003,7 +1003,7 @@ msgid ""
 "                  "
 msgstr ""
 
-#: pycon/templates/site_base.html:167
+#: pycon/templates/site_base.html:171
 msgid ""
 "\n"
 "                    Site forked from the <a href=\"http://us.pycon."
@@ -1014,11 +1014,11 @@ msgid ""
 "                  "
 msgstr ""
 
-#: pycon/templates/site_base.html:172
+#: pycon/templates/site_base.html:176
 msgid ""
 "\n"
-"                    Questions? Comments? Contact <a href=\"mailto:pycon-"
-"organizers-jp@googlegroups.com\">pycon-organizers-jp@googlegroups.com</a>\n"
+"                    Questions? Comments? Contact <a href=\"mailto:2014@pycon."
+"jp\">2014@pycon.jp</a>\n"
 "                  "
 msgstr ""
 
@@ -1687,7 +1687,7 @@ msgstr ""
 #: pycon/templates/sponsorship/list.html:13
 #: symposion/templates/sponsorship/list.html:8
 #: symposion/templates/sponsorship/list.html:17
-msgid "About PyCon Sponsors"
+msgid "About PyCon JP Sponsors"
 msgstr ""
 
 #: pycon/templates/static/sitemap.html:8

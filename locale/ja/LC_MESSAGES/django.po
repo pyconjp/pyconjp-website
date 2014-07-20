@@ -1671,8 +1671,8 @@ msgstr "メールを送信するスポンサー："
 #: pycon/templates/sponsorship/jobs.html:25
 #: symposion/templates/sponsorship/jobs.html:8
 #: symposion/templates/sponsorship/jobs.html:16
-msgid "PyCon Jobs Fair"
-msgstr "PyCon求人フェア"
+msgid "PyCon JP Jobs Fair"
+msgstr "PyCon JP 求人フェア"
 
 #: pycon/templates/sponsorship/jobs.html:27
 #: pycon/templates/sponsorship/list.html:15

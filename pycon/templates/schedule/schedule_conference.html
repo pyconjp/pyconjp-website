@@ -13,7 +13,9 @@
 
 {% block page_content %}
     <div class="container">
-        {% box "schedule_top" %}
+        {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+        {% box "schedule_top-"|add:lang %}
+        {% endwith %}
         {% for section in sections %}
             {% cache 600 "schedule-table" section.schedule.section %}
                 {% for timetable in section.days %}
@@ -23,6 +25,8 @@
             {% endcache %}
         {% endfor %}
 
-        {% box "schedule_bottom" %}
+        {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
+        {% box "schedule_bottom-"|add:lang %}
+        {% endwith %}
     </div>
 {% endblock %}

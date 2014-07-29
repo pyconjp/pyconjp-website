@@ -214,6 +214,9 @@ class ScheduleExporter(BaseExporter):
     description_fields = []
 
     def prepare_title(self, slot):
+        if slot.content_override:
+            return slot.content_override
+
         if slot.content:
             return slot.content.title
         return slot.kind.label

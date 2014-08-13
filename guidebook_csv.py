@@ -75,16 +75,25 @@ PRESENTATIONS_CSV_PATH = u"program_export/presentations/csv/talk_session___ãƒˆãƒ
 if __name__ == '__main__':
 
     if len(sys.argv) > 1:
-        program_export = zipfile.ZipFile(sys.argv[1])
+        if sys.argv[1] == "create":
+            program_export = zipfile.ZipFile(sys.argv[2])
 
-        schedule_csv = program_export.open(SCHEDULE_CSV_PATH)
-        presentations_csv = program_export.open(PRESENTATIONS_CSV_PATH)
-        speakers_csv = program_export.open(SPEAKERS_CSV_PATH)
+            schedule_csv = program_export.open(SCHEDULE_CSV_PATH)
+            presentations_csv = program_export.open(PRESENTATIONS_CSV_PATH)
+            speakers_csv = program_export.open(SPEAKERS_CSV_PATH)
 
-        export_schedule_csv(schedule_csv, presentations_csv, open("guidebook_schedule.csv", "wb"))
-        export_speakers_csv(speakers_csv, open("guidebook_speakers.csv", "wb"))
+            export_schedule_csv(schedule_csv, presentations_csv, open("guidebook_schedule.csv", "wb"))
+            export_speakers_csv(speakers_csv, open("guidebook_speakers.csv", "wb"))
+        elif sys.argv[1] == "links":
+            print("Not yet supported...")
+        else:
+            print("Unknown command: %s" % sys.argv[1])
     else:
-        print("%s - Create guidebook CSV files." % sys.argv[0])
-        print("Output to guidebook_schedule.csv, guidebook_speakers.csv")
+        print("%s - Guidebook Data Script." % sys.argv[0])
         print("")
-        print("%s PROGRAM_EXPORT_ZIP" % sys.argv[0])
+        print("%s create PROGRAM_EXPORT_ZIP" % sys.argv[0])
+        print("Output data to guidebook_schedule.csv, guidebook_speakers.csv")
+        # TODO
+        #print("")
+        #print("%s links PROGRAM_EXPORT_ZIP SESSION_EXPORT_CSV SPEAKERS_EXPORT_CSV" % sys.argv[0])
+        #print("Output session/speaker link data to guidebook_session_links.csv")

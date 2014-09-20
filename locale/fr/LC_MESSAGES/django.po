@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-16 09:00+0900\n"
+"POT-Creation-Date: 2014-09-20 13:48+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -956,21 +956,29 @@ msgstr ""
 msgid "September 15"
 msgstr ""
 
+#: pycon/templates/homepage.html:59
+msgid "PyCon JP 2014 is over!"
+msgstr ""
+
 #: pycon/templates/homepage.html:60
+msgid "Thanks to everyone for making it a great success!"
+msgstr ""
+
+#: pycon/templates/homepage.html:64
 msgid "REGISTER"
 msgstr ""
 
-#: pycon/templates/homepage.html:87 symposion/templates/static/sponsors.html:5
+#: pycon/templates/homepage.html:91 symposion/templates/static/sponsors.html:5
 msgid "Sponsors"
 msgstr ""
 
-#: pycon/templates/homepage.html:125
+#: pycon/templates/homepage.html:129
 #: symposion/templates/biblion/blog_list.html:6
 #: symposion/templates/biblion/blog_list.html:12
 msgid "Announcements"
 msgstr ""
 
-#: pycon/templates/homepage.html:134
+#: pycon/templates/homepage.html:138
 #, python-format
 msgid ""
 "\n"
@@ -979,7 +987,7 @@ msgid ""
 "                            "
 msgstr ""
 
-#: pycon/templates/homepage.html:141
+#: pycon/templates/homepage.html:145
 msgid "No announcements have been published."
 msgstr ""
 
@@ -1674,8 +1682,7 @@ msgstr ""
 #: pycon/templates/sponsorship/jobs.html:8
 #: pycon/templates/sponsorship/jobs.html:25
 #: symposion/templates/sponsorship/jobs.html:8
-#: symposion/templates/sponsorship/jobs.html:16
-msgid "PyCon Jobs Fair"
+msgid "PyCon JP Jobs Fair"
 msgstr ""
 
 #: pycon/templates/sponsorship/jobs.html:27
@@ -2483,6 +2490,10 @@ msgstr ""
 #: symposion/templates/sponsorship/detail.html:24
 #, python-format
 msgid "%(sponsor.level)s Sponsor Benefits"
+msgstr ""
+
+#: symposion/templates/sponsorship/jobs.html:16
+msgid "PyCon Jobs JP Fair"
 msgstr ""
 
 #: symposion/templates/sponsorship/jobs.html:17

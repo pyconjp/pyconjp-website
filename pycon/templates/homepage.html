@@ -54,6 +54,10 @@
                         </ul>
                     </div>
                 </div>
+                <div class="row" style="position: relative;text-align: center;z-index:1000;padding:0 10px;">
+                  {% trans "PyCon JP 2014 is over!" %}<br>
+                  {% trans "Thanks to everyone for making it a great success!" %}<br>
+                </div>
                 {% if config.REGISTRATION_STATUS == 'open' %}
                     <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
                       <a href="{% url 'registration_start' %}">{% trans "REGISTER" %}</a>

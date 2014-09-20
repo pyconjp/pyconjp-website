@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-16 09:00+0900\n"
+"POT-Creation-Date: 2014-09-20 13:48+0900\n"
 "PO-Revision-Date: 2014-06-14 13:43+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/"
@@ -984,21 +984,29 @@ msgstr "スプリント"
 msgid "September 15"
 msgstr ""
 
+#: pycon/templates/homepage.html:59
+msgid "PyCon JP 2014 is over!"
+msgstr "PyCon JP 2014 は盛況のうちに終了しました。"
+
 #: pycon/templates/homepage.html:60
+msgid "Thanks to everyone for making it a great success!"
+msgstr "ご来場・ご協力いただいた皆様、ありがとうございました。"
+
+#: pycon/templates/homepage.html:64
 msgid "REGISTER"
 msgstr "参加登録"
 
-#: pycon/templates/homepage.html:87 symposion/templates/static/sponsors.html:5
+#: pycon/templates/homepage.html:91 symposion/templates/static/sponsors.html:5
 msgid "Sponsors"
 msgstr "スポンサー"
 
-#: pycon/templates/homepage.html:125
+#: pycon/templates/homepage.html:129
 #: symposion/templates/biblion/blog_list.html:6
 #: symposion/templates/biblion/blog_list.html:12
 msgid "Announcements"
 msgstr "アナウンス"
 
-#: pycon/templates/homepage.html:134
+#: pycon/templates/homepage.html:138
 #, python-format
 msgid ""
 "\n"
@@ -1007,7 +1015,7 @@ msgid ""
 "                            "
 msgstr ""
 
-#: pycon/templates/homepage.html:141
+#: pycon/templates/homepage.html:145
 msgid "No announcements have been published."
 msgstr "掲載されたアナウンスはありません。"
 
@@ -1725,7 +1733,6 @@ msgstr "メールを送信するスポンサー："
 #: pycon/templates/sponsorship/jobs.html:8
 #: pycon/templates/sponsorship/jobs.html:25
 #: symposion/templates/sponsorship/jobs.html:8
-#: symposion/templates/sponsorship/jobs.html:16
 msgid "PyCon JP Jobs Fair"
 msgstr "PyCon JP 求人フェア"
 
@@ -2601,6 +2608,11 @@ msgstr ""
 #, python-format
 msgid "%(sponsor.level)s Sponsor Benefits"
 msgstr "%(sponsor.level)s スポンサー特典"
+
+#: symposion/templates/sponsorship/jobs.html:16
+#, fuzzy
+msgid "PyCon Jobs JP Fair"
+msgstr "PyCon JP 求人フェア"
 
 #: symposion/templates/sponsorship/jobs.html:17
 #: symposion/templates/sponsorship/list.html:18

@@ -37,4 +37,11 @@ PyCon JP サイト！
 
     python manage.py runserver
 
+* Vagrant::
 
+    （初めての方）
+    VagrandをDL&インストール http://lab.raqda.com/vagrant/
+    VirtualBoxをDL&インストール https://www.virtualbox.org/
+
+    インストール後、Vagrantfileファイルのディレクトリにてターミナルより
+    vagrant up

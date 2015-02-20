@@ -16,3 +16,4 @@ site_media
 program_export/
 venv/
 *~
+.idea

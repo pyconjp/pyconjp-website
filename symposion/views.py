@@ -67,5 +67,11 @@ def dashboard(request):
 def change_language(request):
     form = LanguageForm(request.POST)
     if form.is_valid():
-        request.session['django_language'] = form.cleaned_data['language']
+        language = form.cleaned_data['language']
+        request.session['django_language'] = language
+        if request.user.is_authenticated():
+            account = request.user.account
+            account.language = language
+            account.save()
+
     return redirect(request.POST['next'])

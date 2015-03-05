@@ -26,8 +26,9 @@
 
     <tbody>
         {% for proposal in proposals %}
+            {% if proposal.cancelled == False %}
             <tr class="{{ proposal.user_vote_css }}">
-                <td>{{ proposal.number }}</td>
+                <td>{{ proposal.number }} </td>
                 <td>
                     <a href="{% url 'review_detail' proposal.pk %}">
                         <small><strong>{{ proposal.speaker }}</strong></small>
@@ -83,6 +84,7 @@
                     </td>
                 {% endif %}
             </tr>
+            {% endif %}
         {% endfor %}
     </tbody>
 </table>

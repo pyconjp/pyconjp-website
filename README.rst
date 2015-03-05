@@ -83,7 +83,3 @@ More documentation
 ------------------
 
 There's more documentation under ``docs/``.
-
-Test
-----
-HTJ-269 JIRA and bitbucket connect test 2.

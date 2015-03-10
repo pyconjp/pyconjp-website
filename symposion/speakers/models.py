@@ -45,6 +45,12 @@ class Speaker(models.Model):
                     u"your proposals.")
     )
 
+    admission = models.CharField(
+        max_length = 15,
+        blank = True,
+        help_text=_(u"connpassNo/sponsor/Keynote")
+    )
+
     def __unicode__(self):
         if self.user:
             return self.name

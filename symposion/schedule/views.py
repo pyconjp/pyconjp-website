@@ -69,7 +69,6 @@ def schedule_detail(request, slug=None):
 
 def schedule_list(request, slug=None):
     schedule = fetch_schedule(slug)
-    print "TEST"
 
     presentations = Presentation.objects.filter(section=schedule.section)
     presentations = presentations.exclude(cancelled=True)

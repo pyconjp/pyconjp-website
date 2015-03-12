@@ -15,7 +15,7 @@
 
     <h2>{{ sponsor.name }} ({{ sponsor.level }})</h2>
 
-    <form enctype="multipart/form-data" method="POST" action="" class="form-horizontal">o
+    <form enctype="multipart/form-data" method="POST" action="" class="form-horizontal">
         {% csrf_token %}
         <fieldset>
             {{ form|as_bootstrap }}

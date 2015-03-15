@@ -22,7 +22,7 @@
         </div>
         <div class="span12">
             {% box "schedule_top" %}
-            
+
             {% for section in sections %}
                 {% cache 600 "schedule-table" section.schedule.section %}
                     {% for timetable in section.days %}
@@ -31,7 +31,7 @@
                     {% endfor %}
                 {% endcache %}
             {% endfor %}
-            
+
             {% box "schedule_bottom" %}
         </div>
     </div>

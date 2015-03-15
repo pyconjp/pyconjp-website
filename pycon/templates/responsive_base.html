@@ -36,6 +36,21 @@
                 {% include "_account_bar.html" %}
                 {% endblock %}
             </div>
+            <!-- language selection -->
+            <div style="position: absolute; left: 30%;">
+                <form action="{% url 'home' %}change_language/" method="post">
+                    {% csrf_token %}
+                <select id="id_language" name="language">
+                    {% for language in LANGUAGES %}
+                        <option value="{{ language.0 }}" {% if request.LANGUAGE_CODE ==  language.0 %} selected="selected" {% endif %}>{% trans language.1 %}</option>
+                    {% endfor %}
+                </select>
+                    <input name="next" type="hidden" value="{{ request.path }}">
+                    <button class="btn btn-success" type="submit">{% trans "Change" %}</button>
+                </form>
+            </div>
+            <!-- language selection -->
+
             {% block main_nav %}
                 <nav>
                     <a class="logo-small" href="{% url 'home' %}">PyCon JP 2014 in Tokyo</a>

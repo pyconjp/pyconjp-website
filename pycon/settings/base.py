@@ -27,10 +27,19 @@ SERVE_MEDIA = DEBUG
 # most users. See <URL> for more information
 COMPRESS = False
 
+# Conference ID and any URL prefixes
+CONFERENCE_ID = 2
+
+CONFERENCE_URL_PREFIXES = {
+    1: "2014",
+    2: "2015"
+}
+
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": env_or_default("DB_NAME", "pycon2014"),
+        "NAME": env_or_default("DB_NAME", "pycon" + CONFERENCE_URL_PREFIXES[CONFERENCE_ID]),
         "USER": env_or_default("DB_USER", ""),
         "PASSWORD": env_or_default("DB_PASSWORD", ""),
         "HOST": env_or_default("DB_HOST", ""),
@@ -61,12 +70,6 @@ LANGUAGE_CODE = "en-us"
 
 SITE_ID = 1
 
-# Conference ID and any URL prefixes
-CONFERENCE_ID = 1
-
-CONFERENCE_URL_PREFIXES = {
-    1: "2014"
-}
 
 
 # If you set this to False, Django will make some optimizations so as not
@@ -273,8 +276,8 @@ ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
 LOGIN_ERROR_URL = reverse_lazy("account_login")
 
 # Need these to be reversed urls, currently breaks if using reverse_lazy
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/2014/dashboard/"
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/2014/dashboard/"
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/" + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] + "/dashboard/"
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/" + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] +"/dashboard/"
 
 SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
 
@@ -285,7 +288,7 @@ SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
 
 EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
-DEFAULT_FROM_EMAIL = "PyCon 2014 <no-reply@us.pycon.org>"
+DEFAULT_FROM_EMAIL = "PyCon " + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] +" <no-reply@us.pycon.org>"
 
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,

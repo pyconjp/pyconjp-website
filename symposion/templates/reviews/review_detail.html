@@ -157,7 +157,17 @@
                 {% endif %}
 
                 {% if reviews %}
-                    <h5>Review Comments</h5>
+                    <script>
+                    $(function(){
+                        var $disp_comments = $("#disp_comments"), $comments_content = $("#comments_content");
+                        $comments_content.hide();
+                        $disp_comments.click(function(){
+                            $comments_content.toggle();
+                        });
+                    });
+                    </script>
+                    <h5>Review Comments  <button type="button" id="disp_comments" name="disp_comments" value="">Display switch</button></h5>
+                    <div id="comments_content">
                     {% for review in reviews %}
                         <div class="review-box">
                             <div class="vote pull-left">
@@ -178,6 +188,7 @@
                             </div>
                         </div>
                     {% endfor %}
+                    </div>
                 {% endif %}
             </div>
             <div class="tab-pane" id="proposal-feedback">

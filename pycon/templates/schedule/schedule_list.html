@@ -29,7 +29,7 @@
         {% for presentation in presentations %}
             <div class="row presentation_box {{ presentation.proposal.category|cut:" " }}">
                 <div class="span8 presentation well">
-                    <h3><a href="{% url 'schedule_presentation_detail' presentation.pk %}">{{ presentation.title }}</a></h3>
+                    <h3><a href="{% url 'schedule_presentation_detail' presentation.pk %}">{{ presentation.title }}&nbsp;({{ presentation.proposal.language }})</a></h3>
                     <h4>{{ presentation.speakers|join:", " }} in <span class="category">{{ presentation.proposal.category }}</span></h4>
                     {{ presentation.description }}
                     {% if presentation.slot %}

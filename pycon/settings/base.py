@@ -35,11 +35,12 @@ CONFERENCE_URL_PREFIXES = {
     2: "2015"
 }
 
+URL_PREFIXES = CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": env_or_default("DB_NAME", "pycon" + CONFERENCE_URL_PREFIXES[CONFERENCE_ID]),
+        "NAME": env_or_default("DB_NAME", "pycon" + URL_PREFIXES),
         "USER": env_or_default("DB_USER", ""),
         "PASSWORD": env_or_default("DB_PASSWORD", ""),
         "HOST": env_or_default("DB_HOST", ""),
@@ -93,7 +94,7 @@ MEDIA_ROOT = env_or_default("MEDIA_ROOT", os.path.join(PROJECT_ROOT, "site_media
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = "/%s/site_media/media/" % CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+MEDIA_URL = "/%s/site_media/media/" % URL_PREFIXES
 
 # Absolute path to the directory where static files will be gathered
 # at deploy time and served from in production.  Should NOT be
@@ -102,7 +103,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, "site_media", "static")
 
 # URL that handles the static files like app media.
 # Example: "http://media.lawrence.com"
-STATIC_URL = "/%s/site_media/static/" % CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+STATIC_URL = "/%s/site_media/static/" % URL_PREFIXES
 
 # Additional directories which hold static files
 STATICFILES_DIRS = [
@@ -276,8 +277,8 @@ ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
 LOGIN_ERROR_URL = reverse_lazy("account_login")
 
 # Need these to be reversed urls, currently breaks if using reverse_lazy
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/" + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] + "/dashboard/"
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/" + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] +"/dashboard/"
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/" + URL_PREFIXES + "/dashboard/"
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/" + URL_PREFIXES +"/dashboard/"
 
 SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
 
@@ -288,7 +289,7 @@ SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
 
 EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
-DEFAULT_FROM_EMAIL = "PyCon " + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] +" <no-reply@us.pycon.org>"
+DEFAULT_FROM_EMAIL = "PyCon " + URL_PREFIXES +" <no-reply@us.pycon.org>"
 
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
@@ -305,6 +306,7 @@ CONSTANCE_CONFIG = {
     "SHOW_LANGUAGE_SELECTOR": (False, "Show language selector on dashboard"),
     "SPONSOR_FROM_EMAIL": ("", "From address for emails to sponsors"),
     "REGISTRATION_STATUS": ("", "Used in the home page template. Valid values are 'soon', 'open' and 'closed'"),
+    "URL_PREFIXES":(URL_PREFIXES, ""),
 }
 
 BIBLION_PARSER = ["symposion.markdown_parser.parse", {}]

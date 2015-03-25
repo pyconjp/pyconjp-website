@@ -81,6 +81,5 @@ def current_conference():
         current_conf = CONFERENCE_CACHE[conf_id]
     except KeyError:
         current_conf = Conference.objects.get(pk=conf_id)
-        print current_conf
         CONFERENCE_CACHE[conf_id] = current_conf
     return current_conf

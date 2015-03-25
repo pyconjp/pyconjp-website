@@ -73,6 +73,7 @@ def current_conference():
     from django.conf import settings
     try:
         conf_id = settings.CONFERENCE_ID
+
     except AttributeError:
         from django.core.exceptions import ImproperlyConfigured
         raise ImproperlyConfigured("You must set the CONFERENCE_ID setting.")
@@ -80,5 +81,6 @@ def current_conference():
         current_conf = CONFERENCE_CACHE[conf_id]
     except KeyError:
         current_conf = Conference.objects.get(pk=conf_id)
+        print current_conf
         CONFERENCE_CACHE[conf_id] = current_conf
     return current_conf

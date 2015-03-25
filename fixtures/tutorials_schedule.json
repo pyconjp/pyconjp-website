@@ -10,7 +10,7 @@
         "pk": 1,
         "model": "schedule.day",
         "fields": {
-            "date": "2014-03-13",
+            "date": "2015-03-13",
             "schedule": 1
         }
     },
@@ -18,7 +18,7 @@
         "pk": 2,
         "model": "schedule.day",
         "fields": {
-            "date": "2014-03-14",
+            "date": "2015-03-14",
             "schedule": 1
         }
     },
@@ -26,7 +26,7 @@
         "pk": 3,
         "model": "schedule.day",
         "fields": {
-            "date": "2014-03-15",
+            "date": "2015-03-15",
             "schedule": 1
         }
     },
@@ -34,7 +34,7 @@
         "pk": 4,
         "model": "schedule.day",
         "fields": {
-            "date": "2014-03-16",
+            "date": "2015-03-16",
             "schedule": 1
         }
     },
@@ -42,7 +42,7 @@
         "pk": 5,
         "model": "schedule.day",
         "fields": {
-            "date": "2014-03-17",
+            "date": "2015-03-17",
             "schedule": 1
         }
     },

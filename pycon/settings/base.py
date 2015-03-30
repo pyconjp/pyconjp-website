@@ -267,12 +267,12 @@ SOCIAL_AUTH_PIPELINE = [
 ]
 
 #Twitter
-TWITTER_CONSUMER_KEY         = ''
-TWITTER_CONSUMER_SECRET      = ''
+TWITTER_CONSUMER_KEY         = env_or_default("TWITTER_CONSUMER_KEY", "")
+TWITTER_CONSUMER_SECRET      = env_or_default("TWITTER_CONSUMER_SECRET", "")
 
 #Facebook
-FACEBOOK_APP_ID              = ''
-FACEBOOK_API_SECRET          = ''
+FACEBOOK_APP_ID              = env_or_default("FACEBOOK_APP_ID", "")
+FACEBOOK_API_SECRET          = env_or_default("FACEBOOK_API_SECRET", "")
 
 LOGIN_URL = reverse_lazy("account_login")
 

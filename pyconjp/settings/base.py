@@ -12,14 +12,16 @@ ROOT_URLCONF = 'pyconjp.urls'
 TIME_ZONE = 'Asia/Tokyo'
 
 LANGUAGES = (
-    ('en', 'English'),
     ('ja', 'Japanese'),
+    ('en', 'English'),
 )
 
 BIBLION_SECTIONS = [
     ("ja", u"Japanese/日本語"),
     ("en", u"English/英語"),
 ]
+LANGUAGE_CODE = 'ja'
+DEFAULT_LANGUAGE = 1
 
 # Add config for Google Analytics
 CONSTANCE_CONFIG["GOOGLE_ANALYTICS_TRACKING_ID"] = ("", "The site's Google Analytics Tracking ID.")

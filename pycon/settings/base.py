@@ -28,11 +28,11 @@ SERVE_MEDIA = DEBUG
 COMPRESS = False
 
 # Conference ID and any URL prefixes
-CONFERENCE_ID = 2
+CONFERENCE_ID = 1
 
 CONFERENCE_URL_PREFIXES = {
-    1: "2014",
-    2: "2015"
+    1: "2015",
+    2: "2014"
 }
 
 

@@ -62,7 +62,7 @@ def gen_urls():
     )
 
     for key, val in settings.LANGUAGES:
-        yield url(r"^%s/" % URL_PREFIX + key + "/", include(include_patterns))
+        yield url(r"^%s/%s/" % (URL_PREFIX, key), include(include_patterns))
 
 urlpatterns = patterns("",
                        url(r"^$", RedirectView.as_view(url="/%s/" % URL_PREFIX)),

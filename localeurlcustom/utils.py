@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.core import urlresolvers
-from localeurl import settings as localeurl_settings
+from localeurlcustom import settings as localeurl_settings
 #Todo
 URL_PREFIX = settings.CONFERENCE_URL_PREFIXES[settings.CONFERENCE_ID]
 def is_locale_independent(path):
@@ -26,17 +26,13 @@ def strip_path(path):
     Separates the locale prefix from the rest of the path. If the path does not
     begin with a locale it is returned without change.
     """
-    check = localeurl_settings.PATH_RE.match(path)
 
+    check = localeurl_settings.PATH_RE.match(path)
     if check:
         path_info = check.group('path') or '/'
         if path_info.startswith('/'):
             locale = check.group('locale')
-            if settings.LANGUAGE_CODE == locale:
-                return locale, "/" + check.group(1) + path_info
-
-            else:
-                return locale, "/" + check.group(1) + "/" + locale + path_info
+            return locale, "/" + check.group(1) + "/" + locale + path_info
 
     return '', path
 
@@ -86,8 +82,7 @@ def locale_path(path, locale=''):
         if tmp_locale in localeurl_settings.SUPPORTED_LOCALES:
             tmp[2] = locale
         else:
-            if settings.LANGUAGE_CODE != locale:
-                tmp.insert(2, locale)
+            tmp.insert(2, locale)
         return "/".join(tmp)
 
 def locale_url(path, locale=''):

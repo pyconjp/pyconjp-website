@@ -4,16 +4,15 @@ from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect
 from django.utils import translation
 from django.utils.encoding import iri_to_uri
 from django.utils.translation.trans_real import parse_accept_lang_header
-from localeurl import settings as localeurl_settings
+from localeurlcustom import settings as localeurl_settings
 # Importing models ensures that reverse() is patched soon enough. Refs #5.
-from localeurl import models, utils
+from localeurlcustom import models, utils
 
 # Make sure the default language is in the list of supported languages
 assert utils.supported_language(settings.LANGUAGE_CODE) is not None, \
         "Please ensure that settings.LANGUAGE_CODE is in settings.LANGUAGES."
 
 class LocaleURLMiddlewareCustom(object):
-    print "LocaleURLMiddlewareCustom"
     """
     Middleware that sets the language based on the request path prefix and
     strips that prefix from the path. It will also automatically redirect any
@@ -38,7 +37,6 @@ class LocaleURLMiddlewareCustom(object):
             raise django.core.exceptions.MiddlewareNotUsed()
 
     def process_request(self, request):
-
         locale, path = utils.strip_path(request.path_info)
         if localeurl_settings.USE_SESSION and not locale:
             slocale = request.session.get('django_language')

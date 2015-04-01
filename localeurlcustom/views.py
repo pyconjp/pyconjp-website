@@ -4,8 +4,8 @@ except ImportError:
     from urllib.parse import urlsplit
 from django import http
 from django.utils.translation import check_for_language
-from localeurl import utils
-from localeurl import settings as localeurl_settings
+from localeurlcustom import utils
+from localeurlcustom import settings as localeurl_settings
 
 def change_locale(request):
     """

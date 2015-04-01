@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.core import urlresolvers
 from django.utils import translation
-from localeurl import utils
+from localeurlcustom import utils
 
 def reverse(*args, **kwargs):
     reverse_kwargs = kwargs.get('kwargs') or {}

@@ -4,7 +4,7 @@ from django.template import resolve_variable
 from django.template.defaultfilters import stringfilter
 from django.templatetags import future
 
-from localeurl import utils
+from localeurlcustom import utils
 
 register = template.Library()
 

@@ -2,7 +2,8 @@
 
 {% load compress static sitetree %}
 {% load i18n %}
-
+{% load localeurl_tags %}
+{% load locale_url from localeurl_future %}
 {% block style_base %}
     {% compress css %}
         <link href="{% static "pinax/css/theme.css" %}" rel="stylesheet" type="text/css">
@@ -38,16 +39,12 @@
             </div>
             <!-- language selection -->
             <div style="position: absolute; left: 30%;">
-                <form action="{% url 'home' %}change_language/" method="post">
-                    {% csrf_token %}
-                <select id="id_language" name="language">
-                    {% for language in LANGUAGES %}
-                        <option value="{{ language.0 }}" {% if request.LANGUAGE_CODE ==  language.0 %} selected="selected" {% endif %}>{% trans language.1 %}</option>
-                    {% endfor %}
-                </select>
-                    <input name="next" type="hidden" value="{{ request.path }}">
-                    <button class="btn btn-success" type="submit">{% trans "Change" %}</button>
-                </form>
+
+                <div class="btn-group">
+                {% for language in LANGUAGES %}
+                    <a href="{{ request.path|chlocale:language.0 }}" class="btn btn-default {% if request.LANGUAGE_CODE ==  language.0 %}active{% endif %}">{% trans language.1 %}</a>
+                {% endfor %}
+                </div>
             </div>
             <!-- language selection -->
 

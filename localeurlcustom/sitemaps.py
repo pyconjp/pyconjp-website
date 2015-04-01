@@ -1,6 +1,6 @@
 from django.contrib.sitemaps import Sitemap
 
-from localeurl.templatetags.localeurl_tags import chlocale
+from localeurlcustom.templatetags.localeurl_tags import chlocale
 
 class LocaleurlSitemap(Sitemap):
     """

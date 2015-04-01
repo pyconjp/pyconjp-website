@@ -31,6 +31,5 @@ django-selectable==0.7.0
 
 django-forms-bootstrap==2.0.3.post1
 django-uni-form==0.9.0
-django-localeurl==2.0.1
 
 requests==2.0.0

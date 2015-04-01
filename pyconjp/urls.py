@@ -65,7 +65,7 @@ def gen_urls():
         yield url(r"^%s/%s/" % (URL_PREFIX, key), include(include_patterns))
 
 urlpatterns = patterns("",
-                       url(r"^$", RedirectView.as_view(url="/%s/" % URL_PREFIX)),
+                       url(r"^$", RedirectView.as_view(url="/%s/" % URL_PREFIX, permanent=False) ),
                        *[gen for gen in gen_urls()]
 )
 

@@ -138,7 +138,7 @@ MIDDLEWARE_CLASSES = [
     # and and cache middleware, and precede commonmiddleware
     #"django.middleware.locale.LocaleMiddleware",
     "account.middleware.LocaleMiddleware",
-    "localeurl.middleware.LocaleURLMiddleware",
+    "localeurlcustom.middleware.LocaleURLMiddlewareCustom",
     "django.middleware.common.CommonMiddleware",
     "django_openid.consumer.SessionConsumer",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -228,7 +228,7 @@ INSTALLED_APPS = [
     "pycon.finaid",
     "pycon.pycon_api",
     "pycon.tutorials",
-    "localeurl",
+    "localeurlcustom",
 ]
 
 FIXTURE_DIRS = [

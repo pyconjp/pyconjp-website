@@ -1,0 +1,36 @@
+{% extends "responsive_base.html" %}
+
+{% load i18n %}
+{% load boxes_tags %}
+{% load cache %}
+{% load sitetree %}
+
+{% block head_title %}{{ schedule.section.name }}{% endblock %}
+
+{% block extra_head %}
+    <style>
+        .page-content .box-content h3 {
+            margin-top: 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block page_title %}
+    {{ schedule.section.name }}
+{% endblock %}
+
+{% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
+
+{% block body %}
+        {% for proposal in proposal_accepted %}
+            <div class="row presentation_box">
+                <div class="span8 presentation well">
+                    <h3>{{ proposal.p_type }}</h3>
+                    <h3><a href="{% url 'proposal_vote' proposal.pk %}">{{ proposal.title }}&nbsp;({{ proposal.language }})</a></h3>
+                    <h4>{{ proposal.speakers|join:", " }} in <span class="category">{{ proposal.category }}</span></h4>
+                    {{ proposal.description }}
+                </div>
+            </div>
+        {% endfor %}
+
+{% endblock %}

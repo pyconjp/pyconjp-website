@@ -9,8 +9,9 @@
 {% load sponsorship_tags %}
 {% load thumbnail %}
 {% load sitetree %}
-{% block head_title_base %}{% block head_title %}{% endblock %} | PyCon JP 2014 in TOKYO{% endblock %}
+{% load kwacros %}
 
+{% kwacro title %}{% block head_title_base %}{% block head_title %}{% endblock %} | PyCon JP {{ config.URL_PREFIXES }} in TOKYO{% endblock %}{% endkwacro %}
 {% block style_base %}
     {% compress css %}
         <link href="{% static "pinax/css/theme.css" %}" rel="stylesheet" type="text/css">
@@ -33,7 +34,14 @@
 {% endblock %}
 
 {% block extra_head_base %}
+    <meta property="og:type" content="{% if config.URL_PREFIXES == request.path|cut:"/" %}website{% else %}article{% endif %}" />
     <meta property="og:image" content="https://us.pycon.org/2014/site_media/static/img/logo.png" />
+    <meta property="og:title" content="{% usekwacro title %}" />
+    <meta property="og:url" content="https://{{ request.get_host }}{{ request.path }}" />
+    <meta property="og:site_name" content="PyCon JP {{ config.URL_PREFIXES }}" />
+    <meta property="og:description" content="PyCon JP {{ config.URL_PREFIXES }}" />
+
+
     <link href="{{ STATIC_URL }}img/favicon.ico" rel="shortcut icon" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     {% include "markedit/includes/markedit-js.html" %}

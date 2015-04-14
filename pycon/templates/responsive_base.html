@@ -31,7 +31,7 @@
     <header class="main">
         <a id="skip" href="#content">{% trans "Skip to main content" %}</a>
         <div class="container"> 
-            <a class="logo-smaller" href="{% url 'home' %}">PyCon JP 2014 in Tokyo</a>
+            <a class="logo-smaller" href="{% url 'home' %}">PyCon JP {{ config.URL_PREFIXES }} in Tokyo</a>
             <div class="account-bar{% if user.is_authenticated %} {% trans "loggedin" %}{% endif %}">
                 {% block account_bar %}
                 {% include "_account_bar.html" %}

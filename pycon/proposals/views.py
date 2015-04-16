@@ -398,9 +398,8 @@ def gen_poroposal(query):
             attr = 'pycon%sproposal' % type
             if hasattr(obj, attr):
                 tmp = getattr(obj, attr)
-                if tmp.overall_status == 4:
-                    tmp.p_type = type
-                    yield tmp
+                tmp.p_type = type
+                yield tmp
 
 def vote_list(request):
     query = PyConProposal.objects.select_related().exclude(cancelled=True)

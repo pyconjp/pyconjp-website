@@ -42,7 +42,7 @@
 
                 <div class="btn-group">
                 {% for language in LANGUAGES %}
-                    <a href="{{ request.path|chlocale:language.0 }}" class="btn btn-default {% if request.LANGUAGE_CODE ==  language.0 %}active{% endif %}">{% trans language.1 %}</a>
+                    <a href="{{ request.path|chlocale:language.0 }}" class="btn btn-default {% if request.LANGUAGE_CODE == language.0 %}active{% endif %}">{% if language.0 == "ja" %} 日本語 {% else %} {{ language.1 }} {% endif %}</a>
                 {% endfor %}
                 </div>
             </div>

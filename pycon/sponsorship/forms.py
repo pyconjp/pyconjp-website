@@ -57,7 +57,8 @@ class SponsorBenefitsInlineFormSet(BaseInlineFormSet):
 
             # provide word limit as help_text
             if form.instance.benefit.type in ["text", "richtext"] and form.instance.max_words:
-                form.fields[field].help_text = u"maximum %s characters" % form.instance.max_words
+#                form.fields[field].help_text = u"maximum %s characters" % form.instance.max_words
+                form.fields[field].help_text = u"Japanese 200 words. English 100 words."
 
             # use admin file widget that shows currently uploaded file
             if field == "upload":

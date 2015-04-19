@@ -2,7 +2,8 @@
 
 {% load compress static sitetree %}
 {% load i18n %}
-
+{% load localeurl_tags %}
+{% load locale_url from localeurl_future %}
 {% block style_base %}
     {% compress css %}
         <link href="{% static "pinax/css/theme.css" %}" rel="stylesheet" type="text/css">
@@ -30,12 +31,23 @@
     <header class="main">
         <a id="skip" href="#content">{% trans "Skip to main content" %}</a>
         <div class="container"> 
-            <a class="logo-smaller" href="{% url 'home' %}">PyCon JP 2014 in Tokyo</a>
+            <a class="logo-smaller" href="{% url 'home' %}">PyCon JP {{ config.URL_PREFIXES }} in Tokyo</a>
             <div class="account-bar{% if user.is_authenticated %} {% trans "loggedin" %}{% endif %}">
                 {% block account_bar %}
                 {% include "_account_bar.html" %}
                 {% endblock %}
             </div>
+            <!-- language selection -->
+            <div style="position: absolute; left: 30%;">
+
+                <div class="btn-group">
+                {% for language in LANGUAGES %}
+                    <a href="{{ request.path|chlocale:language.0 }}" class="btn btn-default {% if request.LANGUAGE_CODE ==  language.0 %}active{% endif %}">{% trans language.1 %}</a>
+                {% endfor %}
+                </div>
+            </div>
+            <!-- language selection -->
+
             {% block main_nav %}
                 <nav>
                     <a class="logo-small" href="{% url 'home' %}">PyCon JP 2014 in Tokyo</a>

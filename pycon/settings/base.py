@@ -27,10 +27,20 @@ SERVE_MEDIA = DEBUG
 # most users. See <URL> for more information
 COMPRESS = False
 
+# Conference ID and any URL prefixes
+CONFERENCE_ID = 1
+
+CONFERENCE_URL_PREFIXES = {
+    1: "2015",
+    2: "2014"
+}
+
+URL_PREFIXES = CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": env_or_default("DB_NAME", "pycon2014"),
+        "NAME": env_or_default("DB_NAME", "pycon" + URL_PREFIXES),
         "USER": env_or_default("DB_USER", ""),
         "PASSWORD": env_or_default("DB_PASSWORD", ""),
         "HOST": env_or_default("DB_HOST", ""),
@@ -61,11 +71,6 @@ LANGUAGE_CODE = "en-us"
 
 SITE_ID = 1
 
-# Conference ID and any URL prefixes
-CONFERENCE_ID = 1
-CONFERENCE_URL_PREFIXES = {
-    1: "2014",
-}
 
 
 # If you set this to False, Django will make some optimizations so as not
@@ -89,7 +94,7 @@ MEDIA_ROOT = env_or_default("MEDIA_ROOT", os.path.join(PROJECT_ROOT, "site_media
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = "/%s/site_media/media/" % CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+MEDIA_URL = "/%s/site_media/media/" % URL_PREFIXES
 
 # Absolute path to the directory where static files will be gathered
 # at deploy time and served from in production.  Should NOT be
@@ -98,7 +103,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, "site_media", "static")
 
 # URL that handles the static files like app media.
 # Example: "http://media.lawrence.com"
-STATIC_URL = "/%s/site_media/static/" % CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
+STATIC_URL = "/%s/site_media/static/" % URL_PREFIXES
 
 # Additional directories which hold static files
 STATICFILES_DIRS = [
@@ -134,6 +139,7 @@ MIDDLEWARE_CLASSES = [
     # and and cache middleware, and precede commonmiddleware
     #"django.middleware.locale.LocaleMiddleware",
     "account.middleware.LocaleMiddleware",
+    "localeurlcustom.middleware.LocaleURLMiddlewareCustom",
     "django.middleware.common.CommonMiddleware",
     "django_openid.consumer.SessionConsumer",
     "django.contrib.messages.middleware.MessageMiddleware",
@@ -152,11 +158,11 @@ TEMPLATE_DIRS = [
 TEMPLATE_CONTEXT_PROCESSORS = [
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
+    "django.core.context_processors.request",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
-    "django.core.context_processors.request",
     "django.contrib.messages.context_processors.messages",
     "social_auth.context_processors.social_auth_backends",
     "pinax_utils.context_processors.settings",
@@ -223,6 +229,7 @@ INSTALLED_APPS = [
     "pycon.finaid",
     "pycon.pycon_api",
     "pycon.tutorials",
+    "localeurlcustom",
 ]
 
 FIXTURE_DIRS = [
@@ -272,8 +279,8 @@ ACCOUNT_USER_DISPLAY = lambda user: user.get_full_name()
 LOGIN_ERROR_URL = reverse_lazy("account_login")
 
 # Need these to be reversed urls, currently breaks if using reverse_lazy
-SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/2014/dashboard/"
-SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/2014/dashboard/"
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/" + URL_PREFIXES + "/dashboard/"
+SOCIAL_AUTH_NEW_USER_REDIRECT_URL = "/" + URL_PREFIXES +"/dashboard/"
 
 SOCIAL_AUTH_ASSOCIATE_BY_MAIL = False
 
@@ -284,7 +291,7 @@ SOCIAL_AUTH_PROTECTED_USER_FIELDS = ['email',]
 
 EMAIL_CONFIRMATION_DAYS = 2
 EMAIL_DEBUG = DEBUG
-DEFAULT_FROM_EMAIL = "PyCon 2014 <no-reply@us.pycon.org>"
+DEFAULT_FROM_EMAIL = "PyCon " + URL_PREFIXES +" <no-reply@us.pycon.org>"
 
 DEBUG_TOOLBAR_CONFIG = {
     "INTERCEPT_REDIRECTS": False,
@@ -301,6 +308,7 @@ CONSTANCE_CONFIG = {
     "SHOW_LANGUAGE_SELECTOR": (False, "Show language selector on dashboard"),
     "SPONSOR_FROM_EMAIL": ("", "From address for emails to sponsors"),
     "REGISTRATION_STATUS": ("", "Used in the home page template. Valid values are 'soon', 'open' and 'closed'"),
+    "URL_PREFIXES":(URL_PREFIXES, ""),
 }
 
 BIBLION_PARSER = ["symposion.markdown_parser.parse", {}]

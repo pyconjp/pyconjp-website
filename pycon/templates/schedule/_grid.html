@@ -30,7 +30,7 @@
                             {% endif %}
                         {% else %}
                             {% if slot.content_override %}
-                                {{ slot.content_override }}
+                                {{ slot.content_override|safe }}
                             {% else %}
                                 {{ slot.kind.label }}
                             {% endif %}

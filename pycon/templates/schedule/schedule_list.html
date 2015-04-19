@@ -23,13 +23,14 @@
 
 {% block body %}
     <h2>Accepted {{ schedule.section.name }}</h2>
+    Category Search<select id="select_category"><option value="">---------</option></select>
     {% box "schedule_detail_"|add:schedule.section.name|slugify %}
     {% cache 600 "schedule-list" schedule.section.name %}
         {% for presentation in presentations %}
-            <div class="row">
+            <div class="row presentation_box {{ presentation.proposal.category|cut:" " }}">
                 <div class="span8 presentation well">
-                    <h3><a href="{% url 'schedule_presentation_detail' presentation.pk %}">{{ presentation.title }}</a></h3>
-                    <h4>{{ presentation.speakers|join:", " }} in {{ presentation.proposal.category }}</h4>
+                    <h3><a href="{% url 'schedule_presentation_detail' presentation.pk %}">{{ presentation.title }}&nbsp;({{ presentation.proposal.language }})</a></h3>
+                    <h4>{{ presentation.speakers|join:", " }} in <span class="category">{{ presentation.proposal.category }}</span></h4>
                     {{ presentation.description }}
                     {% if presentation.slot %}
                         <h4>
@@ -43,4 +44,26 @@
             </div>
         {% endfor %}
     {% endcache %}
+    <script>
+        $(function(){
+            var $category = $(".category"), $select_category = $("#select_category"), tmp_array = [];
+            $category.each(function(){
+                var val = $(this).text();
+                if($.inArray(val, tmp_array) === -1){
+                    $select_category.append($('<option>').html(val).val(val.replace(/\s+/g, "")));
+                    tmp_array.push(val);
+                }
+            });
+            var $presentation_box = $(".presentation_box");
+            $select_category.change(function(){
+                var val = $(this).val();
+                if(val !== ""){
+                    $presentation_box.hide()
+                    $("." + val).show();
+                }else {
+                    $presentation_box.show();
+                }
+            });
+        });
+    </script>
 {% endblock %}

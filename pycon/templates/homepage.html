@@ -9,7 +9,7 @@
 {% load boxes_tags %}
 {% load pyconjp_tags %}
 
-{% block head_title_base %}PyCon JP 2014 in Tokyo | September 12th &ndash; September 15th{% endblock %}
+{% block head_title_base %}PyCon JP {{ config.URL_PREFIXES }} in Tokyo | September 12th &ndash; September 15th{% endblock %}
 
 {% block body_class %}
     {{ block.super }}
@@ -83,7 +83,7 @@
 {% block body_outer %}
 <div class="container">
     {% cache 600 "homepage-sponsor-slider" %}
-    {% sponsors as all_sponsors %}
+        {% sponsors as all_sponsors %}
     {% if all_sponsors %}
     <div class="row">
         <div class="span12 sponsor-crawl">
@@ -156,7 +156,10 @@
 </div>
 {% endblock %}
 
+
 {% block extra_body %}
+    {% include "_sns_buttons.html" %}
+
     {% compress js %}
         <script type="text/javascript">
             $(function(){

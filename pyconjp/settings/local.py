@@ -45,7 +45,7 @@ DEBUG = env_var('DEBUG', bool, default=True)
 
 _db_engine = env_var('DB_ENGINE', default='sqlite3' if DEBUG else 'postgresql_psycopg2')
 _db_name = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-                        'pycon2014.sqlite') if _db_engine == 'sqlite3' else 'pyconjp2014_staging'
+                        'pycon' + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] + '.sqlite') if _db_engine == 'sqlite3' else 'pyconjp'+ CONFERENCE_URL_PREFIXES[CONFERENCE_ID] +'_staging'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.%s' % _db_engine,

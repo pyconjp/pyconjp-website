@@ -37,4 +37,17 @@ PyCon JP サイト！
 
     python manage.py runserver
 
+* Vagrant::
 
+    （初めての方）
+    VagrandをDL&インストール http://lab.raqda.com/vagrant/
+    VirtualBoxをDL&インストール https://www.virtualbox.org/
+
+    インストール後、Vagrantfileファイルのディレクトリにてターミナルより
+    vagrant up
+
+* Web開発作業手順::
+    
+    * 課題・機能・案件ごとにJIRAにてチケットを作成、チケットごとにトピックブランチを切る(ブランチの名前はTicketID
+    * git-flowに乗せる。機能開発はfeatureブランチにて
+    * 作業完了、要レビューの際はpull request、コミッターは小松さん

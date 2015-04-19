@@ -120,6 +120,12 @@ msgstr "時間枠"
 msgid "Outline"
 msgstr "アウトライン"
 
+#: pycon/models.py:131
+msgid "Please write outline of your presentation. "
+"This is not published. it is referenced by reviview."
+msgstr "発表の流れを記入してください。"
+"この項目は公開されません。レビューの参考にされます。"
+
 #: pycon/models.py:134 pyconjp/templates/proposals/_proposal_fields.html:25
 #: symposion/templates/proposals/_proposal_fields.html:21
 msgid "Audience"
@@ -2039,20 +2045,20 @@ msgid "Name"
 msgstr "名前"
 
 #: symposion/proposals/models.py:92
-msgid ""
-"If your talk is accepted this will be made public and printed in the "
-"program. Should be one paragraph, maximum 400 characters."
-msgstr ""
-"講演が承認されたら、このテキストはプログラムに印刷され、公開されます。 最大４"
-"００文字"
+msgid "Please write up to 100 words. "
+"This is published pamphlet when it is accepted."
+msgstr "発表の内容について、200文字以内で説明を記入してください。"
+"この項目は採用された際にパンフレットに記載されます。"
 
 #: symposion/proposals/models.py:95
-msgid "Detailed Abstract"
-msgstr "詳細な説明"
+msgid "Details Abstract"
+msgstr "要約"
 
 #: symposion/proposals/models.py:96
-msgid "Detailed description. Will be made public if your talk is accepted."
-msgstr "詳細な説明はあなたの講演が承認された後で公開されます。"
+msgid "Please write detailed contents of your presentation to a maximum extent. "
+"This is published web site when it is accepted."
+msgstr "発表についての要約をなるべく詳しく、どんな内容で何を発表するのかを記入してください。"
+"この項目は採用された際に Web に記載されます。"
 
 #: symposion/proposals/models.py:100
 msgid "Additional Notes"
@@ -2062,10 +2068,12 @@ msgstr "その他のメモ"
 msgid ""
 "Anything else you'd like the program committee to know when making their "
 "selection: your past speaking experience, open source community experience, "
-"etc."
+"etc. "
+"This is not published. it is referenced by review."
 msgstr ""
 "選考について運営に伝えたいことは他にありますか。 例: 過去の講演経験、オープン"
-"ソースコミュニティでの経験など"
+"ソースコミュニティでの経験など。 "
+"この項目は公開されません。レビューの参考にされます。"
 
 #: symposion/proposals/models.py:205
 msgid "Pending"

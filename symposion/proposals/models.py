@@ -88,20 +88,22 @@ class ProposalBase(models.Model):
     title = models.CharField(_("Title"), max_length=100)
     description = models.TextField(
         _("Description"),
-        max_length=400,  # @@@ need to enforce 400 in UI
-        help_text=_("If your talk is accepted this will be made public and printed in the program. Should be one paragraph, maximum 400 characters.")
+        max_length=200,  # @@@ need to enforce 400 in UI <= Can not change? I did it to 200.
+        help_text=_("Please write up to 100 words. "
+                    "This is published pamphlet when it is accepted.")
     )
     abstract = models.TextField(
-        _("Detailed Abstract"),
-        help_text=_("Detailed description. Will be made public "
-                    "if your talk is accepted.")
+        _("Details Abstract"),
+        help_text=_("Please write detailed contents of your presentation to a maximum extent. "
+                    "This is published web site when it is accepted.")
     )
     additional_notes = models.TextField(
         _("Additional Notes"),
         blank=True,
         help_text=_("Anything else you'd like the program committee to know "
                     "when making their selection: your past speaking "
-                    "experience, open source community experience, etc.")
+                    "experience, open source community experience, etc. "
+                    "This is not published. it is referenced by review.")
     )
     submitted = models.DateTimeField(
         default=datetime.datetime.now,

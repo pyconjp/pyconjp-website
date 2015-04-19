@@ -253,6 +253,8 @@ AUTHENTICATION_BACKENDS = [
     "symposion.teams.backends.TeamPermissionsBackend",
 
     # Social Auth Backends
+    "social_auth.backends.twitter.TwitterBackend",
+    "social_auth.backends.facebook.FacebookBackend",
     "social_auth.backends.google.GoogleBackend",
     "social_auth.backends.yahoo.YahooBackend",
     "social_auth.backends.OpenIDBackend",
@@ -269,6 +271,14 @@ SOCIAL_AUTH_PIPELINE = [
     "social_auth.backends.pipeline.social.load_extra_data",
     "social_auth.backends.pipeline.user.update_user_details",
 ]
+
+#Twitter
+TWITTER_CONSUMER_KEY         = env_or_default("TWITTER_CONSUMER_KEY", "")
+TWITTER_CONSUMER_SECRET      = env_or_default("TWITTER_CONSUMER_SECRET", "")
+
+#Facebook
+FACEBOOK_APP_ID              = env_or_default("FACEBOOK_APP_ID", "")
+FACEBOOK_API_SECRET          = env_or_default("FACEBOOK_API_SECRET", "")
 
 LOGIN_URL = reverse_lazy("account_login")
 

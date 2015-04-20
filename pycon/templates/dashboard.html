@@ -6,6 +6,33 @@
 {% load teams_tags %}
 {% load boxes_tags %}
 
+{# for non responsive #}
+{% block viewport %}{% endblock %}
+{% block extra_style %}
+<style>
+.container {
+  max-width: none !important;
+  width: 970px;
+}
+.container-fluid {
+    min-width: 970px;
+}
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+.navbar-toggle {
+  display: none;
+}
+.navbar-brand {
+  margin-left: -15px;
+}
+</style>
+{% endblock %}
+{# /for non responsive #}
+
 {% block head_title %}{% trans "Dashboard" %}{% endblock %}
 
 {% block body_class %}auth{% endblock %}

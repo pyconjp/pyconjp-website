@@ -127,7 +127,9 @@ class PyConTalkProposal(PyConProposal):
     duration = models.IntegerField(choices=DURATION_CHOICES, verbose_name=_("Duration"))
 
     outline = models.TextField(
-        _(u"Outline")
+        verbose_name = _(u"Outline"),
+        help_text = _("Please write outline of your presentation. "
+                    "This is not published. it is referenced by reviview.")
     )
     audience = models.CharField(
         max_length=150,
@@ -191,8 +193,7 @@ class PyConTutorialProposal(PyConProposal):
     )
     more_info = models.TextField(
         _(u"More info"),
-        help_text=_(u"More info. Will be made public "
-                    u"if your talk is accepted.")
+        help_text=_(u"More info. Will be made public if your talk is accepted.")
     )
     audience = models.CharField(
         max_length=150,

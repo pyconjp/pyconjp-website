@@ -346,8 +346,16 @@ body.home {
 /*
 ======================= */
 @media (min-width: @breakDesktop) {
-
-
+	header {
+		form {
+			margin-bottom: 0;
+			button {
+				padding-left: 20px;
+				border: none;
+				background-color: #fff;
+			}//button
+		}//form
+	}//header
 }
 @media (max-width: @breakDesktop) {
 	header .nav-collapse .dropdown-menu a {

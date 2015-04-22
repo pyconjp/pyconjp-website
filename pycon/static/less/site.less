@@ -384,25 +384,7 @@ aside {
   }
 }
 
-.page-head {
-  padding: 10px 0 20px 0;
-  min-height: 55px;
-  background-color: @blueSky;
-  background-image: url('../img/pagehead-bkg.png');
-  background-repeat: no-repeat;
-  background-position: right bottom;
 
-  h1 {
-    text-transform:uppercase;
-    font-size: @baseFontSize + 18;
-    margin: 9px 0 0 0;
-    span {
-      font-size:@baseFontSize + 1;
-      display:block;
-      line-height:15px;
-    }
-  }
-}
 
 .page-content {
   margin-top: 20px;
@@ -470,7 +452,7 @@ aside.list {
 }
 
 .btn {
-  border: 3px solid @grayLighter;
+  // border: 3px solid @grayLighter;
   color: @white;
   background: @grayLight;
   line-height: 22px;
@@ -1209,12 +1191,12 @@ body.cms-page {
     height: 230px;
     width: 827px;
   }
-  .page-head .skyline {
-    background: url('../img/pagehead-bkg@2x.png') no-repeat;
-    -webkit-background-size: 500px 70px;
-    -moz-background-size: 500px 70px;
-    background-size: 500px 70px;
-  }
+  // .page-head .skyline {
+  //   background: url('../img/pagehead-bkg@2x.png') no-repeat;
+  //   -webkit-background-size: 500px 70px;
+  //   -moz-background-size: 500px 70px;
+  //   background-size: 500px 70px;
+  // }
 }
 
 /* Auth pages
@@ -1679,6 +1661,45 @@ body.finaid {
           font-weight: bold;
         }
       }
+    }
+  }
+}
+/* header
+==================== */
+
+
+header {
+  form {
+    margin-bottom: 0;
+    button {
+      padding-left: 20px;
+      border: none;
+      background-color: #fff;
+    }//button
+  }//form
+}//header
+
+/* page-head
+==================== */
+.page-head {
+  margin-top: -20px;
+  padding: 10px 0 20px 0;
+  min-height: 55px;
+  background-color: #444283;
+  background-image: url('../img/pagehead-bkg.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  h1 {
+    color: #BBEDA3;
+    font-weight: normal;
+    text-transform:uppercase;
+    font-size: @baseFontSize + 18;
+    margin: 9px 0 0 0;
+    span {
+      font-size:@baseFontSize + 1;
+      display:block;
+      line-height:15px;
     }
   }
 }

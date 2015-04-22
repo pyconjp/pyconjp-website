@@ -218,11 +218,11 @@ body.home {
 	// 		}
 	// 	}
 	// }
-	.schedule {
-		@media (max-width: @breakTablet) {
-			display: none;
-		}
-	}
+	// .schedule {
+	// 	@media (max-width: @breakTablet) {
+	// 		display: none;
+	// 	}
+	//}
 	.sponsor-crawl {
 		@media (max-width: @breakMobileLandscape) {
 			padding: 20px 0;
@@ -345,18 +345,6 @@ body.home {
 }
 /*
 ======================= */
-@media (min-width: @breakDesktop) {
-	header {
-		form {
-			margin-bottom: 0;
-			button {
-				padding-left: 20px;
-				border: none;
-				background-color: #fff;
-			}//button
-		}//form
-	}//header
-}
 @media (max-width: @breakDesktop) {
 	header .nav-collapse .dropdown-menu a {
 	font-weight: normal;
@@ -400,30 +388,62 @@ header.navbar-inverse .nav-collapse .dropdown-menu a:hover {
 /* banner
 ======================= */
 body.home .banner {
+	margin-bottom: 20px;
 	margin-top: -20px;
-	height: 720px;
+	height: 670px;
 	background-image: url(../img/top_banner_blur.jpg);
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover;
+	@media (max-width: @breakDesktop) {
+		margin-top: 0;
+		height: 540px;
+	}
+	@media (max-width: @breakTablet) {
+		height: 330px;
+	}
+	@media (max-width: @breakMobileLandscape) {
+		height: 190px;
+	}
 }
 
 body.home .banner-inner {
-	height: 765px;
+	height: 670px;
 	background-image: url(../img/top_banner.jpg);
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: top center;
 	background-size: 900px auto;
 	margin-top: -150px;
+		@media (max-width: @breakDesktop) {
+			height: 540px;
+			margin-top: -20px;
+			background-position: center -100px;
+		}
+		@media (max-width: @breakTablet) {
+			background-position: center -100px;
+			height: 330px;
+			background-size: 700px;
+		}
+		@media (max-width: @breakMobileLandscape) {
+		background-position: center -10px;
+		height: 190px;
+		background-size: 320px auto;
+		}
 }
 body.home .schedule {
   width: 100%;
   margin-top: 430px;
+		@media (max-width: @breakDesktop) {
+	  margin-top: 330px;
+  }
+		@media (max-width: @breakTablet) {
+			display: none;
+		}
 }
 body.home .schedule ul li {
-
-
   color: #FFF163;
   box-shadow: 0 0 20px rgba(153, 247, 255, 0.4);
   background: rgba(119, 126, 255, 0.1);
 }
+
+

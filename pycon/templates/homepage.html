@@ -30,19 +30,11 @@
                                 {% elif config.REGISTRATION_STATUS == 'closed' %}
                                     <p class="small">{% trans "Registration Closed" %}</p>
                                 {% else %}
-                                    <p>&nbsp;<br />&nbsp;</p>
+                                    <p>&nbsp;<br>&nbsp;</p>
                                 {% endif %}
                             </div>
                         {% endif %}
                         {% endcomment %}
-                        <div itemprop="summary" class="logo">PyCon JP 2014 Tokyo September 13th &ndash; September 15th</div>
-                        <div class="details">
-                            <span itemprop="locality">Tokyo</span>,
-                            <span itemprop="country-name">Japan</span>,
-                            <time itemprop="startDate" datetime="2014-9-13">September 13</time>&ndash;
-                            <time itemprop="endDate" datetime="2014-9-15">15</time>
-                        </div>
-
                     </div>
                 </div>
                 <div class="row">
@@ -64,18 +56,6 @@
                     </div>
                 {% endif %}
             </div>
-        </div>
-        <div class="city">
-            <div class="container">
-
-                <div class="clouds">
-                    <div id="two-clouds"></div>
-                    <div id="one-cloud"></div>
-                </div>
-
-                <div class="tokyo"></div>
-            </div>
-            <div class="lawn"></div>
         </div>
     </div>
 {% endblock %}
@@ -147,7 +127,7 @@
         {% endwith %}
 
         <div class="span4">
-          {# homepage-about for each language #} 
+          {# homepage-about for each language #}
           {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
           {% box "homepage-about-"|add:lang %}
           {% endwith %}

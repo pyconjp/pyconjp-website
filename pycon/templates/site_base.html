@@ -77,7 +77,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="{% url 'home' %}">PyCon JP {{ config.URL_PREFIXES }} in Tokyo</a>
+                <a class="brand" href="{% url 'home' %}">
+                    <img src="{{ STATIC_URL }}img/pycon2015-logo-small.png" alt="PyCon JP {{ config.URL_PREFIXES }} in Tokyo" width="100">
+                </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav pull-right">
                         <li class="dropdown">

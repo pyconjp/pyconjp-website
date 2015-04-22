@@ -119,9 +119,7 @@
     {% block banner %}{% endblock %}
 {% endblock %}
 
-{% block sns %}
-    {% include "_sns_buttons.html" %}
-{% endblock %}
+
 
 {% block body_base %}
     <div id="content">
@@ -166,23 +164,20 @@
                             {% endcache %}
                             {% endblock %}
                         </aside>
-                    </div>
-                </div>
-                {% endblock %}
-            </div>
-        {% endblock %}
-    </div>
+                    </div>{# /row #}
+
+{% block sns %}
+    {% include "_sns_buttons.html" %}
+{% endblock %}
+
+                </div>{# /.container #}
+                {% endblock %}{# /page_content #}
+            </div>{# /.page-content #}
+        {% endblock %}{# /body_outer #}
+    </div>{# /content #}
 
     <footer>
-        {% comment %}
-        <div class="hills">
-            <div class="trees-1"></div>
-            <div class="trees-2"></div>
-            <div class="bike"></div>
-            <div class="hill-1"></div>
-            <div class="hill-2"></div>
-        </div>
-        {% endcomment %}
+
 
         <div class="container">
         {% block footer %}

@@ -369,7 +369,12 @@ body.home {
 		background-color: rgba(0, 0, 0, 0);
 	}
 }
-
+header .navbar-inner {
+		.border-radius(0);
+	@media (max-width: @breakTablet) {
+		padding-left: 0;
+	}
+}
 header .nav-collapse .dropdown-menu a {
 
 }
@@ -388,51 +393,46 @@ header.navbar-inverse .nav-collapse .dropdown-menu a:hover {
 /* banner
 ======================= */
 body.home .banner {
+	background-color: #36529C;
 	margin-bottom: 20px;
 	margin-top: -20px;
-	height: 670px;
-	background-image: url(../img/top_banner_blur.jpg);
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: cover;
 	@media (max-width: @breakDesktop) {
 		margin-top: 0;
-		height: 540px;
 	}
 	@media (max-width: @breakTablet) {
-		height: 330px;
 	}
 	@media (max-width: @breakMobileLandscape) {
-		height: 190px;
 	}
 }
 
 body.home .banner-inner {
-	height: 670px;
+	height: 460px;
 	background-image: url(../img/top_banner.jpg);
 	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: 900px auto;
-	margin-top: -150px;
+	background-position: center -170px;
+	background-size: 1400px auto;
 		@media (max-width: @breakDesktop) {
-			height: 540px;
+			height: 440px;
 			margin-top: -20px;
-			background-position: center -100px;
+			background-position: center -170px;
 		}
 		@media (max-width: @breakTablet) {
-			background-position: center -100px;
-			height: 330px;
-			background-size: 700px;
+			background-position: center -80px;
+			height: 270px;
+			background-size: 870px;
 		}
 		@media (max-width: @breakMobileLandscape) {
-		background-position: center -10px;
-		height: 190px;
-		background-size: 320px auto;
+			background-position: center -60px;
+			height: 190px;
+			background-size: 600px auto;
 		}
 }
 body.home .schedule {
-  width: 100%;
-  margin-top: 430px;
+	float: inherit;
+  width: 640px;
+  margin: 0 auto;
+  margin-top: 340px;
+  border-top: 1px solid rgba(255, 255, 255, 0.21);
 		@media (max-width: @breakDesktop) {
 	  margin-top: 330px;
   }
@@ -442,8 +442,6 @@ body.home .schedule {
 }
 body.home .schedule ul li {
   color: #FFF163;
-  box-shadow: 0 0 20px rgba(153, 247, 255, 0.4);
-  background: rgba(119, 126, 255, 0.1);
 }
 
 

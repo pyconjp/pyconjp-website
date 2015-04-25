@@ -405,3 +405,7 @@ def vote_list(request):
     query = PyConProposal.objects.select_related().exclude(cancelled=True)
     proposal_accepted = gen_poroposal(query)
     return render(request, "proposals/vote_list.html", {"proposal_accepted":proposal_accepted})
+
+def vote_detail(request, pk):
+    query = PyConProposal.objects.get(pk = pk)
+    return render(request, "proposals/vote_detail.html", {"proposal": query})

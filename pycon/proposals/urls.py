@@ -16,8 +16,10 @@ urlpatterns = patterns("pycon.proposals.views",
     url(r"^document/(\d+)/delete/$", "document_delete", name="proposal_document_delete"),
     url(r"^document/(\d+)/([^/]+)$", "document_download", name="proposal_document_download"),
     url(r"^vote_list/$", "vote_list", name="proposal_vote_list"),
+    url(r"^vote/(\d+)/$", "vote_detail", name="proposal_vote_detail")
 )
 
-urlpatterns += patterns("symposion.schedule.views",
-                        url(r"^vote/(\d+)/$", "schedule_presentation_detail", name="proposal_vote"),
-                        )
+
+#urlpatterns += patterns("symposion.schedule.views",
+#                        url(r"^vote/(\d+)/$", "schedule_presentation_detail", name="proposal_vote"),
+#                        )

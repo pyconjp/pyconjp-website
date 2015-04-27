@@ -26,7 +26,7 @@
             <div class="row presentation_box">
                 <div class="span8 presentation well">
                     <h3>{{ proposal.p_type }}</h3>
-                    <h3><a href="{% url 'proposal_vote' proposal.pk %}">{{ proposal.title }}&nbsp;({{ proposal.language }})</a></h3>
+                    <h3><a href="{% url 'proposal_vote_detail' proposal.pk %}">{{ proposal.title }}&nbsp;({{ proposal.language }})</a></h3>
                     <h4>{{ proposal.speakers|join:", " }} in <span class="category">{{ proposal.category }}</span></h4>
                     {{ proposal.description }}
                 </div>

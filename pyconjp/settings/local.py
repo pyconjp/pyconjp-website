@@ -16,7 +16,6 @@
 
 from .dev import *  # NOQA
 
-
 def env_var(var, var_type=None, *args, **kwargs):
     u"""
     環境変数の値を返す
@@ -38,14 +37,13 @@ def env_var(var, var_type=None, *args, **kwargs):
             val = var_type(val)
         except ValueError, e:
             raise ImproperlyConfigured('Invalid setting for "%s": "%s"' % (var, e))
-
     return val
 
 DEBUG = env_var('DEBUG', bool, default=True)
 
 _db_engine = env_var('DB_ENGINE', default='sqlite3' if DEBUG else 'postgresql_psycopg2')
 _db_name = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-                        'pycon' + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] + '.sqlite') if _db_engine == 'sqlite3' else 'pyconjp'+ CONFERENCE_URL_PREFIXES[CONFERENCE_ID] +'_staging'
+                        'pycon' + CONFERENCE_URL_PREFIXES[CONFERENCE_ID] + '.sqlite') if _db_engine == 'sqlite3' else 'pyconjp'+ CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.%s' % _db_engine,

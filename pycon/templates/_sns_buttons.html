@@ -1,25 +1,31 @@
 <style>
-    #sns_group {
-        position: relative;
-        overflow: hidden;
-    }
-
+    #sns_group {}
     #sns_group ul{
-        position: relative;
-        left: 50%;
-        float: left;
         list-style-type: none;
+        display: block;
+        margin: 10px 0;
+        padding-top: 10px;
+        border-top: 1px solid #ccc;
     }
     #sns_group li{
-        position: relative;
-        left: -50%;
-        float: left;
+        display: inline-block;
     }
-    
+    #sns_group li.facebook {
+        vertical-align: top;
+        margin-top: 4px;
+        margin-right: 30px;
+    }
+    #sns_group li.google {
+        margin-top: 3px;
+    }
+    #sns_group li.hatena {
+        vertical-align: top;
+        margin-top: 3px;
+    }
 </style>
 <div id="sns_group">
     <ul>
-        <li>
+        <li class="twitter">
             <a href="https://twitter.com/share" class="twitter-share-button" data-text="test">Tweet</a>
             <script>!function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
@@ -31,7 +37,7 @@
                 }
             }(document, 'script', 'twitter-wjs');</script>
         </li>
-        <li>
+        <li class="facebook">
             <script>(function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 // The described facebook appid
@@ -46,11 +52,11 @@
             <div class="fb-like" data-href="{{ request.path }}" data-layout="button_count" data-action="like"
                  data-show-faces="true" data-share="true"></div>
         </li>
-        <li>
+        <li class="google">
             <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
             <g:plusone></g:plusone>
         </li>
-        <li>
+        <li class="hatena">
             <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button"
                data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja"
                title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png"

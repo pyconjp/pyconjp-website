@@ -9,7 +9,7 @@
 {% load boxes_tags %}
 {% load pyconjp_tags %}
 
-{% block head_title_base %}PyCon JP {{ config.URL_PREFIXES }} in Tokyo | September 12th &ndash; September 15th{% endblock %}
+{% block head_title_base %}PyCon JP {{ config.URL_PREFIXES }} in Tokyo | October 9th &ndash; October 12th{% endblock %}
 
 {% block body_class %}
     {{ block.super }}
@@ -18,7 +18,7 @@
 
 {% block banner %}
     <div class="banner">
-        <div class="sky" itemscope itemtype="http://data-vocabulary.org/Event">
+        <div class="banner-inner">
             <div class="container">
                 <div class="row">
                     <div class="span12">
@@ -30,52 +30,34 @@
                                 {% elif config.REGISTRATION_STATUS == 'closed' %}
                                     <p class="small">{% trans "Registration Closed" %}</p>
                                 {% else %}
-                                    <p>&nbsp;<br />&nbsp;</p>
+                                    <p>&nbsp;<br>&nbsp;</p>
                                 {% endif %}
                             </div>
                         {% endif %}
                         {% endcomment %}
-                        <div itemprop="summary" class="logo">PyCon JP 2014 Tokyo September 13th &ndash; September 15th</div>
-                        <div class="details">
-                            <span itemprop="locality">Tokyo</span>,
-                            <span itemprop="country-name">Japan</span>,
-                            <time itemprop="startDate" datetime="2014-9-13">September 13</time>&ndash;
-                            <time itemprop="endDate" datetime="2014-9-15">15</time>
-                        </div>
-
                     </div>
                 </div>
                 <div class="row">
                     <div class="schedule span12">
                         <ul>
-                          <li><strong>{% trans "Tutorials" %}</strong> <br>{% trans "September 12" %}</li>
-                          <li><strong>{% trans "Conference" %}</strong> <br>{% trans "September 13&ndash;14" %}</li>
-                          <li><strong>{% trans "Sprints" %}</strong> <br>{% trans "September 15" %}</li>
+                          <li><strong>Tutorials</strong> <br>October 9</li>
+                          <li><strong>Conference</strong> <br>October 10&ndash;11</li>
+                          <li><strong>Sprints</strong> <br>October 12</li>
                         </ul>
                     </div>
                 </div>
+                {% comment %}
                 <div class="row" style="position: relative;text-align: center;z-index:1000;padding:0 10px;">
                   {% trans "PyCon JP 2014 is over!" %}<br>
                   {% trans "Thanks to everyone for making it a great success!" %}<br>
                 </div>
+                {% endcomment %}
                 {% if config.REGISTRATION_STATUS == 'open' %}
                     <div class="promo" itemprop="tickets" itemscope itemtype="http://data-vocabulary.org/Offer">
                       <a href="{% url 'registration_start' %}">{% trans "REGISTER" %}</a>
                     </div>
                 {% endif %}
             </div>
-        </div>
-        <div class="city">
-            <div class="container">
-
-                <div class="clouds">
-                    <div id="two-clouds"></div>
-                    <div id="one-cloud"></div>
-                </div>
-
-                <div class="tokyo"></div>
-            </div>
-            <div class="lawn"></div>
         </div>
     </div>
 {% endblock %}
@@ -147,7 +129,7 @@
         {% endwith %}
 
         <div class="span4">
-          {# homepage-about for each language #} 
+          {# homepage-about for each language #}
           {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
           {% box "homepage-about-"|add:lang %}
           {% endwith %}

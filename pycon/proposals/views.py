@@ -407,5 +407,13 @@ def vote_list(request):
     return render(request, "proposals/vote_list.html", {"proposal_accepted":proposal_accepted})
 
 def vote_detail(request, pk):
-    query = PyConProposal.objects.get(pk = pk)
-    return render(request, "proposals/vote_detail.html", {"proposal": query})
+    query = PyConProposal.objects.select_related().get(pk = pk)
+    type_list= ["talk", "tutorial", "lightningtalk", "poster"]
+    for type in type_list:
+        attr = 'pycon%sproposal' % type
+        if hasattr(query, attr):
+            tmp = getattr(query, attr)
+            tmp.p_type = type
+
+
+    return render(request, "proposals/vote_detail.html", {"proposal": tmp})

@@ -4,7 +4,6 @@
 {% load compress %}
 {% load i18n %}
 {% load sitetree %}
-
 {% block head_title %}{% trans "投票: " %}{{ proposal.title }}{% endblock %}
 
 {% block extra_head %}
@@ -48,7 +47,7 @@
     {% if proposal.abstract  %}
     <h3>{% trans "Abstract" %}</h3>
 
-    <div class="abstract">{{ proposal.abstract|safe }}</div>
+    <div class="abstract">{{ proposal.abstract }}</div>
     {% endif %}
 
     {# Determine if the proposal is a Tutorial #}

@@ -699,15 +699,19 @@ header.main {
 }
 
 ul.breadcrumb {
- background: transparent;
- margin: 0;
- padding: 0;
- > li {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  > li {
    text-shadow: none;
- }
- > .active, > .divider {
-   color: lighten(@gray, 20%);
- }
+    a {
+      color: #fff;
+    }
+  }
+  > .active,
+  > .divider {
+   color: #ccc;
+  }
 }
 
 /* Homepage
@@ -1690,7 +1694,7 @@ header {
   h1 {
     color: #BBEDA3;
     font-weight: normal;
-    text-transform:uppercase;
+    // text-transform:uppercase;
     font-size: @baseFontSize + 18;
     margin: 9px 0 0 0;
     span {

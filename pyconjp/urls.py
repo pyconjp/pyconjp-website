@@ -40,7 +40,7 @@ def gen_urls():
                                 url(r"^tutorials/", include("pycon.tutorials.urls")),
 
                                 url(r"^speaker/", include("symposion.speakers.urls")),
-                                url(r"^proposals/", include("symposion.proposals.urls")),
+                                url(r"^proposals/", include("pycon.proposals.urls")),
                                 url(r"^reviews/", include("symposion.reviews.urls")),
                                 url(r"^teams/", include("symposion.teams.urls")),
                                 url(r"^schedule/", include("symposion.schedule.urls")),

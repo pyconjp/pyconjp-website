@@ -1,0 +1,34 @@
+{% extends "responsive_base.html" %}
+
+{% load account_tags %}
+{% load compress %}
+{% load i18n %}
+{% load sitetree %}
+{% block head_title %}{% trans "投票: " %}{{ proposal.title }}{% endblock %}
+
+{% block extra_head %}
+{% endblock %}
+
+{% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
+
+{% block body %}
+    <h2>{{ proposal.p_type }}</h2>
+    <h2>{{ proposal.title }}({{ proposal.language }})</h2>
+    <h3>{% trans "Speakers" %}</h3>
+    <h4>
+        {% for speaker in proposal.speakers %}
+            {{ speaker }}
+            {% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </h4>
+
+    {% if proposal.category  %}
+            <div><h3>{% trans "Audience level:" %}</h3><h4>{{ proposal.get_audience_level_display }}</h4></div>
+            <div><h3>{% trans "Category:" %}</h3><h4>{{ proposal.category }}</h4></div>
+    {% endif %}
+
+    <h3>{% trans "Description" %}</h3>
+
+    <div class="description">{{ proposal.description }}</div>
+
+ {% endblock %}

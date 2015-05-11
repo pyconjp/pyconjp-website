@@ -38,7 +38,7 @@
 
 {% block extra_head_base %}
     <meta property="og:type" content="{% if config.URL_PREFIXES == request.path|cut:"/" %}website{% else %}article{% endif %}" />
-    <meta property="og:image" content="https://us.pycon.org/2014/site_media/static/img/logo.png" />
+    <meta property="og:image" content="https://pycon.jp/{{ config.URL_PREFIXES }}/site_media/static/img/ogp_logo.png" />
     <meta property="og:title" content="{% usekwacro title %}" />
     <meta property="og:url" content="https://{{ request.get_host }}{{ request.path }}" />
     <meta property="og:site_name" content="PyCon JP {{ config.URL_PREFIXES }}" />

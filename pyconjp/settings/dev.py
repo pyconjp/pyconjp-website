@@ -4,7 +4,7 @@
 from .base import *  # NOQA
 
 COMPRESS_ENABLED = False
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = ['localhost', '0.0.0.0']
 

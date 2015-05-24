@@ -122,3 +122,9 @@ LOGGING['loggers'].update({
         'level': 'WARNING',
     }
 })
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'
+    }
+}

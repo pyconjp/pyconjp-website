@@ -73,7 +73,10 @@ def locale_path(path, locale=''):
         return path
     else:
         tmp = path.split("/")
-        if len(tmp) < 3:
+
+        if len(tmp) < 3 and tmp[1] == URL_PREFIX:
+            tmp.append("")
+        elif len(tmp) < 2:
             tmp.insert(1, URL_PREFIX)
         elif tmp[1] == locale:
             tmp[1] = URL_PREFIX

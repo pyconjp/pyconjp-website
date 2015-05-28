@@ -38,7 +38,7 @@
 
 {% block extra_head_base %}
     <meta property="og:type" content="{% if config.URL_PREFIXES == request.path|cut:"/" %}website{% else %}article{% endif %}" />
-    <meta property="og:image" content="https://us.pycon.org/2014/site_media/static/img/logo.png" />
+    <meta property="og:image" content="https://pycon.jp/{{ config.URL_PREFIXES }}/site_media/static/img/ogp_logo.png" />
     <meta property="og:title" content="{% usekwacro title %}" />
     <meta property="og:url" content="https://{{ request.get_host }}{{ request.path }}" />
     <meta property="og:site_name" content="PyCon JP {{ config.URL_PREFIXES }}" />
@@ -207,5 +207,9 @@
 {% block script_base %}
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     <script src="{% static "pinax/js/theme.js" %}"></script>
+    {% if request.LANGUAGE_CODE == "ja" %}
+      <script type="text/javascript" src="https://pyconjp.atlassian.net/s/4c678ddcf30ce958715c72ddb2ee1b23-T/ja_JPrwncre/65000/26/1.4.25/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=ja-JP&collectorId=705f31e0"></script>
+    {% else %}
+    {% endif %}
     {% block extra_script %}{% endblock %}
 {% endblock %}

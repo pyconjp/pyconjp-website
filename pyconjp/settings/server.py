@@ -32,6 +32,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 ADMINS = (
     ('Ian Lewis', 'ianmlewis@pycon.jp'),
+    ('Daisuke Komatsu', 'vkg.taro@gmail.com'),
 )
 MANAGERS = ADMINS
 
@@ -122,3 +123,9 @@ LOGGING['loggers'].update({
         'level': 'WARNING',
     }
 })
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'
+    }
+}

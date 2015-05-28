@@ -32,6 +32,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 
 ADMINS = (
     ('Ian Lewis', 'ianmlewis@pycon.jp'),
+    ('Daisuke Komatsu', 'vkg.taro@gmail.com'),
 )
 MANAGERS = ADMINS
 

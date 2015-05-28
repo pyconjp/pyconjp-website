@@ -46,11 +46,18 @@
     <div class="span4">
       <h4>{% trans "Sign in with another account:" %}</h4>
       <ul class="unstyled">
-          <li>
+          <!-- li>
               <a href="{% url "socialauth_begin" "google" %}?next={{ request.path }}">Sign-in using Google</a>
-          </li>
+          </li -->
           <li>
               <a href="{% url "socialauth_begin" "yahoo" %}?next={{ request.path }}">Sign-in using Yahoo!</a>
+          </li>
+          <li>
+              <a href="{% url "socialauth_begin" "facebook" %}">Sign-in using Facebook</a>
+          </li>
+          
+          <li>
+              <a href="{% url "socialauth_begin" "twitter" %}">Sign-in using Twitter</a>
           </li>
       </ul>
     </div>

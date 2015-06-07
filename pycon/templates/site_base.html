@@ -136,6 +136,11 @@
                             <div class="box">
                                 <div class="box-content">{% block body %}{% endblock %}</div>
                             </div>
+
+{% block sns %}
+    {% include "_sns_buttons.html" %}
+{% endblock %}
+
                         </div>
                         <aside class="span3">
                             {% block sidebar %}
@@ -161,10 +166,6 @@
                             {% endblock %}
                         </aside>
                     </div>{# /row #}
-
-{% block sns %}
-    {% include "_sns_buttons.html" %}
-{% endblock %}
 
                 </div>{# /.container #}
                 {% endblock %}{# /page_content #}

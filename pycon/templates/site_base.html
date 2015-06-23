@@ -178,26 +178,13 @@
 
         <div class="container">
         {% block footer %}
-            <a href="{%  url 'home' %}" class="logo">
-                <img src="{{ STATIC_URL }}img/pyconjp2015-logo-official.jpg" alt="PyCon JP {{ config.URL_PREFIXES }} in Tokyo">
-            </a>
             <div class="footer-content">
                 <p class="sns">
                     <a href="https://www.facebook.com/PyConJP"><img src="{{ STATIC_URL }}img/icon-facebook.png"></a>
                     <a href="https://twitter.com/pyconj"><img src="{{ STATIC_URL }}img/icon-twitter.png"></a>
                 </p>
                 <p>
-                  {% blocktrans %}
-                    PyCon JP {{ config.URL_PREFIXES }} in Tokyo is a production of the <a href="http://www.pycon.jp/">PyCon JP Management Team</a>.
-                  {% endblocktrans %}
-                </p>
-                <p>
-                  {% blocktrans %}
-                    Site forked from the <a href="http://us.pycon.org/2014">PyCon 2014</a> site built by <a href="http://caktusgroup.com">Caktus Consulting Group, LLC.</a> using <a href="http://eldarion.com/symposion/" title="Symposion — An Open Platform for Conference Websites">Symposion</a>.
-                  {% endblocktrans %}
-                </p>
-                <p>
-                    Questions? Comments? Contact <a href="mailto:{{ config.URL_PREFIXES }}@pycon.jp">{{ config.URL_PREFIXES }}@pycon.jp</a>
+                  PyCon JP 2015 in Tokyo is a production of the <a href="http://www.pycon.jp/">PyCon JP Committee</a>.Contact <a href="mailto:2015@pycon.jp">2015@pycon.jp</a>
                 </p>
             </div>
         {% endblock %}

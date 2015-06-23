@@ -38,7 +38,7 @@
                     <h2>{{ level.name }}</h2>
                     {% for sponsor in level.sponsors %}
                         {% localized_text "joblisting_text" sponsor as localized_joblisting_text %}
-                        {% if localized_joblisting_text %}
+                        {% ifnotequal localized_joblisting_text "<p></p>" %}
                             <div class="job-post" id="sponsor-{{ sponsor.id }}">
                                 <div class="post-content">
                                     <h2>
@@ -52,7 +52,7 @@
                                 </div>
                             </div>
                         {% else %}
-                        {% endif %}
+                        {% endifnotequal %}
                     {% endfor %}
                 {% endif %}
             {% endfor %}

@@ -12,6 +12,14 @@
 {% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block body %}
+    {% if proposal.cancelled %}
+    <div style="background-color: #EEEEEE; color: #666666">
+    <style>
+    h2, h3, h4 { background-color: #EEEEEE; color: #666666; }
+    </style>
+    <h2>このトークはキャンセルされました</h2>
+    {% endif %}
+
     <h2>{{ proposal.p_type }}</h2>
     <h2>{{ proposal.title }}({{ proposal.language }})</h2>
     <h3>{% trans "Speakers" %}</h3>
@@ -37,5 +45,9 @@
     <h3>{% trans "Description" %}</h3>
 
     <div class="description">{{ proposal.description }}</div>
+
+    {% if proposal.cancelled %}
+    </div>
+    {% endif %}
 
  {% endblock %}

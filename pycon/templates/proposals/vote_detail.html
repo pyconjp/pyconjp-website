@@ -27,6 +27,9 @@
             <div><h3>{% trans "Category:" %}</h3><h4>{{ proposal.category }}</h4></div>
     {% endif %}
 
+    <h3>{% trans "Objectives" %}</h3>
+    <div class="description">{{ proposal.perceived_value }}</div>
+
     <h3>{% trans "Abstract" %}</h3>
 
     <div class="description">{{ proposal.abstract }}</div>

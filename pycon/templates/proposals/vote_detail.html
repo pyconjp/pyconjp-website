@@ -7,6 +7,20 @@
 {% block head_title %}{% trans "投票: " %}{{ proposal.title }}{% endblock %}
 
 {% block extra_head %}
+    <script type="text/javascript">
+        $(function () {
+            var converter = new Attacklab.showdown.converter();
+
+            var mdown = $('#abstract').html();
+            var html = converter.makeHtml(mdown);
+            $('#abstract').html(html);
+
+            var mdown = $('#description').html();
+            var html = converter.makeHtml(mdown);
+            $('#description').html(html);
+
+        });
+    </script>
 {% endblock %}
 
 {% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
@@ -40,11 +54,11 @@
 
     <h3>{% trans "Abstract" %}</h3>
 
-    <div class="description">{{ proposal.abstract }}</div>
+    <div class="description" id="abstract">{{ proposal.abstract }}</div>
 
     <h3>{% trans "Description" %}</h3>
 
-    <div class="description">{{ proposal.description }}</div>
+    <div class="description" id="description">{{ proposal.description }}</div>
 
     {% if proposal.cancelled %}
     </div>

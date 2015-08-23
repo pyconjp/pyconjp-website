@@ -238,6 +238,8 @@ FIXTURE_DIRS = [
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
+SESSION_COOKIE_NAME = "pyconjp-2015"
+
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_OPEN_SIGNUP = True

@@ -523,6 +523,9 @@ def result_notification_send(request, section_slug, status):
     emails = []
 
     for proposal in proposals:
+        if not proposal.speaker_email:
+            continue
+
         rn = ResultNotification()
         rn.proposal = proposal
         rn.template = notification_template

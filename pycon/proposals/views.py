@@ -63,7 +63,7 @@ def proposal_submit_kind(request, kind_slug):
 
     if not kind.section.proposalsection.is_available():
         return redirect("proposal_submit")
-
+    print kind_slug
     form_class = get_form(settings.PROPOSAL_FORMS[kind_slug])
 
     if request.method == "POST":

@@ -34,3 +34,10 @@ class PyConJPTalkProposalForm(PyConProposalForm):
             "additional_notes": MarkEdit(attrs={'rows': '3'}),
             "additional_requirements": forms.Textarea(attrs={'rows': '3'}),
         }
+    def clean_audience(self):
+        value = self.cleaned_data["audience"]
+        if len(value) > 150:
+            raise forms.ValidationError(
+                _(u"The audience must be less than 150 characters")
+            )
+        return value

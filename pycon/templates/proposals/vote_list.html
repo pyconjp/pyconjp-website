@@ -22,6 +22,13 @@
 {% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block body %}
+        <h1>投票用プロポーザル一覧</h1>
+        <h2>
+            こちらは応募されたプロポーザル全ての一覧です。<br>
+            SNS投票など、審議の前のプロポーザルとなります。<br>
+            講演の決定されたプロポーザルの一覧ではありません。<br>
+            講演の決定にはもうしばらくお待ち下さいませ。
+        </h2>
         {% for proposal in proposal_accepted %}
             <div class="row presentation_box">
                 <div class="span8 presentation well">

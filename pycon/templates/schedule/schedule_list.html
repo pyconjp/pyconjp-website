@@ -25,7 +25,7 @@
     <h2>Accepted {{ schedule.section.name }}</h2>
     Category Search<select id="select_category"><option value="">---------</option></select>
     {% box "schedule_detail_"|add:schedule.section.name|slugify %}
-    {% cache 600 "schedule-list" schedule.section.name %}
+    {# % cache 600 "schedule-list" schedule.section.name % #}
         {% for presentation in presentations %}
             <div class="row presentation_box {{ presentation.proposal.category|cut:" " }}">
                 <div class="span8 presentation well">
@@ -43,7 +43,7 @@
                 </div>
             </div>
         {% endfor %}
-    {% endcache %}
+    {# % endcache % #}
     <script>
         $(function(){
             var $category = $(".category"), $select_category = $("#select_category"), tmp_array = [];

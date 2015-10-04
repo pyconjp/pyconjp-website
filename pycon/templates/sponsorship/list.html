@@ -19,7 +19,7 @@
 
 {% block page_content %}
     <div class="container">
-        {% cache 600 "sponsors-list" %}
+        {# % cache 600 "sponsors-list" % #}
         {% sponsor_levels as levels %}
 
         {% for level in levels %}
@@ -50,6 +50,6 @@
                 {% endif %}
             </div>
         {% endfor %}
-        {% endcache %}
+        {# % endcache % #}
     </div>
 {% endblock %}

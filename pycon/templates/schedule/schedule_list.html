@@ -58,8 +58,9 @@
             $select_category.change(function(){
                 var val = $(this).val();
                 if(val !== ""){
-                    $presentation_box.hide()
-                    $("." + val).show();
+                    $presentation_box.hide();
+                    search_class = 'div[class^="row presentation_box ' + val.replace(/^(\w+)/gi, "$1") + '"]';
+                    $(search_class).show();
                 }else {
                     $presentation_box.show();
                 }

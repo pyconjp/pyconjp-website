@@ -31,8 +31,9 @@ COMPRESS = False
 CONFERENCE_ID = 1
 
 CONFERENCE_URL_PREFIXES = {
-    1: "2015",
-    2: "2014"
+    1: "2016",
+    2: "2015",
+    3: "2014"
 }
 
 URL_PREFIXES = CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
@@ -238,7 +239,7 @@ FIXTURE_DIRS = [
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
-SESSION_COOKIE_NAME = "pyconjp-2015"
+SESSION_COOKIE_NAME = "pyconjp-2016"
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 

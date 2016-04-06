@@ -121,10 +121,6 @@
     <div id="content">
         {% block body_outer %}
             <div class="page-head">
-                <div class="container">
-                    <h1>{% block page_title %}{% endblock %}</h1>
-                    {% block breadcrumbs %}{% endblock %}
-                </div>
             </div>
             <div class="page-content">
                 {% block page_content %}
@@ -132,6 +128,10 @@
 
                     <div class="row">
                         <div class="span9">
+                          <header class="page-content-header">
+                              <h1>{% block page_title %}{% endblock %}</h1>
+                              {% block breadcrumbs %}{% endblock %}
+                          </header>
                             {% block edit_page %}{% endblock %}
                             <div class="box">
                                 <div class="box-content">{% block body %}{% endblock %}</div>

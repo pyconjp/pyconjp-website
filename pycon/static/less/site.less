@@ -37,10 +37,11 @@
 
 @greenLight:  #76c34d;
 // #62a83d
-@greenDark:   #346B17; 
+@greenDark:   #346B17;
 @yellowBeak:  #f6b34a;
 
 @danger:      #cd0000;
+@normal-text: #4d4d4d;
 
 @button-text:           @white;
 @button-hover:          mix(@grayLight, white, 80%);
@@ -58,6 +59,14 @@
 @button-white-hover:  overlay(@blueDark, darken(white, 37.5%));
 @button-white-active: mix(@blueDark, black, 85%);
 
+@rect-color-blue:        #54c2f0;
+@rect-color-green:       #86c8a0;
+@rect-color-yellowgreen: #a9c952;
+@rect-color-yellow:      #ffe45f;
+@rect-color-orange:      #f8c058;
+@rect-color-red:         #f19975;
+@rect-color-magenta:     #ea6d99;
+
 
 /* Mixins
 ==================== */
@@ -74,6 +83,15 @@
   &.active {
     background-color: @active;
   }
+}
+
+.rect(@length, @color) {
+    content: '';
+    display: inline-block;
+    width: @length;
+    height: @length;
+    background: @color;
+    transform: rotate(45deg);
 }
 
 .inline-block {
@@ -149,6 +167,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   font-weight: normal;
+  color: @normal-text;
 }
 
 h1, h2, h3, h4, h5 {
@@ -796,14 +815,37 @@ body.home {
         // border: 4px solid #E5A173;
         line-height: 24px;
         text-align: center;
-        width: 160px;
+        width: 140px;
+        &:nth-child(1)::before {
+          .rect(14px, @rect-color-blue);
+          position: relative;
+          right: 14px;
+        }
+        &:nth-child(2) {
+          width: 200px;
+          &::before {
+            .rect(14px, @rect-color-yellowgreen);
+            position: relative;
+            right: 14px;
+          }
+        }
+        &:nth-child(3)::before {
+          .rect(14px, @rect-color-orange);
+          position: relative;
+          right: 14px;
+        }
+        &:last-child::after {
+          .rect(14px, @rect-color-magenta);
+          position: relative;
+          left: 14px;
+        }
         strong {
             margin-top: 30px;
+            font-size: 14px;
             display: inline-block;
-            color: #78FFEA;
         }
       }
-      li + li { margin-left: 70px; }
+      li + li { margin-left: 10px; }
     }//ul
   }//.schedule
   // .city {

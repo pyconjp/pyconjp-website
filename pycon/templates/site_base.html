@@ -69,7 +69,7 @@
 
 {% block topbar_base %}
     {% include "_messages.html" %}
-    <header class="navbar navbar-inverse">
+    <header class="navbar">
         <div class="navbar-inner">
             <div class="container">
                 <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -78,7 +78,7 @@
                     <span class="icon-bar"></span>
                 </a>
                 <a class="brand" href="{% url 'home' %}">
-                    <img src="{{ STATIC_URL }}img/pycon2015-logo-small.png" alt="PyCon JP {{ config.URL_PREFIXES }} in Tokyo" width="100">
+                    <img src="{{ STATIC_URL }}img/pycon2016-logo-small.png" alt="PyCon JP {{ config.URL_PREFIXES }} in Tokyo" width="100">
                 </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav pull-right">
@@ -121,10 +121,6 @@
     <div id="content">
         {% block body_outer %}
             <div class="page-head">
-                <div class="container">
-                    <h1>{% block page_title %}{% endblock %}</h1>
-                    {% block breadcrumbs %}{% endblock %}
-                </div>
             </div>
             <div class="page-content">
                 {% block page_content %}
@@ -132,6 +128,10 @@
 
                     <div class="row">
                         <div class="span9">
+                          <header class="page-content-header">
+                              <h1>{% block page_title %}{% endblock %}</h1>
+                              {% block breadcrumbs %}{% endblock %}
+                          </header>
                             {% block edit_page %}{% endblock %}
                             <div class="box">
                                 <div class="box-content">{% block body %}{% endblock %}</div>

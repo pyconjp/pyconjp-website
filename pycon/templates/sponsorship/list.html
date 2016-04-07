@@ -9,18 +9,16 @@
 
 {% block body_class %}sponsors{% endblock %}
 
-{% block page_title %}
-    {% trans "About PyCon JP Sponsors" %}
-    <!-- a href="{% url 'cms_page' "sponsors/prospectus/" %}" class="read-more">
-        {% trans "Learn how to become a sponsor " %}
-        <i class="icon icon-arrow-right"></i>
-    </a -->
-{% endblock %}
-
 {% block page_content %}
     <div class="container">
+
         {# % cache 600 "sponsors-list" % #}
         {% sponsor_levels as levels %}
+
+          <header class="page-content-header">
+            <h1>{% block page_title %}{% trans "About PyCon JP Sponsors" %}{% endblock %}</h1>
+            {% block breadcrumbs %}{% endblock %}
+          </header>
 
         {% for level in levels %}
             <div class="span12">

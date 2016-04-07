@@ -40,9 +40,15 @@
                 <div class="row">
                     <div class="schedule span12">
                         <ul>
-                          <li><strong>Tutorials</strong> <br>October 9</li>
-                          <li><strong>Conference</strong> <br>October 10&ndash;11</li>
-                          <li><strong>Sprints</strong> <br>October 12</li>
+                          <li><strong>Tutorials</strong> Sep. 20</li>
+                          <li><strong>Conference</strong> Sep. 21&ndash;22</li>
+                          <li><strong>Sprints</strong> Sep. 23</li>
+                        </ul>
+                    </div>
+                    <div class="links">
+                        <ul>
+                          <li class="twitter">#pyconjp</li>
+                          <li class="access-map">WASEDA University</li>
                         </ul>
                     </div>
                 </div>
@@ -106,7 +112,7 @@
     <div class="row homepage-content">
         {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
         {% latest_section_posts lang as posts %}
-        <div class="span8">
+        <div class="span12 homepage-announcement">
             <h3>{% trans "Announcements" %}</h3>
                 {% for post in posts %}
                     <div class="blog-post">
@@ -128,7 +134,7 @@
         </div>
         {% endwith %}
 
-        <div class="span4">
+        <div class="span12 homepage-about">
           {# homepage-about for each language #}
           {% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}
           {% box "homepage-about-"|add:lang %}

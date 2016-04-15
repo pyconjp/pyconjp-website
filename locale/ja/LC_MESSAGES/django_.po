@@ -1187,11 +1187,7 @@ msgstr "会員登録"
 msgid "Create a new account"
 msgstr "アカウントを作成"
 
-#: pycon/templates/account/signup.html:19
-msgid "Accounts on this site are for talk proposals and sponsors applications. If you would like to attend PyCon JP 2016, please wait until tickets go on sale around May."
-msgstr "このサイトのアカウント登録は、スピーカー登録やスポンサー登録のためのものです。一般の参加者登録開始は5月以降に別途アナウンスいたします。"
-
-#: pycon/templates/account/signup.html:28
+#: pycon/templates/account/signup.html:25
 #: symposion/templates/account/signup.html:19
 msgid "Create Account"
 msgstr "アカウントを作成"

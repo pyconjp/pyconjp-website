@@ -26,11 +26,10 @@
 {% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block body %}
-    <h1>投票用プロポーザル</h1>
+    <h1>Talk for voting / 応募トーク</h1>
     <h2 style="font-size: 14px">
-        こちらはSNS投票など、審議の前のプロポーザルとなります。<br>
-        講演の決定されたプロポーザルではありません。<br>
-        講演の決定にはもうしばらくお待ち下さいませ。
+       This is a applied talk. Please share talks which you want to attend at PyCon JP 2016 event. It is one of criterion  for selection.<br>
+       これは応募されたトークです。聞きたいと思うトークをSNSで拡散しましょう。選考時に参考にさせていただきます。
     </h2>
     {% if proposal.cancelled %}
     <div style="background-color: #EEEEEE; color: #666666">

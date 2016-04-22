@@ -22,12 +22,10 @@
 {% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block body %}
-        <h1>投票用プロポーザル一覧</h1>
+        <h1>Applied talks / 応募リスト</h1>
         <h2 style="font-size: 14px">
-            こちらは応募されたプロポーザル全ての一覧です。<br>
-            SNS投票など、審議の前のプロポーザルとなります。<br>
-            講演の決定されたプロポーザルの一覧ではありません。<br>
-            講演の決定にはもうしばらくお待ち下さいませ。
+        This is the applied talks list. Please share talks which you want to attend at PyCon JP 2016 event. It is one of criterion  for selection.<br>
+        これはトークの応募リストです。聞きたいと思うトークをSNSで拡散しましょう。選考時に参考にさせていただきます。
         </h2>
         {% for proposal in proposal_accepted %}
             <div class="row presentation_box">

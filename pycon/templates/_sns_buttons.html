@@ -9,18 +9,7 @@
     }
     #sns_group li{
         display: inline-block;
-    }
-    #sns_group li.facebook {
         vertical-align: top;
-        margin-top: 4px;
-        margin-right: 30px;
-    }
-    #sns_group li.google {
-        margin-top: 3px;
-    }
-    #sns_group li.hatena {
-        vertical-align: top;
-        margin-top: 3px;
     }
 </style>
 <div id="sns_group">
@@ -52,10 +41,6 @@
             <div class="fb-like" data-href="{{ request.path }}" data-layout="button_count" data-action="like"
                  data-show-faces="true" data-share="true"></div>
         </li>
-        <li class="google">
-            <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-            <g:plusone></g:plusone>
-        </li>
         <li class="hatena">
             <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button"
                data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja"
@@ -64,6 +49,10 @@
                                                  style="border: none;"/></a>
             <script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8"
                     async="async"></script>
+        </li>
+        <li class="google">
+            <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang:'{{ request.LANGUAGE_CODE }}'}</script>
+            <g:plusone size="medium"></g:plusone>
         </li>
     </ul>
 </div>

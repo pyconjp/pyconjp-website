@@ -26,9 +26,9 @@
 {% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block body %}
-    <h1>Talk for voting / 応募トーク</h1>
+    <h1>Talk proposal / 応募トーク</h1>
     <h2 style="font-size: 14px">
-       This is a applied talk. Please share talks which you want to attend at PyCon JP 2016 event. It is one of criterion  for selection.<br>
+        If you are interested in attending this talk at PyCon JP 2016, please use the social media share buttons below. We will consider the popularity of the proposals when making our selection.<br>
        これは応募されたトークです。聞きたいと思うトークをSNSで拡散しましょう。選考時に参考にさせていただきます。
     </h2>
     {% if proposal.cancelled %}

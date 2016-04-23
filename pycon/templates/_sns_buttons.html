@@ -46,7 +46,7 @@
                 if (d.getElementById(id)) return;
                 js = d.createElement(s);
                 js.id = id;
-                js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=" + appID + "&version=v2.0";
+                js.src = "//connect.facebook.net/{% if request.LANGUAGE_CODE == 'ja' %}ja_JA{% else %}en_US{% endif %}/sdk.js#xfbml=1&appId=" + appID + "&version=v2.0";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
             <div class="fb-like" data-href="{{ request.path }}" data-layout="button_count" data-action="like"

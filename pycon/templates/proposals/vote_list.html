@@ -22,9 +22,9 @@
 {% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
 
 {% block body %}
-        <h1>Applied talks / 応募リスト</h1>
+        <h1>Submitted talk proposals / 応募リスト</h1>
         <h2 style="font-size: 14px">
-        This is the applied talks list. Please share talks which you want to attend at PyCon JP 2016 event. It is one of criterion  for selection.<br>
+        This is the list of all submitted talk proposals. Please share the talks you’re interested in attending at PyCon JP 2016 on social media using the share buttons on the talks detail page. We will take the amount of interest shown for proposals into consideration when selecting the talks.<br>
         これはトークの応募リストです。聞きたいと思うトークをSNSで拡散しましょう。選考時に参考にさせていただきます。
         </h2>
         {% for proposal in proposal_accepted %}

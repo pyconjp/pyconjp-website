@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # base settings - imported by other settings files, then overridden
 
+import os
 import os.path
 import posixpath
 
@@ -364,3 +365,5 @@ CACHES = {
 # logging with an empty dictionary.
 from django.utils.log import DEFAULT_LOGGING
 LOGGING = DEFAULT_LOGGING
+
+SLACK_SPONSOR_WEBHOOK_URL = os.environ.get('SLACK_SPONSOR_WEBHOOK_URL')

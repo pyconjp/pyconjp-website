@@ -254,7 +254,7 @@ post_save.connect(_send_sponsor_notification_emails, sender=Sponsor)
 def _send_sponsor_slack(sender, instance, created, **kwargs):
     if instance and created and settings.SLACK_SPONSOR_WEBHOOK_URL:
         payload = json.dumps({
-            'text': '%s registered sponsorship leve:%s' % (
+            'text': '%s registered sponsorship level:%s' % (
                 instance.name, instance.level)})
         requests.post(
             settings.SLACK_SPONSOR_WEBHOOK_URL, data=payload)

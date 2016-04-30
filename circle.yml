@@ -1,0 +1,19 @@
+test:
+  override:
+    - ls
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - sh ./deploy/deploy_production.sh
+  staging:
+    branch: develop
+    commands:
+      - sh ./deploy/deploy_staging.sh
+
+  trial:
+    branch: feature/SAR-553-circleci
+    commands:
+      - sh ./deploy/deploy_trial.sh
+

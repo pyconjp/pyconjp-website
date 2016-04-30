@@ -10,6 +10,9 @@ PyCon JP サイト！
     $ virtualenv env/pycon
     $ . env/pycon/bin/activate
 
+* 依存するライブラリをインストールする::
+    
+    $ brew install libjpeg zlib  # OSX
 
 * Copy ``pycon/settings/local.py-example`` to ``pycon/settings/local.py``.
 * Edit ``pycon/settings/local.py`` according to the comments. Note that you
@@ -32,7 +35,8 @@ PyCon JP サイト！
 
 * Run local server::
 
-    python manage.py runserver
+    python manage.py runserver  # => http://127.0.0.1:8000/2016/ja/
+
 
 * Vagrant::
 

@@ -60,6 +60,9 @@ def sponsor_detail(request, pk):
         form = SponsorDetailsForm(request.POST, instance=sponsor)
         formset = SponsorBenefitsFormSet(request.POST, request.FILES, **formset_kwargs)
 
+        print form.is_valid()
+        print formset.is_valid()
+
         if form.is_valid() and formset.is_valid():
             formset.save()
             form.save()
@@ -70,7 +73,7 @@ def sponsor_detail(request, pk):
     else:
         form = SponsorDetailsForm(instance=sponsor)
         formset = SponsorBenefitsFormSet(**formset_kwargs)
-
+#    print formset
     return render_to_response("sponsorship/detail.html", {
         "sponsor": sponsor,
         "form": form,

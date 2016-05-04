@@ -17,7 +17,7 @@ deployment:
       - sh ./deploy/deploy_staging.sh
 
   trial:
-    branch: feature/SAR-553-circleci
+    branch: SAR-566-deploy-from-circleCI
     commands:
       - sh ./deploy/deploy_trial.sh
 

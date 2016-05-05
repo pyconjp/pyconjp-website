@@ -34,8 +34,8 @@ PyCon JP サイト！
 
 * If you have ssh access to the staging server, copy the database and media::
 
-    $ fab staging get_db_dump:pycon2014
-    $ fab staging get_media
+    $ fab -f scripts/fabfile.py staging get_db_dump:pycon2014
+    $ fab -f scripts/fabfile.py staging get_media
 
   Change ``pycon2014`` in that first command to the name of your local database.
 

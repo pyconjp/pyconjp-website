@@ -18,5 +18,5 @@ Vagrant.configure("2") do |config|
 
   config.vm.hostname = "pyconjp-web"
   config.vm.network "forwarded_port", guest: 8000, host: 8000
-  config.vm.provision :shell, :inline => "bash /vagrant/pyconjp/setup-centos.sh"
+  config.vm.provision :shell, :inline => "bash /vagrant/scripts/setup-centos.sh"
 end

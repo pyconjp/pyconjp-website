@@ -6,13 +6,12 @@
 # Put project-specific requirements here.
 # See http://pip-installer.org/requirement-format.html for more information.
 
-Pillow==2.0.0
+Pillow==3.2.0
 easy-thumbnails==1.2
 html5lib==0.95
 django-social-auth==0.7.23
 
 gondor==1.2.4
-psycopg2==2.5
 gunicorn==0.17.4
 django-secure==1.0
 raven==3.3.7
@@ -25,4 +24,4 @@ redis==2.7.5
 hiredis==0.1.1
 South==0.8.1
 
-graypy==0.2.9
+-e git+https://bitbucket.org/pyconjp/django-restcms.git@e3b4600#egg=restcms

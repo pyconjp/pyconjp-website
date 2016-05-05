@@ -5,8 +5,8 @@ PyCon JP サイト！
 運用フロー
 ----------------------
 
-* 各ブランチの使い方は `こちら <https://github.com/pyconjp/pyconjp-website/wiki/%E5%90%84%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E5%BD%B9%E5%89%B2>`_ です。
-* 運用フローは `こちら <https://github.com/pyconjp/pyconjp-website/wiki/%E9%81%8B%E7%94%A8%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6>`_ です。
+* `各ブランチの役割 <https://github.com/pyconjp/pyconjp-website/wiki/%E5%90%84%E3%83%96%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AE%E5%BD%B9%E5%89%B2>`_
+* `運用フロー <https://github.com/pyconjp/pyconjp-website/wiki/%E9%81%8B%E7%94%A8%E3%83%95%E3%83%AD%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6>`_
 
 ローカル開発
 ----------------------

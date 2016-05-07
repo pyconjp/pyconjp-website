@@ -36,7 +36,7 @@ curl -L https://bootstrap.pypa.io/get-pip.py | python - --user
 ~/.local/bin/pip install --user virtualenv
 ~/.local/bin/virtualenv ~/.venv
 source ~/.venv/bin/activate
-pip install -r /vagrant/requirements/online.txt -r /vagrant/requirements/dev.txt
+pip install -f /vagrant/wheelhouse -r /vagrant/requirements/dev.txt
 sh /vagrant/pyconjp/init_db.sh
 
 echo "Finished if no error occured. Pleaes re-login or execute 'source ~/.bashrc'"

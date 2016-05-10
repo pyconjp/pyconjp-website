@@ -1,3 +1,0 @@
---requirement=project.txt
-
-psycopg2==2.5

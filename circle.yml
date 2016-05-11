@@ -16,8 +16,3 @@ deployment:
     commands:
       - sh ./deploy/deploy_staging.sh
 
-  trial:
-    branch: SAR-566-deploy-from-circleCI
-    commands:
-      - sh ./deploy/deploy_trial.sh
-

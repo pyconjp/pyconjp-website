@@ -52,5 +52,5 @@ South==0.8.1
 django-restcms
 
 # production.txt
-psycopg2==2.5
+psycopg2==2.5 ; 'linux' in sys_platform
 

@@ -3,6 +3,7 @@ _build
 *.swp
 *.pot
 *.sqlite
+*.log
 dev.db
 .DS_Store
 pycon/static/js/cssrefresh.js
@@ -10,7 +11,6 @@ pycon/static/less/bootstrap/bootstrap.css
 pycon/static/less/bootstrap/variables.css
 MANIFEST
 .tox
-pycon/settings/local.py
 site_media
 .ropeproject/
 program_export/

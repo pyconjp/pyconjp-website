@@ -32,7 +32,7 @@ DB バックエンドは DB_ENGINE の環境変数で設定できます。
 
 :DEBUG:
     True でデバッグツールバーを有効にし、Djangoをデバッグモードで実行します。
-    デフォルトはFalseです。
+    デフォルトはTrueです。
     DEBUG, TEMPLATE_DEBUG, EMAIL_DEBUG の設定に使用されます。
 
 :DB_ENGINE:
@@ -99,7 +99,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 # Symposion package
 PACKAGE_ROOT = os.path.join(PROJECT_ROOT, "pyconjp-website/symposion")
 
-DEBUG = env_or_default("DEBUG", False)
+DEBUG = env_or_default("DEBUG", True)
 TEMPLATE_DEBUG = DEBUG
 
 # tells Pinax not to serve media through the staticfiles app.

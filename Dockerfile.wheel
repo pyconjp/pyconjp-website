@@ -1,0 +1,14 @@
+# PyPAが提供するmanylinux wheelビルド用Docker
+FROM quay.io/pypa/manylinux1_x86_64
+
+# psycopg2とPILのビルド用
+RUN yum install -y -q postgresql-devel libjpeg-devel zlib-devel
+
+COPY ./requirements /app/requirements
+COPY ./scripts/make-wheels.sh  /app/make-wheels.sh
+
+VOLUME /app/wheelhouse /app/wheelhouse_new
+WORKDIR /app/wheelhouse_new
+
+CMD ["bash", "/app/make-wheels.sh"]
+

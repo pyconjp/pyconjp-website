@@ -7,10 +7,10 @@
 --extra-index-url=http://dist.pinaxproject.com/fresh-start/
 
 # packages pinned to forked version for Django-1.5
-https://github.com/caktus/biblion/archive/feature/django-1.5.zip#egg=biblion
-https://github.com/daaray/django-sitetree/archive/master.zip#egg=django-sitetree
-https://github.com/shvechikov/python-rtfng/archive/master.zip#egg=pyrtf-ng
-https://bitbucket.org/pyconjp/django-restcms/get/master.zip#egg=django-restcms
+https://github.com/caktus/biblion/archive/feature/django-1.5.zip#egg=biblion-0.1.dev12
+https://github.com/daaray/django-sitetree/archive/master.zip#egg=django_sitetree-0.12.0
+https://github.com/shvechikov/python-rtfng/archive/master.zip#egg=pyrtf_ng-0.9.1
+https://bitbucket.org/pyconjp/django-restcms/get/master.zip#egg=django_restcms-0.1
 
 -r production.txt
 

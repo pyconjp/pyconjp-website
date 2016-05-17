@@ -14,9 +14,9 @@ python-openid==2.2.5
 django_compressor==1.3
 
 # packages pinned to forked version for Django-1.5
-biblion
-django-sitetree
-pyrtf-ng
+biblion==0.1.dev12
+django_sitetree==0.12.0
+pyrtf_ng==0.9.1
 
 django-taggit==0.10a1
 django-reversion==1.7
@@ -49,7 +49,7 @@ hiredis==0.1.1
 South==0.8.1
 
 # packages pinned to forked version for Django-1.5
-django-restcms
+django-restcms==0.1
 
 # production.txt
 psycopg2==2.5 ; 'linux' in sys_platform

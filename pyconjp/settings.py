@@ -32,7 +32,7 @@ DB バックエンドは DB_ENGINE の環境変数で設定できます。
 
 :DEBUG:
     True でデバッグツールバーを有効にし、Djangoをデバッグモードで実行します。
-    デフォルトはFalseです。
+    デフォルトはTrueです。
     DEBUG, TEMPLATE_DEBUG, EMAIL_DEBUG の設定に使用されます。
 
 :DB_ENGINE:
@@ -71,10 +71,10 @@ DB バックエンドは DB_ENGINE の環境変数で設定できます。
     Facebookログインを使用する場合設定してください。デフォルトは空文字列です。
 
 :LOG_PATH:
-    ログファイル出力先です。デフォルトは ``/var/log/pyconjp/pyconjp_website.log`` です。
+    ログファイル出力先です。デフォルトは ``./pyconjp_website.log`` です。
 
 :ERROR_LOG_PATH:
-    エラーログファイル出力先です。デフォルトは ``/var/log/pyconjp/pyconjp_website.error.log`` です。
+    エラーログファイル出力先です。デフォルトは ``./pyconjp_website.error.log`` です。
 
 :LOG_LEVEL:
     ログレベルです。デフォルトは ``INFO`` です。
@@ -99,7 +99,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir
 # Symposion package
 PACKAGE_ROOT = os.path.join(PROJECT_ROOT, "pyconjp-website/symposion")
 
-DEBUG = env_or_default("DEBUG", False)
+DEBUG = env_or_default("DEBUG", True)
 TEMPLATE_DEBUG = DEBUG
 
 # tells Pinax not to serve media through the staticfiles app.
@@ -502,15 +502,13 @@ LOGGING['handlers'].update({
         'level': 'INFO',
         'formatter': 'verbose',
         'class': 'logging.handlers.WatchedFileHandler',
-        'filename': env_or_default('LOG_PATH',
-                                   '/var/log/pyconjp/pyconjp_website.log'),
+        'filename': env_or_default('LOG_PATH', './pyconjp_website.log'),
     },
     'pyconjp_error_log': {
         'level': 'ERROR',
         'formatter': 'verbose',
         'class': 'logging.handlers.WatchedFileHandler',
-        'filename': env_or_default('ERROR_LOG_PATH',
-                                   '/var/log/pyconjp/pyconjp_website.error.log'),
+        'filename': env_or_default('ERROR_LOG_PATH', './pyconjp_website.error.log'),
     },
 })
 LOGGING['loggers'].update({

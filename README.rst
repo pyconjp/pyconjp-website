@@ -16,14 +16,6 @@ PyCon JP サイト！
     $ virtualenv env/pycon
     $ . env/pycon/bin/activate
 
-* 依存するライブラリをインストールする::
-    
-    $ brew install libjpeg zlib  # OSX
-
-* Copy ``pycon/settings/local.py-example`` to ``pycon/settings/local.py``.
-* Edit ``pycon/settings/local.py`` according to the comments. Note that you
-  `will` have to edit it; by default everything there is commented out.
-
 * make::
 
     $ make dev
@@ -58,3 +50,10 @@ PyCon JP サイト！
     * 課題・機能・案件ごとにJIRAにてチケットを作成、チケットごとにトピックブランチを切る(ブランチの名前はTicketID
     * git-flowに乗せる。機能開発はfeatureブランチにて
     * 作業完了、要レビューの際はpull request、コミッターは小松さん
+
+
+Docker support
+----------------
+
+see README-Docker.md
+

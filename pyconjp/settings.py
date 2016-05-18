@@ -97,7 +97,7 @@ ENVIRONMENT = env_or_default('ENVIRONMENT', 'dev')
 # Top level of our source / repository
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 # Symposion package
-PACKAGE_ROOT = os.path.join(PROJECT_ROOT, "pyconjp-website/symposion")
+PACKAGE_ROOT = os.path.join(PROJECT_ROOT, "symposion")
 
 DEBUG = env_or_default("DEBUG", True)
 TEMPLATE_DEBUG = DEBUG
@@ -325,7 +325,7 @@ INSTALLED_APPS = [
 ]
 
 FIXTURE_DIRS = [
-    os.path.join(PROJECT_ROOT, "pyconjp-website/fixtures"),
+    os.path.join(PROJECT_ROOT, "fixtures"),
 ]
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"

@@ -412,8 +412,27 @@ aside {
     padding-right: 25px;
   }
   .box-content {
-    h3 {
+    h1, h2, h3 {
       margin-top: 25px;
+    }
+      font-size: 16px;
+      line-height: 28px;
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    th,td {
+      text-align: left;
+      padding: 3px 5px;
+    }
+    li {
+      margin-top: 8px;
+    }
+    dt {
+      margin-bottom: 10px;
+    }
+    dd {
+      margin-bottom: 30px;
     }
   }
 }
@@ -724,12 +743,15 @@ ul.breadcrumb {
   > li {
    text-shadow: none;
     a {
-      color: #fff;
+      color: #8b8b8b;
+      &:hover {
+        color: #333;
+      }
     }
   }
   > .active,
   > .divider {
-   color: #ccc;
+   color: #333;
   }
 }
 
@@ -1748,11 +1770,35 @@ header {
 /* page-content-title
 ==================== */
 .page-content-header {
-  padding: 10px 0 0 50px;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-justify-content: center; /* Safari */
+  justify-content:         center;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+
+  padding: 0 0 0 30px;
+  margin-bottom: 20px;
   text-align: left;
   min-height: 74px;
   min-width: 111px;
   background-image: url('../img/title-mark.png');
+  position: relative;
+  right: 30px;
   background-repeat: no-repeat;
+  h1 {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 0;
+    min-height: 32px;
+    width: 100%;
+  }
+  ul.breadcrumb {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 0;
+    min-height: 18px;
+    width: 100%;
+  }
 
 }

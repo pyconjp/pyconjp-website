@@ -409,8 +409,7 @@ body.home .banner-inner {
 		}
 		@media (max-width: @breakMobileLandscape) {
 			background-position: center top;
-			height: 190px;
-			background-size: 600px auto;
+			height: 230px;
 		}
 }
 body.home .schedule {
@@ -468,4 +467,16 @@ body.home .links {
 		@media (max-width: @breakTablet) {
 			display: none;
 		}
+}
+
+.box {
+	@media (max-width: @breakTablet) {
+		padding-right: 0 !important;
+	}
+}
+
+.page-content-header {
+	@media (min-width: @breakMobileLandscape) {
+	  padding: 0 0 0 50px;
+	}
 }

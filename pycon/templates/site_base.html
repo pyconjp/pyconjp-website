@@ -187,8 +187,8 @@
                 <p class="footer-venue">
                   <img src="{{ STATIC_URL }}img/pyconjp-logo.png" alt="PyCon JP Committee">
                   <img src="{{ STATIC_URL }}img/waseda-x200.png" alt="Waseda University"> <br>
-                  主催: 一般社団法人PyCon JP<span> / </span>
-                  共催: 早稲田大学グローバルソフトウェアエンジニアリング研究所
+                  {{ _('Host: PyCon JP Committee') }}<span> / </span>
+                  {{ _('Cohost: Global Software Engineering Laboratory, Waseda University') }}
                 </p>
                 <p>
                   PyCon JP 2016 in Tokyo is a production of the <a href="http://www.pycon.jp/">PyCon JP Committee</a>. Contact <a href="mailto:2016@pycon.jp">2016@pycon.jp</a>
@@ -203,7 +203,7 @@
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     <script src="{% static "pinax/js/theme.js" %}"></script>
     {% if request.LANGUAGE_CODE == "ja" %}
-      <script type="text/javascript" src="https://pyconjp.atlassian.net/s/4c678ddcf30ce958715c72ddb2ee1b23-T/ja_JPrwncre/65000/26/1.4.25/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=ja-JP&collectorId=705f31e0"></script>
+        <script type="text/javascript" src="https://pyconjp.atlassian.net/s/048e172afaa11f8ad9162162d802fb5d-T/fjjzfj/72002/3c610f9ba371815fb16876af3ce547ea/2.0.14/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=ja-JP&collectorId=90f0623a"></script>
     {% else %}
     {% endif %}
     {% block extra_script %}{% endblock %}

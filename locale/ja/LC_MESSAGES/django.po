@@ -1064,6 +1064,14 @@ msgid ""
 "                  "
 msgstr ""
 
+#: pycon/templates/site_base.html:190
+msgid "Host: PyCon JP Committee"
+msgstr "主催: 一般社団法人PyCon JP"
+
+#: pycon/templates/site_base.html:191
+msgid "Cohost: Global Software Engineering Laboratory, Waseda University"
+msgstr "共催: 早稲田大学グローバルソフトウェアエンジニアリング研究所"
+
 #: pycon/templates/account/_openid_sidebar.html:5
 #: symposion/templates/account/_openid_sidebar.html:5
 #: symposion/templates/social_auth/usersocialauth_list.html:47

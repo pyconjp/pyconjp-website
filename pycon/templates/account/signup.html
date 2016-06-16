@@ -15,11 +15,7 @@
         <div class="span12">
             <form id="signup_form" method="post" action="{% url "account_signup" %}" autocapitalize="off" class="form-horizontal"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
                 <legend>{% trans "Create a new account" %}</legend>
-	  <div>
-	    {% trans "Accounts on this site are for talk proposals and sponsors
-    applications. If you would like to attend PyCon JP 2016, please
-    wait until tickets go on sale in May." %}
-	  </div>
+                <div>{% trans "Accounts on this site are for talk proposals and sponsors applications. If you would like to attend PyCon JP 2016, please wait until tickets go on sale in May." %}</div>
                 <fieldset>
                     {% csrf_token %}
                     {{ form|as_bootstrap }}

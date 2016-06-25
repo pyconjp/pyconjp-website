@@ -2657,3 +2657,8 @@ msgstr "開催地"
 #: symposion/templates/teams/team_detail.html:48
 msgid "demote"
 msgstr ""
+
+#: symposion/speakers/view.html:36
+#: symposion/speakers/view.html:64
+msgid "Speaker profile created."
+msgstr "スピーカープロファイルが作成されました"

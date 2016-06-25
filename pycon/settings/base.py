@@ -365,5 +365,3 @@ CACHES = {
 # logging with an empty dictionary.
 from django.utils.log import DEFAULT_LOGGING
 LOGGING = DEFAULT_LOGGING
-
-SLACK_SPONSOR_WEBHOOK_URL = os.environ.get('SLACK_SPONSOR_WEBHOOK_URL')

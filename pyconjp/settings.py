@@ -586,3 +586,4 @@ else:  # ENVIRONMENT == 'dev' or else
     # Including a default secret key since this is just for development
     SECRET_KEY = env_or_default('SECRET_KEY', u'dipps!+sq49#e2k#5^@4*^qn#8s83$kawqqxn&_-*xo7twru*8')
 
+SLACK_SPONSOR_WEBHOOK_URL = os.environ['SLACK_SPONSOR_WEBHOOK_URL']

@@ -11,6 +11,10 @@ PyCon JP サイト！
 ローカル開発
 ----------------------
 
+* Pythonのバージョン::
+    Python 2系
+    2.7.11推奨
+
 * virtualenvを作成, make::
 
     $ virtualenv env/pycon

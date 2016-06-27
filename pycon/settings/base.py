@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 # base settings - imported by other settings files, then overridden
 
-import os
 import os.path
 import posixpath
 

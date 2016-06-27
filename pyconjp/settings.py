@@ -430,6 +430,8 @@ BIBLION_SECTIONS = [
     ("en", u"English/英語"),
 ]
 
+SLACK_SPONSOR_WEBHOOK_URL = env_or_default('SLACK_SPONSOR_WEBHOOK_URL', '')
+
 SYMPOSION_PAGE_REGEX = r"(([\w-]{1,})(/[\w-]{1,})*)/$"
 
 PROPOSAL_FORMS = {
@@ -585,5 +587,3 @@ else:  # ENVIRONMENT == 'dev' or else
     ALLOWED_HOSTS = [x.strip() for x in env_or_default('ALLOWED_HOSTS', 'localhost, 0.0.0.0').split()]
     # Including a default secret key since this is just for development
     SECRET_KEY = env_or_default('SECRET_KEY', u'dipps!+sq49#e2k#5^@4*^qn#8s83$kawqqxn&_-*xo7twru*8')
-
-SLACK_SPONSOR_WEBHOOK_URL = os.environ['SLACK_SPONSOR_WEBHOOK_URL']

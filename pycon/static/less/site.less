@@ -853,10 +853,13 @@ body.home {
             right: 14px;
           }
         }
-        &:nth-child(3)::before {
-          .rect(14px, @rect-color-orange);
-          position: relative;
-          right: 14px;
+        &:nth-child(3) {
+          width: 175px;
+          &::before{
+            .rect(14px, @rect-color-orange);
+            position: relative;
+            right: 14px;
+          }
         }
         &:last-child::after {
           .rect(14px, @rect-color-magenta);

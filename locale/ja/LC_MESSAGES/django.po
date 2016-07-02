@@ -2705,7 +2705,7 @@ msgstr "科学"
 
 #: pycon/forms.py:16
 msgid "Industry Uses"
-msgstr "産業用途"
+msgstr "業務利用事例"
 
 #: pycon/forms.py:16
 msgid "Web Frameworks"
@@ -2717,7 +2717,7 @@ msgstr "ドキュメンテーション"
 
 #: pycon/forms.py:16
 msgid "Concurrency"
-msgstr "並列計算"
+msgstr "並列処理"
 
 #: pycon/forms.py:16
 msgid "Python Internals"

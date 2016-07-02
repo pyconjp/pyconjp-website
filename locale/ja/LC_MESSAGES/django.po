@@ -930,7 +930,7 @@ msgstr "審査セクション"
 
 #: pycon/templates/dashboard.html:272
 msgid "Proposals you have reviewed"
-msgstr "プロポーザルは審査されました"
+msgstr "あなたが審査したプロポーザル"
 
 #: pycon/templates/dashboard.html:276
 #: symposion/templates/reviews/_review_table.html:7

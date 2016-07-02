@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-09-20 13:48+0900\n"
-"PO-Revision-Date: 2014-06-14 13:43+0000\n"
+"PO-Revision-Date: 2016-07-02 16:13+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/"
 "language/ja/)\n"
@@ -930,7 +930,7 @@ msgstr "審査セクション"
 
 #: pycon/templates/dashboard.html:272
 msgid "Proposals you have reviewed"
-msgstr "プロポーザルは審査されました"
+msgstr "あなたが審査したプロポーザル"
 
 #: pycon/templates/dashboard.html:276
 #: symposion/templates/reviews/_review_table.html:7
@@ -2657,3 +2657,104 @@ msgstr "開催地"
 #: symposion/templates/teams/team_detail.html:48
 msgid "demote"
 msgstr ""
+
+
+#: pycon/forms.py:16
+msgid "Business"
+msgstr "ビジネス"
+
+#: pycon/forms.py:16
+msgid "Community"
+msgstr "コミュニティ"
+
+#: pycon/forms.py:16
+msgid "Distributed Computing"
+msgstr "分散コンピューティング"
+
+#: pycon/forms.py:16
+msgid "Systems Administration"
+msgstr "システムアドミニストレーション"
+
+#: pycon/forms.py:16
+msgid "Packaging"
+msgstr "パッケージング"
+
+#: pycon/forms.py:16
+msgid "Testing"
+msgstr "テスト"
+
+#: pycon/forms.py:16
+msgid "Databases/NoSQL"
+msgstr "データベース/NoSQL"
+
+#: pycon/forms.py:16
+msgid "Best Practices/Patterns"
+msgstr "ベストプラクティス/パターン"
+
+#: pycon/forms.py:16
+msgid "High Performance Computing"
+msgstr "ハイパフォーマンス・コンピューティング"
+
+#: pycon/forms.py:16
+msgid "Education"
+msgstr "教育"
+
+#: pycon/forms.py:16
+msgid "Science"
+msgstr "科学"
+
+#: pycon/forms.py:16
+msgid "Industry Uses"
+msgstr "業務利用事例"
+
+#: pycon/forms.py:16
+msgid "Web Frameworks"
+msgstr "Webフレームワーク"
+
+#: pycon/forms.py:16
+msgid "Documentation"
+msgstr "ドキュメンテーション"
+
+#: pycon/forms.py:16
+msgid "Concurrency"
+msgstr "並列処理"
+
+#: pycon/forms.py:16
+msgid "Python Internals"
+msgstr "Pythonインターナル"
+
+#: pycon/forms.py:16
+msgid "Embedded Systems"
+msgstr "組み込みシステム"
+
+#: pycon/forms.py:16
+msgid "Other"
+msgstr "その他"
+
+#: pycon/forms.py:16
+msgid "GUI Programming"
+msgstr "GUIプログラミング"
+
+#: pycon/forms.py:16
+msgid "Useful libraries"
+msgstr "ライブラリ"
+
+#: pycon/forms.py:16
+msgid "Gaming"
+msgstr "ゲーム"
+
+#: pycon/forms.py:16
+msgid "Mobile"
+msgstr "モバイル"
+
+#: pycon/forms.py:16
+msgid "Big Data"
+msgstr "ビッグデータ"
+
+#: pycon/forms.py:16
+msgid "Cloud"
+msgstr "クラウド"
+
+#: pycon/forms.py:16
+msgid "Core Python (Language, Stdlib)"
+msgstr "コアPython（言語, 標準ライブラリ）"

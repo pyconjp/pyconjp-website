@@ -283,7 +283,7 @@
                                             <td>
                                                 <b>{{ review.proposal.speaker }}</b>
                                                 <br />
-                                                {{ review.proposal.title }}
+                                                <a href="{% url 'review_detail' review.proposal.pk %}">{{ review.proposal.title }}</a>
                                             </td>
                                             <td>{{ review.vote }}</td>
                                         </tr>

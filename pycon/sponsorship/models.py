@@ -1,5 +1,7 @@
 import datetime
+import json
 
+import requests
 from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
@@ -247,6 +249,16 @@ def _send_sponsor_notification_emails(sender, instance, created, **kwargs):
     if instance and created:
         instance.send_coordinator_emails()
 post_save.connect(_send_sponsor_notification_emails, sender=Sponsor)
+
+
+def _send_sponsor_slack(sender, instance, created, **kwargs):
+    if instance and created and settings.SLACK_SPONSOR_WEBHOOK_URL:
+        payload = json.dumps({
+            'text': '%s registered sponsorship level:%s' % (
+                instance.name, instance.level)})
+        requests.post(
+            settings.SLACK_SPONSOR_WEBHOOK_URL, data=payload)
+post_save.connect(_send_sponsor_slack, sender=Sponsor)
 
 
 class Benefit(models.Model):

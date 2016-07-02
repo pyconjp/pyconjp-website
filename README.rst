@@ -11,6 +11,10 @@ PyCon JP サイト！
 ローカル開発
 ----------------------
 
+* Pythonのバージョン::
+    Python 2系
+    2.7.11推奨
+
 * virtualenvを作成, make::
 
     $ virtualenv env/pycon
@@ -46,14 +50,18 @@ PyCon JP サイト！
     vagrant up
 
 * Web開発作業手順::
-    
+
     * 課題・機能・案件ごとにJIRAにてチケットを作成、チケットごとにトピックブランチを切る(ブランチの名前はTicketID
     * git-flowに乗せる。機能開発はfeatureブランチにて
     * 作業完了、要レビューの際はpull request、コミッターは小松さん
+
+* スポンサー登録通知::
+
+    * 環境変数 `SLACK_SPONSOR_WEBHOOK_URL` にslackのincoming hookを登録しておくと、設定したchannelへスポンサーの登録通知が届く。
+
 
 
 Docker support
 ----------------
 
 see README-Docker.md
-

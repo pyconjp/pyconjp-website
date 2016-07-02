@@ -1072,6 +1072,18 @@ msgstr "主催: 一般社団法人PyCon JP"
 msgid "Cohost: Global Software Engineering Laboratory, Waseda University"
 msgstr "共催: 早稲田大学グローバルソフトウェアエンジニアリング研究所"
 
+#: pycon/templates/site_base.html:198
+msgid "Creative Commons License"
+msgstr "クリエイティブ・コモンズ・ライセンス"
+
+#: pycon/templates/site_base.html:201
+msgid "This web site is licensed under a"
+msgstr "この Webサイト は"
+
+#: pycon/templates/site_base.html:203
+msgid "Creative Commons Attribution 4.0 International License"
+msgstr "クリエイティブ・コモンズ 表示 4.0 国際 ライセンスの下に提供されています。"
+
 #: pycon/templates/account/_openid_sidebar.html:5
 #: symposion/templates/account/_openid_sidebar.html:5
 #: symposion/templates/social_auth/usersocialauth_list.html:47

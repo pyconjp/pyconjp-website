@@ -61,7 +61,7 @@ def speaker_create_staff(request, pk):
             speaker = form.save(commit=False)
             speaker.user = user
             speaker.save()
-            messages.success(request, "Speaker profile created.")
+            messages.success(request, {% trans "Speaker profile created." %})
             return redirect("user_list")
     else:
         form = SpeakerForm(initial={"name": user.get_full_name()})

@@ -548,8 +548,7 @@ if ENVIRONMENT == 'production':
     SECRET_KEY = os.environ["SECRET_KEY"]  # required
     ALLOWED_HOSTS = ['pycon.jp']
     ADMINS = (
-        ('Ian Lewis', 'ianmlewis@pycon.jp'),
-        ('Daisuke Komatsu', 'vkg.taro@gmail.com'),
+        ('PyConJP Symposion Group', 'symposion-group@pycon.jp'),
     )
     MANAGERS = ADMINS
 
@@ -557,8 +556,7 @@ elif ENVIRONMENT == 'staging':
     SECRET_KEY = os.environ["SECRET_KEY"]  # required
     ALLOWED_HOSTS = ['.pycon.jp']
     ADMINS = (
-        ('Ian Lewis', 'ianmlewis@pycon.jp'),
-        ('Daisuke Komatsu', 'vkg.taro@gmail.com'),
+        ('PyConJP Symposion Group', 'symposion-group@pycon.jp'),
     )
     MANAGERS = ADMINS
 

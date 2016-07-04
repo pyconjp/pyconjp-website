@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DEBUG=FALSE
+export DEBUG=
 export DJANGO_SETTINGS_MODULE=pyconjp.settings
 export ENVIRONMENT=dev
 export DB_ENGINE=sqlite3

@@ -1,20 +1,17 @@
+# -*- coding: UTF-8 -*-
 #from .models import ProposalData
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, HttpResponseBadRequest, Http404
 import json
 from symposion.schedule.models import Schedule, Day, Slot, Presentation
 from django.shortcuts import render, get_object_or_404
 
+#Todo::Error処理
 def fetch_schedule(slug):
     qs = Schedule.objects.all()
     if slug is None:
-        if qs.count() > 1:
-            raise Http404()
-        schedule = next(iter(qs), None)
-        if schedule is None:
-            raise Http404()
+        return HttpResponseBadRequest(json.dumps({"error": "HttpResponseBadRequest"}), content_type="application/json")
     else:
         schedule = get_object_or_404(qs, section__slug=slug)
-
     return schedule
 
 def api_schedule_list(request, slug=None):
@@ -22,12 +19,14 @@ def api_schedule_list(request, slug=None):
     presentations = Presentation.objects.filter(section=schedule.section)
     presentations = presentations.exclude(cancelled=True)
     res = []
+    #presentation.proposal.language
     for item in presentations:
         tmp = {
             "id": item.pk,
             "title": item.title,
             "category": str(item.proposal.category),
             "description": item.description,
+            "language": str(item.proposal.language),
         }
         tmp["speakers"] = [ speaker.name for speaker in item.speakers()]
         if item.slot:
@@ -63,5 +62,6 @@ def api_presentation_detail(request, pk):
         proposal = presentation.proposal
         res["level"] = proposal.get_audience_level_display().encode('utf-8')
         res["category"] = str(proposal.category)
+        res["language"] = str(proposal.language)
 
     return HttpResponse(json.dumps(res), content_type="application/json")

@@ -26,15 +26,39 @@
         <h2 style="font-size: 14px">
         {% trans "This is the list of all submitted talk proposals. Please share the talks you’re interested in attending at PyCon JP 2016 on social media using the share buttons on the talks detail page. We will take the amount of interest shown for proposals into consideration when selecting the talks." %}
         </h2>
+        Category Search<select id="select_category"><option value="">---------</option></select>
+
         {% for proposal in proposal_accepted %}
-            <div class="row presentation_box">
+            <div class="row presentation_box {{ proposal.p_type }}">
                 <div class="span8 presentation well">
-                    <h3>{{ proposal.p_type }}</h3>
+                    <h3 class="p_type">{{ proposal.p_type }}</h3>
                     <h3><a href="{% url 'proposal_vote_detail' proposal.pk %}">{{ proposal.title }}&nbsp;({{ proposal.language }})</a></h3>
                     <h4>{{ proposal.speakers|join:", " }} in <span class="category">{{ proposal.category }}</span></h4>
                     {{ proposal.description }}
                 </div>
             </div>
         {% endfor %}
-
+        <script>
+            $(function(){
+                var $category = $(".p_type"), $select_category = $("#select_category"), tmp_array = [];
+                $category.each(function(){
+                    var val = $(this).text();
+                    if($.inArray(val, tmp_array) === -1){
+                        $select_category.append($('<option>').html(val).val(val.replace(/\s+/g, "")));
+                        tmp_array.push(val);
+                    }
+                });
+                var $presentation_box = $(".presentation_box");
+                $select_category.change(function(){
+                    var val = $(this).val();
+                    if(val !== ""){
+                        $presentation_box.hide();
+                        search_class = 'div[class^="row presentation_box ' + val.replace(/^(\w+)/gi, "$1") + '"]';
+                        $(search_class).show();
+                    }else {
+                        $presentation_box.show();
+                    }
+                });
+            });
+        </script>
 {% endblock %}

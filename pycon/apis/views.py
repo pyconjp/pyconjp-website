@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-#from .models import ProposalData
 from django.http import HttpResponse, HttpResponseBadRequest, Http404
 import json
 from symposion.schedule.models import Schedule, Day, Slot, Presentation

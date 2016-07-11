@@ -61,7 +61,7 @@ def api_presentation_detail(request, pk):
         res["rooms"] = str(slot.rooms[0])
     if presentation.proposal:
         proposal = presentation.proposal
-        res["level"] = proposal.get_audience_level_display()
+        res["level"] = proposal.get_audience_level_display().encode('utf-8')
         res["category"] = str(proposal.category)
 
     return HttpResponse(json.dumps(res), content_type="application/json")

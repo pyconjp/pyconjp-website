@@ -35,6 +35,7 @@ def gen_urls():
                                 url(r"^registration/", include("pycon.registration.urls")),
                                 url(r"^finaid/", include("pycon.finaid.urls")),
                                 url(r"^pycon_api/", include("pycon.pycon_api.urls")),
+                                url(r"^api/", include("pycon.apis.urls")),
                                 url(r"^schedule/", include("pycon.schedule.urls")),
                                 url(r"^profile/", include("pycon.profile.urls")),
                                 url(r"^tutorials/", include("pycon.tutorials.urls")),

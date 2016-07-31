@@ -27,6 +27,4 @@
     {% endif %}
 {% endblock %}
 
-{% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
-
 {% block body %}{# NOTE: page.subtitle is required because of django-restcms silliness. #}{% if page.subtitle %}<h1>{{ page.subtitle }}</h1>{% endif %}{{ page.body|safe }}{% endblock %}

@@ -52,6 +52,11 @@ class LocaleURLMiddlewareCustom(object):
             ]
             if accept_langs:
                 locale = accept_langs[0]
+
+        if path == "/":
+            # If accessing root URL redirect to the URL prefix
+            return HttpResponseRedirect("/%s/" % settings.URL_PREFIXES)
+
         locale_path = utils.locale_path(path, locale)
         # locale case might be different in the two paths, that doesn't require
         # a redirect (besides locale they'll be identical anyway)

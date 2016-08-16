@@ -45,6 +45,8 @@ def api_schedule_list(request, slug=None):
 def api_presentation_detail(request, pk):
     presentation = get_object_or_404(Presentation, pk=pk)
     res = {
+        "id": presentation.pk,
+        "title": presentation.title,
         "description": presentation.description,
         "abstract": presentation.abstract,
     }

@@ -7,7 +7,7 @@ from symposion.speakers.models import Speaker
 
 
 def speaker_list(request):
-    speakers = Speaker.objects.filter()
+    speakers = Speaker.objects.filter().order_by('name')
     speakers = speakers.exclude(Q(presentations__isnull=True) & Q(copresentations__isnull=True))
 
     ctx = {

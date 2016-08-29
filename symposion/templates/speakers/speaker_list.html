@@ -1,0 +1,71 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load cache %}
+{% load sitetree %}
+{% load thumbnail %}
+
+{% block head_title %}{% trans "Speaker Listing" %}{% endblock %}
+
+{% block extra_head %}
+    <style>
+        .speaker-photo {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .speaker h3 {
+            line-height: 1em;
+            font-weight: bold;
+            margin-top: 0 !important;
+        }
+        .speaker h3 .twitter {
+            margin-left: 1em;
+        }
+        .speaker h4 {
+
+        }
+    </style>
+{% endblock %}
+
+{% block breadcrumbs %}{% sitetree_breadcrumbs from "main" %}{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-9">
+      <h2>Speakers</h2>
+      {% cache 6 "speaker-list" speakers %}
+        {% for speaker in speakers %}
+          <div class="span2 speaker-photo">
+            {% if speaker.photo %}
+              <img src="{% thumbnail speaker.photo '100x100' %}" alt="{{ speaker.name }}" />
+            {% else %}
+              <img src="/2016/site_media/static/img/pagehead-bkg.png" alt="{{ speaker.name }}" />
+            {% endif %}
+          </div>
+          <div class="span6 speaker well">
+            <h3>
+              <a href="{% url 'speaker_profile' speaker.pk %}">{{ speaker.name }}</a>
+              {% if speaker.twitter_username %}
+              <span class="twitter">
+                <a href="https://twitter.com/{{ speaker.twitter_username }}"><img style="width: 16px; height:  16px;" src="/2016/site_media/static/img/icon-twitter.png">
+                  @{{ speaker.twitter_username }}</a>
+              </span>
+              {% endif %}
+            </h3>
+            {% for presentation in speaker.all_presentations %}
+              <ul>
+                <li>
+                  {{ presentation.section.name }}:
+                  <a href="{% url 'schedule_presentation_detail' presentation.pk %}">{{ presentation.title }}</a>
+                  {% if presentation.slot %}
+                    ({{ presentation.slot.day.date|date:"Y-m-d" }})
+                  {% endif %}
+                </li>
+              </ul>
+            {% endfor %}
+            </div>
+        {% endfor %}
+      {% endcache %}
+    </div>
+  </div>
+{% endblock %}

@@ -11,6 +11,7 @@ admin.autodiscover()
 
 import symposion.views
 import pycon.profile.views
+import pyconjp.speaker.views as speaker_views
 
 # from pinax.apps.account.openid_consumer import PinaxConsumer
 
@@ -41,6 +42,7 @@ def gen_urls():
                                 url(r"^tutorials/", include("pycon.tutorials.urls")),
 
                                 url(r"^speaker/", include("symposion.speakers.urls")),
+                                url(r"^speaker/list$", speaker_views.speaker_list, name='speaker_list'),
                                 url(r"^proposals/", include("pycon.proposals.urls")),
                                 url(r"^reviews/", include("symposion.reviews.urls")),
                                 url(r"^teams/", include("symposion.teams.urls")),

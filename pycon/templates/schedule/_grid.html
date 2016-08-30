@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <table class="calendar table table-bordered">
     <thead>
         <tr>
@@ -37,7 +39,7 @@
                                     {{ slot.content.speakers|join:", " }}
                                 </span>
                                 {% if slot.content.proposal.category.name %}
-                                <span class="label" style="white-space: normal" title="{{ slot.content.proposal.category.name }}">{{ slot.content.proposal.category.name }}</span>
+                                <span class="label" style="white-space: normal" title="{% trans slot.content.proposal.category.name %}">{% trans slot.content.proposal.category.name %}</span>
                                 {% endif %}
                                 <div class="badges">
                                     {% for session in slot.sessions.all %}

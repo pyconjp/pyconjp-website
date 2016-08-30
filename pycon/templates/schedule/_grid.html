@@ -20,7 +20,15 @@
                                 <span class="label label-info" title="language">{{ slot.content.proposal.language }}</span>
                                 {% endif %}
                                 {% if slot.content.proposal.audience_level %}
-                                  <span class="label label-success" title="level">Lv{{ slot.content.proposal.audience_level }}</span>
+                                  <span class="label label-success" title="level">
+                                    Lv{% if slot.content.proposal.audience_level == 2 %}
+                                      3
+                                    {% elif slot.content.proposal.audience_level == 3  %}
+                                      2
+                                    {% elif slot.content.proposal.audience_level == 1  %}
+                                      1
+                                    {% endif %}
+                                  </span>
                                 {% endif %}
                                 <span class="title">
                                     <a href="{% url 'schedule_presentation_detail'  slot.content.pk %}" title="{{ slot.content.description|striptags|cut:"\"" }}">{{ slot.content.title }}</a>

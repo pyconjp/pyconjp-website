@@ -16,12 +16,21 @@
                         {% if slot.kind.label == "talk" or slot.kind.label == "tutorial" or slot.kind.label == "sponsor-tutorial" or slot.kind.label == "plenary" %}
                             {% if not slot.content %}
                             {% else %}
+                                {% if slot.content.proposal.language %}
+                                <span class="label label-info" title="language">{{ slot.content.proposal.language }}</span>
+                                {% endif %}
+                                {% if slot.content.proposal.audience_level %}
+                                  <span class="label label-success" title="level">Lv{{ slot.content.proposal.audience_level }}</span>
+                                {% endif %}
                                 <span class="title">
                                     <a href="{% url 'schedule_presentation_detail'  slot.content.pk %}" title="{{ slot.content.description|striptags|cut:"\"" }}">{{ slot.content.title }}</a>
                                 </span>
                                 <span class="speaker">
                                     {{ slot.content.speakers|join:", " }}
                                 </span>
+                                {% if slot.content.proposal.category.name %}
+                                <span class="label" style="white-space: normal" title="{{ slot.content.proposal.category.name }}">{{ slot.content.proposal.category.name }}</span>
+                                {% endif %}
                                 <div class="badges">
                                     {% for session in slot.sessions.all %}
                                         <a href="{% url 'schedule_session_detail' session.id %}" class="btn btn-mini" style="margin-right: 10px" title="Session Information">S</a>

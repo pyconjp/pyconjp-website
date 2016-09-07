@@ -51,7 +51,17 @@ def api_presentation_detail(request, pk):
         "abstract": presentation.abstract,
     }
 
-    res["speakers"] = [ speaker.name for speaker in presentation.speakers()]
+    speakers = res["speakers"] = []
+    speaker_infomations = res["speaker_infomations"] = []
+
+    for speaker in presentation.speakers():
+        info = {
+            "name": speaker.name,
+            "twitter": speaker.twitter_username if speaker.twitter_username else None,
+            "image_uri": speaker.photo.url if speaker.photo else None,
+        }
+        speaker_infomations.append(info)
+        speakers.append(speaker.name)
 
     if presentation.slot:
         slot = presentation.slot

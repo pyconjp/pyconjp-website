@@ -18,6 +18,18 @@
 
         });
     </script>
+
+    <style>
+        span.hashtag a {
+            font-size: 90%;
+            color: green;
+        }
+
+        .page-content .box-content dl.dl-horizontal dt,
+        .page-content .box-content dl.dl-horizontal dd {
+            margin-bottom: 5px;
+        }
+    </style>
 {% endblock %}
 
 {% block breadcrumbs %}{% with lang=LANGUAGE_CODE|default:"en"|slice:":2" %}{% sitetree_breadcrumbs from "main-"|add:lang %}{% endwith %}{% endblock %}
@@ -28,6 +40,19 @@
             {{ presentation.slot.day.date|date:"l" }}
             {{ presentation.slot.start}}&ndash;{{ presentation.slot.end }}
         </h4>
+        {% for room in presentation.slot.rooms %}
+          <span class="room">{{ room.name }}</span>
+          <span class="hashtag">
+            {% if room.name == 'Room 201' %}<a href="https://twitter.com/search?q=%23pyconjp_201" target="_blank">#pyconjp_201</a>
+            {% elif room.name == 'Room 202' %}<a href="https://twitter.com/search?q=%23pyconjp_202" target="_blank">#pyconjp_202</a>
+            {% elif room.name == 'Room 203' %}<a href="https://twitter.com/search?q=%23pyconjp_203" target="_blank">#pyconjp_203</a>
+            {% elif room.name == 'Room 204' %}<a href="https://twitter.com/search?q=%23pyconjp_204" target="_blank">#pyconjp_204</a>
+            {% elif room.name == 'Room 205' %}<a href="https://twitter.com/search?q=%23pyconjp_205" target="_blank">#pyconjp_205</a>
+            {% elif room.name == '3F ABC Room' %}<a href="https://twitter.com/search?q=%23pyconjp_3ABC" target="_blank">#pyconjp_3ABC</a>
+            {% elif room.name == '3F E Room' %}<a href="https://twitter.com/search?q=%23pyconjp_3E" target="_blank">#pyconjp_3E</a>
+            {% endif %}
+          </span>
+        {% endfor %}
         {% if proposal.domain_level %}
             {% if request.user.speaker_profile in speakers or request.user.is_staff %}
               <h4>Attendees: {{ proposal.registrants.count|default:0 }} of {{ proposal.max_attendees|default:'TBD' }}</h4>
@@ -44,7 +69,7 @@
     {% if proposal.category  %}
         <dl class="dl-horizontal">
             <dt>{% trans "Audience level:" %}</dt>
-            <dd style="margin-bottom: 0;">{{ proposal.get_audience_level_display }}</dd>
+            <dd>{{ proposal.get_audience_level_display }}</dd>
             <dt>{% trans "Category:" %}</dt>
             <dd>{{ proposal.category }}</dd>
         </dl>

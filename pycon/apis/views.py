@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 from django.http import HttpResponse, HttpResponseBadRequest, Http404
+from django.utils.translation import ugettext as _
 import json
 from symposion.schedule.models import Schedule, Day, Slot, Presentation
 from django.shortcuts import render, get_object_or_404
@@ -72,7 +73,7 @@ def api_presentation_detail(request, pk):
     if presentation.proposal:
         proposal = presentation.proposal
         res["level"] = proposal.get_audience_level_display().encode('utf-8')
-        res["category"] = str(proposal.category)
+        res["category"] = _(proposal.category.name)
         res["language"] = str(proposal.language)
 
     return HttpResponse(json.dumps(res), content_type="application/json")

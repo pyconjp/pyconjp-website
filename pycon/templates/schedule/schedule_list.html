@@ -32,7 +32,7 @@
                     <h3><a href="{% url 'schedule_presentation_detail' presentation.pk %}">{{ presentation.title }}&nbsp;({{ presentation.proposal.language }})</a></h3>
                     <h4>{{ presentation.speakers|join:", " }} in <span class="category">{{ presentation.proposal.category }}</span></h4>
                     <div>
-                    {% for res in presentation.proposal.presentation_resources.all %}
+                    {% for res in presentation.proposal.presentation_resources.all|dictsort:"type" %}
                       <a href="{{ res.url }}"><img src="/2016/site_media/static/img/{{ res.type }}.png" alt="{{ res.type }}" title="{{ res.get_type_display }}"/> {{ res.get_type_display }}</a>
                     {% endfor %}
                     </div>

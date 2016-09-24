@@ -70,6 +70,9 @@
                                     {% for session in slot.sessions.all %}
                                         <a href="{% url 'schedule_session_detail' session.id %}" class="btn btn-mini" style="margin-right: 10px" title="Session Information">S</a>
                                     {% endfor %}
+                                    {% for res in slot.content.proposal.presentation_resources.all %}
+                                      <a href="{{ res.url }}"><img src="/2016/site_media/static/img/{{ res.type }}.png" alt="{{ res.type }}" title="{{ res.type }}"/></a>
+                                    {% endfor %}
                                 </div>
                             {% endif %}
                         {% else %}

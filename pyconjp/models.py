@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*-
+
+from django.db import models
+from django.utils.translation import ugettext_lazy as _
+
+from symposion.proposals.models import ProposalBase
+
+
+class PresentationResource(models.Model):
+    PRESENTATION_RESOURCE_TYPE = (
+        ('video', _('Video')),
+        ('slide', _('Slide')),
+    )
+
+    proposal_base = models.ForeignKey(ProposalBase, related_name="presentation_resources")
+    url = models.CharField(max_length=1024)
+    type = models.CharField(
+        max_length=16,
+        choices=PRESENTATION_RESOURCE_TYPE,
+    )
+
+    def __unicode__(self):
+        return u"#{}, {}, '{}'>".format(
+            self.pk, self.type, self.url,
+        )

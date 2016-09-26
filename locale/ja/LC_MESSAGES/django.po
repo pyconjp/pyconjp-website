@@ -2759,3 +2759,11 @@ msgstr "クラウド"
 #: pycon/forms.py:16
 msgid "Core Python (Language, Stdlib)"
 msgstr "コアPython（言語, 標準ライブラリ）"
+
+#: pyconjp/models.py:16
+msgid "Slide"
+msgstr "スライド"
+
+#: pyconjp/models.py:16
+msgid "Video"
+msgstr "ビデオ"

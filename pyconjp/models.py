@@ -20,6 +20,6 @@ class PresentationResource(models.Model):
     )
 
     def __unicode__(self):
-        return u"#{}, {}, '{}'>".format(
+        return u"<#{}, {}, '{}'>".format(
             self.pk, self.type, self.url,
         )

@@ -18,6 +18,7 @@ class PresentationResource(models.Model):
         max_length=16,
         choices=PRESENTATION_RESOURCE_TYPE,
     )
+    label = models.CharField(max_length=16, default='')
 
     def __unicode__(self):
         return u"<#{}, {}, '{}'>".format(

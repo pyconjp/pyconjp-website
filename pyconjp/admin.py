@@ -56,6 +56,7 @@ class PresentationResourceAdmin(admin.ModelAdmin):
         'id',
         'proposal_base',
         'type',
+        'label',
         'url',
     ]
 

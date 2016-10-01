@@ -7,11 +7,11 @@ dependencies:
     - "~/docker"
 
   override:
-    - sh ./scripts/circleci-dependencies.sh
+    - if [[ -n $CI_PULL_REQUEST ]]; then sh ./scripts/circleci-dependencies.sh; fi
 
 test:
   override:
-    - sh ./scripts/test-new-packages.sh
+    - if [[ -n $CI_PULL_REQUEST ]]; then sh ./scripts/test-new-packages.sh; fi
 
 deployment:
   production:

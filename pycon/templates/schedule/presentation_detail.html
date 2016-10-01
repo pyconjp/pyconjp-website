@@ -74,7 +74,7 @@
             <dd>{{ proposal.category }}</dd>
             {% for res in proposal.presentation_resources.all|dictsort:"type" %}
               <dt>{% trans res.get_type_display %}:</dt>
-              <dd><a href="{{ res.url }}"><img src="/2016/site_media/static/img/{{ res.type }}.png" alt="{{ res.type }}" title="{{ res.type }}"/> {{ res.url }}</a></dd>
+              <dd><a href="{{ res.url }}"><img src="/2016/site_media/static/img/{{ res.type }}.png" alt="{{ res.type }}" title="{% trans res.get_type_display %}"/> {{ res.url }}</a></dd>
             {% endfor %}
         </dl>
     {% endif %}

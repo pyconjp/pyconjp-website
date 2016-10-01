@@ -19,7 +19,13 @@ class PresentationChoideField(forms.ModelChoiceField):
         except ObjectDoesNotExist:
             labels.append('?')
 
-        labels.extend([obj.pk, obj.result.status])
+        labels.append(obj.pk)
+
+        try:
+            labels.append(obj.result.status)
+        except ObjectDoesNotExist:
+            labels.append('unknown status')
+
         try:
             if obj.presentation.slot:
                 labels.append(obj.presentation.slot.day.date)

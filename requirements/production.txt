@@ -54,3 +54,5 @@ django-restcms==0.1
 # production.txt
 psycopg2==2.5 ; 'linux' in sys_platform
 
+# for convenient of debugging, docker container should contain this package.
+django-debug-toolbar==0.9.4

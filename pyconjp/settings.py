@@ -537,13 +537,6 @@ LOGGING['loggers'].update({
 })
 
 
-if DEBUG:
-    import logging
-    logging.basicConfig(level=logging.DEBUG)
-
-    INSTALLED_APPS += ['debug_toolbar']
-    MIDDLEWARE_CLASSES += ["debug_toolbar.middleware.DebugToolbarMiddleware"]
-
 if ENVIRONMENT == 'production':
     SECRET_KEY = os.environ["SECRET_KEY"]  # required
     ALLOWED_HOSTS = ['pycon.jp']
@@ -592,3 +585,11 @@ else:  # ENVIRONMENT == 'dev' or else
         def process_request(self, request):
             request.META['REMOTE_ADDR'] = '127.0.0.1'
     MIDDLEWARE_CLASSES += ["pyconjp.settings.RemoteAddrAsLocalMiddleware"]
+
+if DEBUG:
+    import logging
+    logging.basicConfig(level=logging.DEBUG)
+
+    # installing debug_toolbar middleware must be after RemoteAddrAsLocalMiddleware
+    INSTALLED_APPS += ['debug_toolbar']
+    MIDDLEWARE_CLASSES += ["debug_toolbar.middleware.DebugToolbarMiddleware"]

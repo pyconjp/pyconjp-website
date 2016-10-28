@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.core import urlresolvers
+from django.http import Http404
 from localeurlcustom import settings as localeurl_settings
 #Todo
 URL_PREFIX = settings.CONFERENCE_URL_PREFIXES[settings.CONFERENCE_ID]
@@ -74,8 +75,11 @@ def locale_path(path, locale=''):
     else:
         tmp = path.split("/")
 
-        if len(tmp) < 3 and tmp[1] == URL_PREFIX:
-            tmp.append("")
+        if len(tmp) < 3:
+            if tmp[1] == URL_PREFIX:
+                tmp.append("")
+            else:
+                raise Http404()
         elif len(tmp) < 2:
             tmp.insert(1, URL_PREFIX)
         elif tmp[1] == locale:

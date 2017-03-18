@@ -31,10 +31,12 @@ COMPRESS = False
 CONFERENCE_ID = 1
 
 CONFERENCE_URL_PREFIXES = {
-    1: "2016",
-    2: "2015",
-    3: "2014"
+    1: "2017",
+    2: "2016",
+    3: "2015",
+    4: "2014"
 }
+
 
 URL_PREFIXES = CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
 

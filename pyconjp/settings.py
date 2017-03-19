@@ -116,9 +116,10 @@ COMPRESS_ENABLED = True  # FIXME: compress on the production server is worse.
 CONFERENCE_ID = 1
 
 CONFERENCE_URL_PREFIXES = {
-    1: "2016",
-    2: "2015",
-    3: "2014"
+    1: "2017",
+    2: "2016",
+    3: "2015",
+    4: "2014"
 }
 
 URL_PREFIXES = CONFERENCE_URL_PREFIXES[CONFERENCE_ID]
@@ -330,7 +331,7 @@ FIXTURE_DIRS = [
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
-SESSION_COOKIE_NAME = "pyconjp-2016"
+SESSION_COOKIE_NAME = "pyconjp-2017"
 
 EMAIL_HOST = env_or_default("EMAIL_HOST", None)
 if EMAIL_HOST:

@@ -38,7 +38,7 @@
 
 {% block extra_head_base %}
     <meta property="og:type" content="{% if config.URL_PREFIXES == request.path|cut:"/" %}website{% else %}article{% endif %}" />
-    <meta property="og:image" content="https://pycon.jp/{{ config.URL_PREFIXES }}/site_media/static/img/ogp_logo_2016.png" />
+    <meta property="og:image" content="https://pycon.jp/{{ config.URL_PREFIXES }}/site_media/static/img/ogp_logo_2017.png" />
     <meta property="og:title" content="{% usekwacro title %}" />
     <meta property="og:url" content="https://{{ request.get_host }}{{ request.path }}" />
     <meta property="og:site_name" content="PyCon JP {{ config.URL_PREFIXES }}" />
@@ -78,7 +78,7 @@
                     <span class="icon-bar"></span>
                 </a>
                 <a class="brand" href="{% url 'home' %}">
-                    <img src="{{ STATIC_URL }}img/pycon2016-logo-small.png" alt="PyCon JP {{ config.URL_PREFIXES }} in Tokyo" width="100">
+                    <img src="{{ STATIC_URL }}img/pycon2017-logo-small.png" alt="PyCon JP {{ config.URL_PREFIXES }} in Tokyo" width="100">
                 </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav pull-right">

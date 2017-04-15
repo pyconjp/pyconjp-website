@@ -15,6 +15,24 @@
             <fieldset>
                 {{ form|as_bootstrap }}
             </fieldset>
+
+            <!-- this is first aid process -->
+            <style type="text/css">
+                <!--
+                #div_id_duration { visibility : hidden; }
+                -->
+            </style>
+            <script type="text/javascript">
+                $(function () {
+                    // this is first aid process
+                    var $id_duration = $("#id_duration");
+                    if ($id_duration.length === 0) return false;
+                    $("#div_id_duration").hide();
+                    $id_duration.val("1");
+                });
+            </script>
+            <!-- this is first aid process -->
+
             <div class="form-actions">
                 <p>{% blocktrans %}
                     You will be able to edit your proposal after it has been submitted.

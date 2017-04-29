@@ -211,9 +211,10 @@
 {% block script_base %}
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     <script src="{% static "pinax/js/theme.js" %}"></script>
-        <script src="https://cdn.eurie.io/libs/webcomponentsjs/0.7.22/webcomponents-lite.min.js" /></script>
-      <link rel="import" href="https://cdn.eurie.io/components/eurie-public-form/0.1.4/eurie-modal-form.html" />
-      <style>
+    <script src="https://cdn.eurie.io/libs/webcomponentsjs/0.7.22/webcomponents-lite.min.js" /></script>
+  <link rel="import" href="https://cdn.eurie.io/components/eurie-public-form/0.2.0/eurie-modal-form.html" />
+
+  <style>
   .eurie-btn {
   background-color: #e2aa14;
   border: none;
@@ -224,15 +225,16 @@
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  position: fixed;
-  bottom:0;
+  position: absolute;
+  bottom:-1;
   right:0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 3px 10px 0 rgba(0, 0, 0, .19)
 }
   .eurie-btn a {
   color: #FFFFFF!important
 }
-      </style>
-      <eurie-modal-form account-name="pyconjp" api-key="e9f2ec3431d4476eeb5b3627aa2d1390" class="eurie-btn">CONTACT</eurie-modal-form>
+  </style>
+
+  <eurie-modal-form account-name="pyconjp" api-key="e9f2ec3431d4476eeb5b3627aa2d1390" team-id="Aa32dmMyk2TokT93qsFZXg" class="eurie-btn">CONTACT</eurie-modal-form>
     {% block extra_script %}{% endblock %}
 {% endblock %}

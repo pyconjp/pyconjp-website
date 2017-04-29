@@ -211,9 +211,28 @@
 {% block script_base %}
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
     <script src="{% static "pinax/js/theme.js" %}"></script>
-    {% if request.LANGUAGE_CODE == "ja" %}
-        <script type="text/javascript" src="https://pyconjp.atlassian.net/s/048e172afaa11f8ad9162162d802fb5d-T/fjjzfj/72002/3c610f9ba371815fb16876af3ce547ea/2.0.14/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=ja-JP&collectorId=90f0623a"></script>
-    {% else %}
-    {% endif %}
+        <script src="https://cdn.eurie.io/libs/webcomponentsjs/0.7.22/webcomponents-lite.min.js" /></script>
+      <link rel="import" href="https://cdn.eurie.io/components/eurie-public-form/0.1.4/eurie-modal-form.html" />
+      <style>
+  .eurie-btn {
+  background-color: #e2aa14;
+  border: none;
+  padding: 8px 35px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  bottom:0;
+  right:0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 3px 10px 0 rgba(0, 0, 0, .19)
+}
+  .eurie-btn a {
+  color: #FFFFFF!important
+}
+      </style>
+      <eurie-modal-form account-name="pyconjp" api-key="e9f2ec3431d4476eeb5b3627aa2d1390" class="eurie-btn">CONTACT</eurie-modal-form>
     {% block extra_script %}{% endblock %}
 {% endblock %}

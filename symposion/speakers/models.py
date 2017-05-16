@@ -27,6 +27,16 @@ class Speaker(models.Model):
         blank = True,
         help_text=_(u"Your Twitter account")
     )
+    facebook_username = models.CharField(
+        max_length = 50,
+        blank = True,
+        help_text=_(u"Your Facebook account")
+    )
+    github_username = models.CharField(
+        max_length = 39,
+        blank = True,
+        help_text=_(u"Your GitHub account")
+    )
     annotation = models.TextField() # staff only
     invite_email = models.CharField(max_length=200, unique=True, null=True, db_index=True)
     invite_token = models.CharField(max_length=40, db_index=True)

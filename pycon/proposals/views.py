@@ -1,3 +1,4 @@
+import json
 import random
 import sys
 
@@ -13,7 +14,10 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
+import requests
+
 from account.models import EmailAddress
+from account.utils import user_display
 from symposion.proposals.models import ProposalBase, ProposalSection, ProposalKind
 from symposion.proposals.models import SupportingDocument, AdditionalSpeaker
 from symposion.speakers.models import Speaker
@@ -181,13 +185,6 @@ def proposal_edit(request, pk):
     if request.user != proposal.speaker.user:
         raise Http404()
 
-    if not proposal.can_edit():
-        ctx = {
-            "title": "Proposal editing closed",
-            "body": "Proposal editing is closed for this session type."
-        }
-        return render(request, "proposals/proposal_error.html", ctx)
-
     form_class = get_form(settings.PROPOSAL_FORMS[proposal.kind.slug])
 
     if request.method == "POST":
@@ -209,6 +206,11 @@ def proposal_edit(request, pk):
                         [user.email], "proposal_updated",
                         context=ctx
                     )
+            if hasattr(proposal, "presentation"):
+                payload = json.dumps({
+                    'text': '{} has been updated by {}'.format(proposal.title, user_display(request.user)),
+                })
+                requests.post(settings.SLACK_PROGRAM_WEBHOOK_URL, data=payload)
             messages.success(request, "Proposal updated.")
             return redirect("proposal_detail", proposal.pk)
     else:

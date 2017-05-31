@@ -1491,21 +1491,22 @@ msgid "Vote: "
 msgstr "投票: "
 
 #: pycon/templates/proposals/vote_detail.html:29
-msgid "Talk Submission"
-msgstr "応募トーク"
+msgid "Talk Proposal Submission"
+msgstr "プロポーザル"
 
 #: pycon/templates/proposals/vote_detail.html:31
 msgid ""
-"If you are interested in attending this talk at PyCon JP 2016, please use "
+"If you are interested in attending this talk at PyCon JP 2017, please use "
 "the social media share buttons below. We will consider the popularity of the "
 "proposals when making our selection."
 msgstr ""
-"これは応募されたトークです。聞きたいと思うトークをSNSで拡散しましょう。選考時"
-"に参考にさせていただきます。"
+"これは応募されたプロポーザルです。聞きたいと思うプロポーザルを各ページの下部にあるSNSのボタ"
+"ンで拡散しましょう。拡散された投稿をプロポーザルへの投票としてカウントし、選考時に参考にさせ"
+"ていただきます。"
 
 #: pycon/templates/proposals/vote_detail.html:38
 msgid "This talk proposal has been cancelled."
-msgstr "この応募されたトークはキャンセルされました。"
+msgstr "この応募されたプロポーザルはキャンセルされました。"
 
 #: pycon/templates/proposals/vote_detail.html:43
 msgid "Speakers"
@@ -1553,7 +1554,8 @@ msgid ""
 "shown for proposals into consideration when selecting the talks."
 msgstr ""
 "現在応募されているプロポーザルの一覧です。プルダウンより「talk」「poster」を選択ください。"
-"聞いてみたいプロポーザルがあれば、是非SNS等で拡散しましょう。選考時に参考にさせていただきます。"
+"聞いてみたいプロポーザルがあれば、是非SNS等で拡散しましょう。拡散された投稿をプロポーザルへ"
+"の投票としてカウントし、選考時に参考にさせていただきます。"
 
 #: pycon/templates/schedule/_slot_edit.html:5
 #: symposion/templates/schedule/_slot_edit.html:5

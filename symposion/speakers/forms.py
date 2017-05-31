@@ -25,23 +25,15 @@ class SpeakerForm(forms.ModelForm):
             "biography",
             "photo",
             "twitter_username",
-            "facebook_username",
-            "github_username",
             "sessions_preference",
             "admission"
         ]
 
     def clean_twitter_username(self):
         value = self.cleaned_data["twitter_username"]
-        return self._trim_atmark(value)
-
-    def clean_facebook_username(self):
-        value = self.cleaned_data["facebook_username"]
-        return self._trim_atmark(value)
-
-    def clean_github_username(self):
-        value = self.cleaned_data["github_username"]
-        return self._trim_atmark(value)
+        if value.startswith("@"):
+            value = value[1:]
+        return value
 
     def clean_sessions_preference(self):
         value = self.cleaned_data["sessions_preference"]
@@ -57,8 +49,6 @@ class SpeakerForm(forms.ModelForm):
                                     u"words or less"))
         return value
 
-    def _trim_atmark(self, value):
-        return value[1:] if value.startswith("@") else value
 
 # class SignupForm(PinaxSignupForm):
 

@@ -1546,17 +1546,17 @@ msgstr "概要"
 #: pycon/templates/proposals/vote_list.html:8
 #: pycon/templates/proposals/vote_list.html:25
 msgid "Talk Proposal Submissions"
-msgstr "応募トーク一覧"
+msgstr "プロポーザル一覧"
 
 #: pycon/templates/proposals/vote_list.html:27
 msgid ""
 "This is the list of all submitted talk proposals. Please share the talks "
-"you’re interested in attending at PyCon JP 2016 on social media using the "
+"you’re interested in attending at PyCon JP 2017 on social media using the "
 "share buttons on the talks detail page. We will take the amount of interest "
 "shown for proposals into consideration when selecting the talks."
 msgstr ""
-"これはトークの応募リストです。聞きたいと思うトークをSNSで拡散しましょう。選考"
-"時に参考にさせていただきます。"
+"現在応募されているプロポーザルの一覧です。プルダウンより「talk」「poster」を選択ください。"
+"聞いてみたいプロポーザルがあれば、是非SNS等で拡散しましょう。選考時に参考にさせていただきます。"
 
 #: pycon/templates/schedule/_slot_edit.html:5
 #: symposion/templates/schedule/_slot_edit.html:5

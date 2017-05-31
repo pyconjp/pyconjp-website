@@ -18,11 +18,12 @@
             font-weight: bold;
             margin-top: 0 !important;
         }
-        .speaker h3 .twitter {
-            margin-left: 1em;
+        .speaker h3 .social {
+            margin-left: 0.5em;
         }
-        .speaker h4 {
-
+        .social-icon {
+            width: 16px;
+            height: 16px;
         }
     </style>
 {% endblock %}
@@ -45,12 +46,27 @@
           <div class="span6 speaker well">
             <h3>
               <a href="{% url 'speaker_profile' speaker.pk %}">{{ speaker.name }}</a>
-              {% if speaker.twitter_username %}
-              <span class="twitter">
-                <a href="https://twitter.com/{{ speaker.twitter_username }}"><img style="width: 16px; height:  16px;" src="/2016/site_media/static/img/icon-twitter.png">
-                  @{{ speaker.twitter_username }}</a>
+              <span class="social">
+                {% if speaker.twitter_username %}
+                  <a href="https://twitter.com/{{ speaker.twitter_username }}"><img class="social-icon" src="{{ STATIC_URL }}img/icon-twitter.png"></a>
+                {% else %}
+                  <img class="social-icon" src="{{ STATIC_URL }}img/icon-gray-twitter.png">
+                {% endif %}
               </span>
-              {% endif %}
+              <span class="social">
+                {% if speaker.facebook_username %}
+                  <a href="https://www.facebook.com/{{ speaker.facebook_username }}"><img class="social-icon" src="{{ STATIC_URL }}img/icon-facebook.png"></a>
+                {% else %}
+                  <img class="social-icon" src="{{ STATIC_URL }}img/icon-gray-facebook.png">
+                {% endif %}
+              </span>
+              <span class="social">
+                {% if speaker.github_username %}
+                  <a href="https://github.com/{{ speaker.github_username }}"><img class="social-icon" src="{{ STATIC_URL }}img/icon-github.png"></a>
+                {% else %}
+                  <img class="social-icon" src="{{ STATIC_URL }}img/icon-gray-github.png">
+                {% endif %}
+              </span>
             </h3>
             {% for presentation in speaker.all_presentations %}
               <ul>

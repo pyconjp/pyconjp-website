@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-18 22:24+0900\n"
+"POT-Creation-Date: 2016-07-03 10:08+0900\n"
 "PO-Revision-Date: 2016-07-02 16:13+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/"
@@ -169,7 +169,7 @@ msgstr "追加情報"
 msgid "More info. Will be made public if your talk is accepted."
 msgstr "追加された情報はあなたの講演が承認された後で公開されます。"
 
-#: pycon/models.py:212 pycon/templates/schedule/presentation_detail.html:94
+#: pycon/models.py:212 pycon/templates/schedule/presentation_detail.html:65
 #: pyconjp/templates/proposals/_proposal_fields.html:84
 #: symposion/templates/proposals/_proposal_fields.html:80
 msgid "Student Handout"
@@ -459,9 +459,10 @@ msgstr "費用補助申請は現在できません。"
 msgid "Application submitted"
 msgstr "申請が完了しました"
 
-#: pycon/finaid/views.py:85 pycon/finaid/views.py:146 pycon/finaid/views.py:192
-#: pycon/finaid/views.py:253 pycon/finaid/views.py:366
-#: pycon/tutorials/views.py:32 pycon/tutorials/views.py:93
+#: pycon/finaid/views.py:85 pycon/finaid/views.py:146
+#: pycon/finaid/views.py:192 pycon/finaid/views.py:253
+#: pycon/finaid/views.py:366 pycon/tutorials/views.py:32
+#: pycon/tutorials/views.py:93
 msgid "Not authorized for this page"
 msgstr "このページを閲覧する権限がありません"
 
@@ -541,11 +542,11 @@ msgstr "名字をローマ字で入力してください"
 msgid "Successfully updated profile."
 msgstr "プロファイルのアップロードが成功しました。"
 
-#: pycon/settings/base.py:86
+#: pycon/settings/base.py:84
 msgid "English"
 msgstr "英語"
 
-#: pycon/settings/base.py:87
+#: pycon/settings/base.py:85
 msgid "French"
 msgstr "フランス語"
 
@@ -558,6 +559,7 @@ msgid "unreviewed"
 msgstr "レビュー前"
 
 #: pycon/sponsorship/admin.py:70
+#, fuzzy
 msgid "approved"
 msgstr "承認済み"
 
@@ -748,7 +750,8 @@ msgstr "選択したスポンサーへメールを送信"
 msgid "Email sent to sponsors"
 msgstr "スポンサーへ送信したメール"
 
-#: pycon/templates/_account_bar.html:13 symposion/templates/_account_bar.html:9
+#: pycon/templates/_account_bar.html:13
+#: symposion/templates/_account_bar.html:9
 msgid "Admin"
 msgstr "管理画面"
 
@@ -766,14 +769,16 @@ msgid "Settings"
 msgstr "設定"
 
 #: pycon/templates/_account_bar.html:18 pycon/templates/account/logout.html:6
-#: pycon/templates/account/logout.html:8 pycon/templates/account/logout.html:16
+#: pycon/templates/account/logout.html:8
+#: pycon/templates/account/logout.html:16
 #: symposion/templates/_account_bar.html:16
 msgid "Log out"
 msgstr "ログアウト"
 
 #: pycon/templates/_account_bar.html:20 pycon/templates/account/login.html:7
 #: pycon/templates/account/login.html:11 pycon/templates/account/login.html:23
-#: pycon/templates/admin/login.html:54 symposion/templates/_account_bar.html:26
+#: pycon/templates/admin/login.html:54
+#: symposion/templates/_account_bar.html:26
 #: symposion/templates/account/login.html:7
 #: symposion/templates/account/login.html:20
 msgid "Log in"
@@ -893,7 +898,8 @@ msgstr "申請をレビュー"
 msgid "Download applications"
 msgstr "申請をダウンロード"
 
-#: pycon/templates/dashboard.html:215 pycon/templates/sponsorship/detail.html:8
+#: pycon/templates/dashboard.html:215
+#: pycon/templates/sponsorship/detail.html:8
 #: symposion/templates/sponsorship/detail.html:8
 msgid "Sponsorship"
 msgstr "スポンサーシップ"
@@ -965,17 +971,17 @@ msgstr "プログラムデータをエクスポート"
 msgid "This action may take up to a minute to complete."
 msgstr ""
 
-#: pycon/templates/homepage.html:69
+#: pycon/templates/homepage.html:65
 msgid "REGISTER"
 msgstr "参加登録"
 
-#: pycon/templates/homepage.html:122
+#: pycon/templates/homepage.html:118
 #: symposion/templates/biblion/blog_list.html:6
 #: symposion/templates/biblion/blog_list.html:12
 msgid "Announcements"
 msgstr "アナウンス"
 
-#: pycon/templates/homepage.html:131
+#: pycon/templates/homepage.html:127
 #, python-format
 msgid ""
 "\n"
@@ -984,7 +990,7 @@ msgid ""
 "                            "
 msgstr ""
 
-#: pycon/templates/homepage.html:138
+#: pycon/templates/homepage.html:134
 msgid "No announcements have been published."
 msgstr "掲載されたアナウンスはありません。"
 
@@ -1042,7 +1048,8 @@ msgstr "アカウントをお持ちですか。"
 msgid "Sign up now!"
 msgstr "今すぐ会員登録する"
 
-#: pycon/templates/account/base.html:13 pycon/templates/account/settings.html:6
+#: pycon/templates/account/base.html:13
+#: pycon/templates/account/settings.html:6
 #: pycon/templates/account/settings.html:8
 #: pycon/templates/account/settings.html:12
 #: symposion/templates/account/base.html:10
@@ -1068,7 +1075,8 @@ msgstr "関連付け"
 msgid "Delete account"
 msgstr "アカウント削除"
 
-#: pycon/templates/account/delete.html:7 pycon/templates/account/delete.html:10
+#: pycon/templates/account/delete.html:7
+#: pycon/templates/account/delete.html:10
 msgid "Delete Account"
 msgstr "アカウント削除"
 
@@ -1094,10 +1102,6 @@ msgstr "メールアドレスは<b>%(email)s</b>でよろしいですか？"
 msgid "Confirm"
 msgstr "確認"
 
-#: pycon/templates/account/login.html:14
-msgid "<b>Note:</b> Account information is not saved year to year."
-msgstr "<b>注意:</b> アカウント情報は今年度しか保持されません。"
-
 #: pycon/templates/account/login.html:16
 #: symposion/templates/account/login.html:12
 msgid "Log in to an existing account"
@@ -1115,12 +1119,12 @@ msgstr "ログアウトしてよろしいですか？"
 #: pycon/templates/account/password_change.html:16
 #: pycon/templates/account/settings.html:16
 #: pycon/templates/cms/page_edit.html:20
-#: pycon/templates/proposals/proposal_submit_kind.html:43
+#: pycon/templates/proposals/proposal_submit_kind.html:25
 #: pycon/templates/schedule/_slot_edit.html:12
 #: pycon/templates/speakers/speaker_create.html:31
 #: pycon/templates/sponsorship/detail.html:46
 #: symposion/templates/cms/page_edit.html:22
-#: symposion/templates/proposals/proposal_edit.html:35
+#: symposion/templates/proposals/proposal_edit.html:18
 #: symposion/templates/proposals/proposal_submit_kind.html:21
 #: symposion/templates/schedule/_slot_edit.html:12
 #: symposion/templates/speakers/speaker_create.html:21
@@ -1143,7 +1147,14 @@ msgstr "会員登録"
 msgid "Create a new account"
 msgstr "アカウントを作成"
 
-#: pycon/templates/account/signup.html:25
+#: pycon/templates/account/signup.html:18
+msgid ""
+"Accounts on this site are for talk proposals and sponsors applications. If "
+"you would like to attend PyCon JP 2016, please wait until tickets go on sale "
+"in May."
+msgstr ""
+
+#: pycon/templates/account/signup.html:26
 #: symposion/templates/account/signup.html:19
 msgid "Create Account"
 msgstr "アカウントを作成"
@@ -1351,11 +1362,11 @@ msgstr ""
 msgid "Change status to"
 msgstr ""
 
-#: pycon/templates/finaid/edit.html:9 pycon/templates/finaid/edit.html.py:28
+#: pycon/templates/finaid/edit.html:9 pycon/templates/finaid/edit.html:28
 msgid "Apply for Financial Aid"
 msgstr "金銭的支援を申請する"
 
-#: pycon/templates/finaid/edit.html:9 pycon/templates/finaid/edit.html.py:28
+#: pycon/templates/finaid/edit.html:9 pycon/templates/finaid/edit.html:28
 msgid "Edit Financial Aid Application"
 msgstr "金銭的支援の項目を編集する"
 
@@ -1465,7 +1476,7 @@ msgstr "プロファイルを保存する"
 msgid "Submit a Proposal for a %(name)s"
 msgstr "%(name)s のプロポーザルを提出する"
 
-#: pycon/templates/proposals/proposal_submit_kind.html:37
+#: pycon/templates/proposals/proposal_submit_kind.html:19
 msgid ""
 "\n"
 "                    You will be able to edit your proposal after it has been "
@@ -1481,7 +1492,7 @@ msgstr ""
 "審査の過程で運営委員会は提出されたプロポーザルへの質問やフィードバック、変更"
 "依頼をすることがあります。"
 
-#: pycon/templates/proposals/proposal_submit_kind.html:45
+#: pycon/templates/proposals/proposal_submit_kind.html:27
 #: symposion/templates/proposals/proposal_submit_kind.html:23
 msgid "Save and Add Additional Speakers"
 msgstr "スピーカーを追加して保存する"
@@ -1512,19 +1523,19 @@ msgid "Speakers"
 msgstr "スピーカー"
 
 #: pycon/templates/proposals/vote_detail.html:52
-#: pycon/templates/schedule/presentation_detail.html:71
+#: pycon/templates/schedule/presentation_detail.html:46
 #: symposion/templates/schedule/presentation_detail.html:26
 msgid "Audience level:"
 msgstr "対象レベル："
 
 #: pycon/templates/proposals/vote_detail.html:53
-#: pycon/templates/schedule/presentation_detail.html:73
+#: pycon/templates/schedule/presentation_detail.html:48
 #: symposion/templates/schedule/presentation_detail.html:28
 msgid "Category:"
 msgstr "カテゴリ："
 
 #: pycon/templates/proposals/vote_detail.html:56
-#: pycon/templates/schedule/presentation_detail.html:82
+#: pycon/templates/schedule/presentation_detail.html:53
 #: pyconjp/templates/proposals/_proposal_fields.html:57
 #: symposion/proposals/models.py:90
 #: symposion/templates/proposals/_proposal_fields.html:53
@@ -1533,7 +1544,7 @@ msgid "Description"
 msgstr "説明"
 
 #: pycon/templates/proposals/vote_detail.html:64
-#: pycon/templates/schedule/presentation_detail.html:87
+#: pycon/templates/schedule/presentation_detail.html:58
 #: pyconjp/templates/proposals/_proposal_fields.html:61
 #: symposion/templates/proposals/_proposal_fields.html:57
 #: symposion/templates/schedule/presentation_detail.html:37
@@ -1543,17 +1554,17 @@ msgstr "概要"
 #: pycon/templates/proposals/vote_list.html:8
 #: pycon/templates/proposals/vote_list.html:25
 msgid "Talk Proposal Submissions"
-msgstr "プロポーザル一覧"
+msgstr "応募トーク一覧"
 
 #: pycon/templates/proposals/vote_list.html:27
 msgid ""
 "This is the list of all submitted talk proposals. Please share the talks "
-"you’re interested in attending at PyCon JP 2017 on social media using the "
+"you’re interested in attending at PyCon JP 2016 on social media using the "
 "share buttons on the talks detail page. We will take the amount of interest "
 "shown for proposals into consideration when selecting the talks."
 msgstr ""
-"現在応募されているプロポーザルの一覧です。プルダウンより「talk」「poster」を選択ください。"
-"聞いてみたいプロポーザルがあれば、是非SNS等で拡散しましょう。選考時に参考にさせていただきます。"
+"これはトークの応募リストです。聞きたいと思うトークをSNSで拡散しましょう。選考"
+"時に参考にさせていただきます。"
 
 #: pycon/templates/schedule/_slot_edit.html:5
 #: symposion/templates/schedule/_slot_edit.html:5
@@ -1565,41 +1576,41 @@ msgstr "時間枠を編集する"
 msgid "Presentation: "
 msgstr "プレゼンテーション："
 
-#: pycon/templates/schedule/presentation_detail.html:99
+#: pycon/templates/schedule/presentation_detail.html:70
 msgid "No handouts have been provided yet for this tutorial"
 msgstr ""
 
-#: pycon/templates/schedule/presentation_detail.html:105
+#: pycon/templates/schedule/presentation_detail.html:76
 msgid "Questions about this tutorial"
 msgstr ""
 
-#: pycon/templates/schedule/presentation_detail.html:110
+#: pycon/templates/schedule/presentation_detail.html:81
 #: pycon/templates/tutorials/message.html:22
 msgid "Leave class note"
 msgstr ""
 
-#: pycon/templates/schedule/presentation_detail.html:113
+#: pycon/templates/schedule/presentation_detail.html:84
 #: pycon/templates/tutorials/message.html:24
 msgid "Class notes are visible to both instructor(s) and attendees"
 msgstr ""
 
-#: pycon/templates/schedule/presentation_detail.html:132
+#: pycon/templates/schedule/presentation_detail.html:103
 msgid "Email Attendees"
 msgstr ""
 
-#: pycon/templates/schedule/presentation_detail.html:133
+#: pycon/templates/schedule/presentation_detail.html:104
 msgid "Select attendee(s) to email directly"
 msgstr ""
 
-#: pycon/templates/schedule/presentation_detail.html:165
+#: pycon/templates/schedule/presentation_detail.html:136
 msgid "Email Instructors"
 msgstr ""
 
-#: pycon/templates/schedule/presentation_detail.html:166
+#: pycon/templates/schedule/presentation_detail.html:137
 msgid "Email instructors privately"
 msgstr ""
 
-#: pycon/templates/schedule/presentation_detail.html:175
+#: pycon/templates/schedule/presentation_detail.html:146
 msgid "Send email"
 msgstr "メールを送信する"
 
@@ -1705,7 +1716,7 @@ msgstr "スピーカー用プロファイルを作成する"
 
 #: pycon/templates/speakers/speaker_create.html:32
 #: pycon/templates/speakers/speaker_edit.html:33
-#: symposion/templates/proposals/proposal_edit.html:36
+#: symposion/templates/proposals/proposal_edit.html:19
 #: symposion/templates/speakers/speaker_create.html:22
 #: symposion/templates/speakers/speaker_edit.html:22
 msgid "Cancel"
@@ -1776,7 +1787,8 @@ msgstr "スポンサーになる方法を見る"
 msgid "About PyCon JP Sponsors"
 msgstr "PyCon JP のスポンサーについて"
 
-#: pycon/templates/static/sitemap.html:8 pycon/templates/static/sitemap.html:10
+#: pycon/templates/static/sitemap.html:8
+#: pycon/templates/static/sitemap.html:10
 #: symposion/templates/static/sitemap.html:8
 #: symposion/templates/static/sitemap.html:10
 msgid "Sitemap"
@@ -1909,14 +1921,6 @@ msgstr ""
 #: pycon/tutorials/views.py:116
 msgid "Message sent"
 msgstr ""
-
-#: pyconjp/models.py:11
-msgid "Video"
-msgstr "ビデオ"
-
-#: pyconjp/models.py:12
-msgid "Slide"
-msgstr "スライド"
 
 #: pyconjp/templates/proposals/_proposal_fields.html:4
 #: symposion/templates/proposals/_proposal_fields.html:4
@@ -2132,7 +2136,7 @@ msgstr ""
 "複数のプロポーザルを提出している場合は、１回だけ講演したいかあるいは２回講演"
 "したいのかお知らせ下さい。"
 
-#: symposion/speakers/forms.py:56
+#: symposion/speakers/forms.py:48
 msgid "Please limit speaker biography to 100 words or less"
 msgstr "スピーカーの略歴を100文字以内にして下さい。"
 
@@ -2160,15 +2164,7 @@ msgstr ""
 msgid "Your Twitter account"
 msgstr "あなたのTwitterアカウント"
 
-#: symposion/speakers/models.py:33
-msgid "Your Facebook account"
-msgstr "あなたのFacebookアカウント"
-
-#: symposion/speakers/models.py:38
-msgid "Your GitHub account"
-msgstr "あなたのGitHubアカウント"
-
-#: symposion/speakers/models.py:51
+#: symposion/speakers/models.py:41
 msgid ""
 "If you've submitted multiple talk proposals, please let us know if you only "
 "want to give one or if you'd like to give two talks.  For tutorials and "
@@ -2179,7 +2175,7 @@ msgstr ""
 "したいのかお知らせ下さい。チュートリアルとポスターの場合は、プロポーザルのメ"
 "モ欄にsimilar preferencesを記入して下さい。"
 
-#: symposion/speakers/models.py:61
+#: symposion/speakers/models.py:51
 msgid "connpassNo/sponsor/Keynote"
 msgstr ""
 
@@ -2615,10 +2611,6 @@ msgstr "削除"
 msgid "You don't have any social accounts associated."
 msgstr "関連付けられているソーシャルアカウントがありません。"
 
-#: symposion/templates/speakers/speaker_list.html:8
-msgid "Speaker Listing"
-msgstr "スピーカーのリスト"
-
 #: symposion/templates/speakers/speaker_profile.html:40
 msgid "Presentations"
 msgstr "プレゼンテーション"
@@ -2641,6 +2633,7 @@ msgstr ""
 "に同意したことになります。"
 
 #: symposion/templates/sponsorship/jobs.html:16
+#, fuzzy
 msgid "PyCon Jobs JP Fair"
 msgstr "PyCon JP 求人フェア"
 
@@ -2665,6 +2658,7 @@ msgstr "開催地"
 #: symposion/templates/teams/team_detail.html:48
 msgid "demote"
 msgstr ""
+
 
 #: pycon/forms.py:16
 msgid "Business"
@@ -2765,3 +2759,11 @@ msgstr "クラウド"
 #: pycon/forms.py:16
 msgid "Core Python (Language, Stdlib)"
 msgstr "コアPython（言語, 標準ライブラリ）"
+
+#: pyconjp/models.py:16
+msgid "Slide"
+msgstr "スライド"
+
+#: pyconjp/models.py:16
+msgid "Video"
+msgstr "ビデオ"

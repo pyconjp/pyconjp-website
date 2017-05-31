@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-01 02:15+0900\n"
+"POT-Creation-Date: 2017-05-18 22:24+0900\n"
 "PO-Revision-Date: 2016-07-02 16:13+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/"
@@ -1094,6 +1094,10 @@ msgstr "メールアドレスは<b>%(email)s</b>でよろしいですか？"
 msgid "Confirm"
 msgstr "確認"
 
+#: pycon/templates/account/login.html:14
+msgid "<b>Note:</b> Account information is not saved year to year."
+msgstr "<b>注意:</b> アカウント情報は今年度しか保持されません。"
+
 #: pycon/templates/account/login.html:16
 #: symposion/templates/account/login.html:12
 msgid "Log in to an existing account"
@@ -1139,14 +1143,7 @@ msgstr "会員登録"
 msgid "Create a new account"
 msgstr "アカウントを作成"
 
-#: pycon/templates/account/signup.html:18
-msgid ""
-"Accounts on this site are for talk proposals and sponsors applications. If "
-"you would like to attend PyCon JP 2016, please wait until tickets go on sale "
-"in May."
-msgstr ""
-
-#: pycon/templates/account/signup.html:26
+#: pycon/templates/account/signup.html:25
 #: symposion/templates/account/signup.html:19
 msgid "Create Account"
 msgstr "アカウントを作成"
@@ -2668,7 +2665,6 @@ msgstr "開催地"
 #: symposion/templates/teams/team_detail.html:48
 msgid "demote"
 msgstr ""
-
 
 #: pycon/forms.py:16
 msgid "Business"

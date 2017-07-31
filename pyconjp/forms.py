@@ -6,6 +6,11 @@ from pycon.forms import PyConProposalForm
 
 
 class PyConJPTalkProposalForm(PyConProposalForm):
+    video = forms.URLField(
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'fullwidth-input'}),
+        help_text=u'url field for video',
+    )
 
     class Meta:
         model = PyConTalkProposal
@@ -23,6 +28,7 @@ class PyConJPTalkProposalForm(PyConProposalForm):
             "additional_notes",
             "additional_requirements",
             "recording_release",
+            "video",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),

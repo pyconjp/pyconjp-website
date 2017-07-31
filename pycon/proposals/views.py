@@ -22,6 +22,8 @@ from symposion.utils.mail import send_email
 from symposion.proposals.forms import AddSpeakerForm, SupportingDocumentCreateForm
 
 from pycon.models import PyConProposal
+from pyconjp.models import PresentationResource
+
 
 def get_form(name):
     dot = name.rindex('.')
@@ -74,6 +76,12 @@ def proposal_submit_kind(request, kind_slug):
             proposal.speaker = speaker_profile
             proposal.save()
             form.save_m2m()
+            if form.cleaned_data['video']:
+                video = PresentationResource()
+                video.proposal_base_id = proposal.proposalbase_ptr_id
+                video.type = 'video'
+                video.url = form.cleaned_data['video']
+                video.save()
             messages.success(request, "Proposal submitted.")
             if "add-speakers" in request.POST:
                 return redirect("proposal_speaker_manage", proposal.pk)

@@ -10,6 +10,7 @@ class PresentationResource(models.Model):
     PRESENTATION_RESOURCE_TYPE = (
         ('video', _('Video')),
         ('slide', _('Slide')),
+        ('code', _('Code')),
     )
 
     proposal_base = models.ForeignKey(ProposalBase, related_name="presentation_resources")

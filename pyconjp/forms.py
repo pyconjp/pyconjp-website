@@ -11,6 +11,16 @@ class PyConJPTalkProposalForm(PyConProposalForm):
         widget=forms.TextInput(attrs={'class': 'fullwidth-input'}),
         help_text=u'url field for video',
     )
+    slide = forms.URLField(
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'fullwidth-input'}),
+        help_text=u'url field for slide',
+    )
+    code = forms.URLField(
+        required=False,
+        widget=forms.TextInput(attrs={'class': 'fullwidth-input'}),
+        help_text=u'url field for code',
+    )
 
     class Meta:
         model = PyConTalkProposal
@@ -29,6 +39,8 @@ class PyConJPTalkProposalForm(PyConProposalForm):
             "additional_requirements",
             "recording_release",
             "video",
+            "slide",
+            "code",
         ]
         widgets = {
             "title": forms.TextInput(attrs={'class': 'fullwidth-input'}),

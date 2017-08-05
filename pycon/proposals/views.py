@@ -76,12 +76,13 @@ def proposal_submit_kind(request, kind_slug):
             proposal.speaker = speaker_profile
             proposal.save()
             form.save_m2m()
-            if form.cleaned_data['video']:
-                video = PresentationResource()
-                video.proposal_base_id = proposal.proposalbase_ptr_id
-                video.type = 'video'
-                video.url = form.cleaned_data['video']
-                video.save()
+            for resource_type in ['video', 'slide', 'code']:
+                if form.cleaned_data[resource_type]:
+                    resource = PresentationResource()
+                    resource.proposal_base_id = proposal.proposalbase_ptr_id
+                    resource.type = resource_type
+                    resource.url = form.cleaned_data[resource_type]
+                    resource.save()
             messages.success(request, "Proposal submitted.")
             if "add-speakers" in request.POST:
                 return redirect("proposal_speaker_manage", proposal.pk)

@@ -224,6 +224,25 @@ def proposal_edit(request, pk):
                         [user.email], "proposal_updated",
                         context=ctx
                     )
+            for resource_type in ['video', 'slide', 'code']:
+                if form.cleaned_data[resource_type]:
+                    resource = PresentationResource.objects.get(
+                        proposal_base_id=proposal.proposalbase_ptr_id,
+                        type=resource_type
+                    )
+                    if not resource:
+                        resource = PresentationResource()
+                        resource.proposal_base_id = proposal.proposalbase_ptr_id
+                        resource.type = resource_type
+                    resource.url = form.cleaned_data[resource_type]
+                    resource.save()
+                else:
+                    resource = PresentationResource.objects.get(
+                        proposal_base_id=proposal.proposalbase_ptr_id,
+                        type=resource_type
+                    )
+                    if resource:
+                        resource.delete()
             messages.success(request, "Proposal updated.")
             return redirect("proposal_detail", proposal.pk)
     else:

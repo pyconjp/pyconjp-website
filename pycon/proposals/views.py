@@ -186,6 +186,12 @@ def proposal_edit(request, pk):
     queryset = ProposalBase.objects.select_related("speaker")
     proposal = get_object_or_404(queryset, pk=pk)
     proposal = ProposalBase.objects.get_subclass(pk=proposal.pk)
+    for resource_type in ['video', 'slide', 'code']:
+        resource_query = PresentationResource.objects.filter(proposal_base_id=proposal.id, type=resource_type)
+        url = ''
+        if resource_query.__len__():
+            url = resource_query[0].url
+        setattr(proposal, resource_type, url)
 
     if request.user != proposal.speaker.user:
         raise Http404()
@@ -221,7 +227,7 @@ def proposal_edit(request, pk):
             messages.success(request, "Proposal updated.")
             return redirect("proposal_detail", proposal.pk)
     else:
-        form = form_class(instance=proposal)
+        form = form_class(instance=proposal, initial={'code': proposal.code, 'video': proposal.video, 'slide': proposal.slide})
 
     return render(request, "proposals/proposal_edit.html", {
         "proposal": proposal,

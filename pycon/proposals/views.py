@@ -234,6 +234,11 @@ def proposal_detail(request, pk):
     queryset = ProposalBase.objects.select_related("speaker", "speaker__user")
     proposal = get_object_or_404(queryset, pk=pk)
     proposal = ProposalBase.objects.get_subclass(pk=proposal.pk)
+    resource = {}
+    for resource_type in ['video', 'slide', 'code']:
+        resource_query = PresentationResource.objects.filter(proposal_base_id=proposal.id, type=resource_type)
+        if resource_query.__len__():
+            resource[resource_type] = resource_query[0].url
 
     if request.user not in [p.user for p in proposal.speakers()]:
         raise Http404()
@@ -278,6 +283,7 @@ def proposal_detail(request, pk):
 
     return render(request, "proposals/proposal_detail.html", {
         "proposal": proposal,
+        "resource": resource,
         "message_form": message_form
     })
 

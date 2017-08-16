@@ -111,4 +111,13 @@
             {% trans "No supporting documents attached to this proposal." %}
         {% endif %}
     </dd>
+
+    <dt>{% trans "video" %}</dt>
+    <dd><a href="{{ resource.video }}">{{ resource.video }}</a>&nbsp;</dd>
+
+    <dt>{% trans "slide" %}</dt>
+    <dd><a href="{{ resource.slide }}">{{ resource.slide }}</a>&nbsp;</dd>
+
+    <dt>{% trans "code" %}</dt>
+    <dd><a href="{{ resource.code }}">{{ resource.code }}</a>&nbsp;</dd>
 </dl>

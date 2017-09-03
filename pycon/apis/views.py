@@ -59,6 +59,8 @@ def api_presentation_detail(request, pk):
         info = {
             "name": speaker.name,
             "twitter": speaker.twitter_username if speaker.twitter_username else None,
+            "facebook": speaker.facebook_username if speaker.facebook_username else None,
+            "github": speaker.github_username if speaker.github_username else None,
             "image_uri": speaker.photo.url if speaker.photo else None,
         }
         speaker_infomations.append(info)

@@ -1500,9 +1500,9 @@ msgid ""
 "the social media share buttons below. We will consider the popularity of the "
 "proposals when making our selection."
 msgstr ""
-"これは応募されたプロポーザルです。聞きたいと思うプロポーザルを各ページの下部"
-"にあるSNSのボタンで拡散しましょう。拡散された投稿をプロポーザルへの投票として"
-"カウントし、選考時に参考にさせていただきます。"
+"これは応募されたプロポーザルです。聞きたいと思うプロポーザルを各ページの下部にあるSNSのボタ"
+"ンで拡散しましょう。拡散された投稿をプロポーザルへの投票としてカウントし、選考時に参考にさせ"
+"ていただきます。"
 
 #: pycon/templates/proposals/vote_detail.html:38
 msgid "This talk proposal has been cancelled."
@@ -1553,10 +1553,9 @@ msgid ""
 "share buttons on the talks detail page. We will take the amount of interest "
 "shown for proposals into consideration when selecting the talks."
 msgstr ""
-"現在応募されているプロポーザルの一覧です。プルダウンより「talk」「poster」を"
-"選択ください。聞いてみたいプロポーザルがあれば、是非SNS等で拡散しましょう。拡"
-"散された投稿をプロポーザルへの投票としてカウントし、選考時に参考にさせていた"
-"だきます。"
+"現在応募されているプロポーザルの一覧です。プルダウンより「talk」「poster」を選択ください。"
+"聞いてみたいプロポーザルがあれば、是非SNS等で拡散しましょう。拡散された投稿をプロポーザルへ"
+"の投票としてカウントし、選考時に参考にさせていただきます。"
 
 #: pycon/templates/schedule/_slot_edit.html:5
 #: symposion/templates/schedule/_slot_edit.html:5
@@ -1944,10 +1943,6 @@ msgstr "動画"
 #: pyconjp/models.py:12
 msgid "Slide"
 msgstr "スライド"
-
-#: pyconjp/models.py:13
-msgid "Code"
-msgstr "ソースコード"
 
 #: pyconjp/templates/proposals/_proposal_fields.html:4
 #: symposion/templates/proposals/_proposal_fields.html:4
@@ -2697,77 +2692,102 @@ msgstr "開催地"
 msgid "demote"
 msgstr ""
 
-#~ msgid "Business"
-#~ msgstr "ビジネス"
+#: pycon/forms.py:16
+msgid "Business"
+msgstr "ビジネス"
 
-#~ msgid "Community"
-#~ msgstr "コミュニティ"
+#: pycon/forms.py:16
+msgid "Community"
+msgstr "コミュニティ"
 
-#~ msgid "Distributed Computing"
-#~ msgstr "分散コンピューティング"
+#: pycon/forms.py:16
+msgid "Distributed Computing"
+msgstr "分散コンピューティング"
 
-#~ msgid "Systems Administration"
-#~ msgstr "システムアドミニストレーション"
+#: pycon/forms.py:16
+msgid "Systems Administration"
+msgstr "システムアドミニストレーション"
 
-#~ msgid "Packaging"
-#~ msgstr "パッケージング"
+#: pycon/forms.py:16
+msgid "Packaging"
+msgstr "パッケージング"
 
-#~ msgid "Testing"
-#~ msgstr "テスト"
+#: pycon/forms.py:16
+msgid "Testing"
+msgstr "テスト"
 
-#~ msgid "Databases/NoSQL"
-#~ msgstr "データベース/NoSQL"
+#: pycon/forms.py:16
+msgid "Databases/NoSQL"
+msgstr "データベース/NoSQL"
 
-#~ msgid "Best Practices/Patterns"
-#~ msgstr "ベストプラクティス/パターン"
+#: pycon/forms.py:16
+msgid "Best Practices/Patterns"
+msgstr "ベストプラクティス/パターン"
 
-#~ msgid "High Performance Computing"
-#~ msgstr "ハイパフォーマンス・コンピューティング"
+#: pycon/forms.py:16
+msgid "High Performance Computing"
+msgstr "ハイパフォーマンス・コンピューティング"
 
-#~ msgid "Education"
-#~ msgstr "教育"
+#: pycon/forms.py:16
+msgid "Education"
+msgstr "教育"
 
-#~ msgid "Science"
-#~ msgstr "科学"
+#: pycon/forms.py:16
+msgid "Science"
+msgstr "科学"
 
-#~ msgid "Industry Uses"
-#~ msgstr "業務利用事例"
+#: pycon/forms.py:16
+msgid "Industry Uses"
+msgstr "業務利用事例"
 
-#~ msgid "Web Frameworks"
-#~ msgstr "Webフレームワーク"
+#: pycon/forms.py:16
+msgid "Web Frameworks"
+msgstr "Webフレームワーク"
 
-#~ msgid "Documentation"
-#~ msgstr "ドキュメンテーション"
+#: pycon/forms.py:16
+msgid "Documentation"
+msgstr "ドキュメンテーション"
 
-#~ msgid "Concurrency"
-#~ msgstr "並列処理"
+#: pycon/forms.py:16
+msgid "Concurrency"
+msgstr "並列処理"
 
-#~ msgid "Python Internals"
-#~ msgstr "Pythonインターナル"
+#: pycon/forms.py:16
+msgid "Python Internals"
+msgstr "Pythonインターナル"
 
-#~ msgid "Embedded Systems"
-#~ msgstr "組み込みシステム"
+#: pycon/forms.py:16
+msgid "Embedded Systems"
+msgstr "組み込みシステム"
 
-#~ msgid "Other"
-#~ msgstr "その他"
+#: pycon/forms.py:16
+msgid "Other"
+msgstr "その他"
 
-#~ msgid "GUI Programming"
-#~ msgstr "GUIプログラミング"
+#: pycon/forms.py:16
+msgid "GUI Programming"
+msgstr "GUIプログラミング"
 
-#~ msgid "Useful libraries"
-#~ msgstr "ライブラリ"
+#: pycon/forms.py:16
+msgid "Useful libraries"
+msgstr "ライブラリ"
 
-#~ msgid "Gaming"
-#~ msgstr "ゲーム"
+#: pycon/forms.py:16
+msgid "Gaming"
+msgstr "ゲーム"
 
-#~ msgid "Mobile"
-#~ msgstr "モバイル"
+#: pycon/forms.py:16
+msgid "Mobile"
+msgstr "モバイル"
 
-#~ msgid "Big Data"
-#~ msgstr "ビッグデータ"
+#: pycon/forms.py:16
+msgid "Big Data"
+msgstr "ビッグデータ"
 
-#~ msgid "Cloud"
-#~ msgstr "クラウド"
+#: pycon/forms.py:16
+msgid "Cloud"
+msgstr "クラウド"
 
-#~ msgid "Core Python (Language, Stdlib)"
-#~ msgstr "コアPython（言語, 標準ライブラリ）"
+#: pycon/forms.py:16
+msgid "Core Python (Language, Stdlib)"
+msgstr "コアPython（言語, 標準ライブラリ）"

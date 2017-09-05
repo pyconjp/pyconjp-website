@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pyconjp-website\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-16 16:37+0900\n"
+"POT-Creation-Date: 2017-05-18 22:24+0900\n"
 "PO-Revision-Date: 2016-07-02 16:13+0000\n"
 "Last-Translator: Ian Lewis <ianmlewis@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/pyconjp-website/"
@@ -1913,41 +1913,13 @@ msgstr ""
 msgid "Message sent"
 msgstr ""
 
-#: pyconjp/forms.py:11 pyconjp/templates/proposals/_proposal_fields.html:115
-msgid "video"
-msgstr "動画"
-
-#: pyconjp/forms.py:14
-msgid "url field for video"
-msgstr "動画のURLを入力してください"
-
-#: pyconjp/forms.py:17 pyconjp/templates/proposals/_proposal_fields.html:118
-msgid "slide"
-msgstr "スライド"
-
-#: pyconjp/forms.py:20
-msgid "url field for slide"
-msgstr "スライドのURLを入力してください"
-
-#: pyconjp/forms.py:23 pyconjp/templates/proposals/_proposal_fields.html:121
-msgid "code"
-msgstr "ソースコード"
-
-#: pyconjp/forms.py:26
-msgid "url field for code"
-msgstr "ソースコードのURLを入力してください"
-
 #: pyconjp/models.py:11
 msgid "Video"
-msgstr "動画"
+msgstr "ビデオ"
 
 #: pyconjp/models.py:12
 msgid "Slide"
 msgstr "スライド"
-
-#: pyconjp/models.py:13
-msgid "Code"
-msgstr "ソースコード"
 
 #: pyconjp/templates/proposals/_proposal_fields.html:4
 #: symposion/templates/proposals/_proposal_fields.html:4

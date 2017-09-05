@@ -1,5 +1,4 @@
 from django import forms
-from django.utils.translation import gettext as _
 
 from markedit.widgets import MarkEdit
 from pycon.models import PyConTalkProposal
@@ -8,22 +7,19 @@ from pycon.forms import PyConProposalForm
 
 class PyConJPTalkProposalForm(PyConProposalForm):
     video = forms.URLField(
-        label=_('video'),
         required=False,
         widget=forms.TextInput(attrs={'class': 'fullwidth-input'}),
-        help_text=_('url field for video'),
+        help_text=u'url field for video',
     )
     slide = forms.URLField(
-        label=_('slide'),
         required=False,
         widget=forms.TextInput(attrs={'class': 'fullwidth-input'}),
-        help_text=_('url field for slide'),
+        help_text=u'url field for slide',
     )
     code = forms.URLField(
-        label=_('code'),
         required=False,
         widget=forms.TextInput(attrs={'class': 'fullwidth-input'}),
-        help_text=_('url field for code'),
+        help_text=u'url field for code',
     )
 
     class Meta:
